@@ -1,0 +1,588 @@
+Return-Path: <benedict.hermann@barclays.com>
+Original-Recipient: rfc822;priips@pec.consob.it
+Received: from pecengine12.print.infocert.it (10.114.64.147) by pecpchig21.print.infocert.it (9.0.034) id 606EEB5D000AF9F5 for priips@pec.consob.it; Tue, 20 Apr 2021 11:34:40 +0200
+Received: by pecengine12.print.infocert.it (8.6.147.01) id 5BBECAFA1C159B99 for M4750746@userid.local; Tue, 20 Apr 2021 11:34:40 +0200
+Received: from AS8PR01MB7749.eurprd01.prod.exchangelabs.com ([fe80::41f8:1fba:6903:e303]) by AS8PR01MB7749.eurprd01.prod.exchangelabs.com ([fe80::41f8:1fba:6903:e303%6]) with mapi id 15.20.4042.024; Tue, 20 Apr 2021 09:34:30 +0000
+Received: from AS8PR01MB7749.eurprd01.prod.exchangelabs.com (2603:10a6:20b:2a8::20) by AM6PR01MB5074.eurprd01.prod.exchangelabs.com (2603:10a6:20b:33::15) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4042.16; Tue, 20 Apr 2021 09:34:30 +0000
+Received: from EUR01-HE1-obe.outbound.protection.outlook.com (104.47.0.53) by edge.barclays.com (10.234.4.24) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Tue, 20 Apr 2021 10:34:32 +0100
+Received: from XUKPBCC4XEDG005.collab.barclayscorp.com (10.234.4.40) by MUKPBCC1XHY0008.collab.barclayscorp.com (22.48.77.26) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Tue, 20 Apr 2021 10:34:33 +0100
+Received: from MUKPBCC1XHY0008.collab.barclayscorp.com (22.48.77.26) by MUKPBCC4XSN0037.collab.barclayscorp.com (10.37.66.105) with Microsoft SMTP Server (TLS) id 15.0.1395.4; Tue, 20 Apr 2021 10:34:33 +0100
+Received: from MUKPBCC4XSN0037.collab.barclayscorp.com (Not Verified[10.40.84.45]) by MUKPBCC1MEG0005.collab.barclayscorp.com with Barclays Capital Filter ESMTP (using TLS: TLSv1.2, ECDHE-RSA-AES256-SHA384) id <B607ea0290000>; Tue, 20 Apr 2021 10:34:33 +0100
+Received: from MUKPBCC1MEG0005.collab.barclayscorp.com (Unknown_Domain [10.250.250.254]) by IMSMGGCCP04P.barclays.com (Symantec Messaging Gateway) with SMTP id D6.06.11469.920AE706; Tue, 20 Apr 2021 10:34:33 +0100 (BST)
+Received: from IMSMGGCCP04P.barclays.com (Unknown_Domain [35.49.84.78]) (using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits)) (Client did not present a certificate) by IMSMGGCB604P.barclays.com (Symantec Messaging Gateway) with SMTP id AC.62.47629.A20AE706; Tue, 20 Apr 2021 10:34:34 +0100 (BST)
+Received: from unknown (HELO IMSMGGCB604P.barclays.com) (157.83.97.117) by server-11.tower-263.messagelabs.com with ECDHE-RSA-AES256-GCM-SHA384 encrypted SMTP; 20 Apr 2021 09:34:34 -0000
+Received: (qmail 2345 invoked from network); 20 Apr 2021 09:34:34 -0000
+Received: from [100.112.193.211] (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)) by server-1.bemta.az-a.eu-west-1.aws.symcld.net id 00/34-56778-B20AE706; Tue, 20 Apr 2021 09:34:35 +0000
+Received: from mail1.bemta25.messagelabs.com (195.245.230.1) by mx.cert.legalmail.it (5.8.715.01) id 6062BA7B007B01A7 for priips@pec.consob.it; Tue, 20 Apr 2021 11:34:35 +0200
+Date: Tue, 20 Apr 2021 11:34:38 +0200
+From: "Per conto di: benedict.hermann@barclays.com" <posta-certificata@legalmail.it>
+Reply-To: barclaysitaliankids@barclays.com
+To: <priips@pec.consob.it>
+Message-ID: <AS8PR01MB774926EEDF7B365E77B7237AEB489@AS8PR01MB7749.eurprd01.prod.exchangelabs.com>
+Subject: ANOMALIA MESSAGGIO: COD CH1102114670 SUB Barclays Bank PLC RISK 4 MAX 1 TYPE Start
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-1; boundary="----=_Part_228774691_1270470930.1618911278968"
+X-Trasporto: errore
+
+------=_Part_228774691_1270470930.1618911278968
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_228774688_2026467114.1618911278964"
+
+------=_Part_228774688_2026467114.1618911278964
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_228774689_1889627225.1618911278964"
+
+------=_Part_228774689_1889627225.1618911278964
+Content-Type: text/plain; charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Anomalia nel messaggio
+
+Il giorno 20/04/2021 alle ore 11:34:38 (+0200) =E8 stato ricevuto=20
+il messaggio "COD CH1102114670 SUB Barclays Bank PLC RISK 4 MAX 1 TYPE Star=
+t" proveniente da "benedict.hermann@barclays.com"=20
+ed indirizzato a:
+
+
+
+priips@pec.consob.it
+
+
+
+Tali dati non sono stati certificati per il seguente errore:
+
+
+Messaggio proveniente da utente non certificato
+
+
+Il messaggio originale =E8 incluso in allegato.
+
+
+------------------------------------------------
+
+Anomaly message
+
+On 20/04/2021 at 11:34:38 (+0200) has been received the message "COD CH1102=
+114670 SUB Barclays Bank PLC RISK 4 MAX 1 TYPE Start" sent by "benedict.her=
+mann@barclays.com" and addressed to:
+
+
+priips@pec.consob.it
+
+
+These data have not been certified for the following error:
+
+Messaggio proveniente da utente non certificato
+=20
+The original message is included in attached.
+
+------=_Part_228774689_1889627225.1618911278964
+Content-Type: text/html; charset="ISO-8859-1"
+Content-Transfer-Encoding: 7bit
+
+<HTML><HEAD><TITLE>Anomalia nel messaggio</TITLE></HEAD>
+<BODY>
+
+<H1><p><font style="font-family: Arial; font-size: 20px; font-weight: 400; line-height:17.3px; text-align: left;"><b>Anomalia nel messaggio</b></font></p></H1>
+
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">Il giorno 20/04/2021 alle ore 11:34:38 (+0200) &egrave; stato ricevuto 
+il messaggio "COD CH1102114670 SUB Barclays Bank PLC RISK 4 MAX 1 TYPE Start" proveniente da "benedict.hermann@barclays.com" 
+ed indirizzato a:</font><br>
+<table border="0" cellpadding="0" cellpadding="0" style="border-spacing: 0;">
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">priips@pec.consob.it</font></td></tr>
+</table>
+<font style="font-family: Arial;  font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">
+Tali dati non sono stati certificati per il seguente errore:<br>
+Messaggio proveniente da utente non certificato</font></p>
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">Il messaggio originale &egrave; incluso in allegato.</font></p>
+
+
+<hr />
+<p><font style="font-family: Arial; font-size: 20px; font-weight: 400; line-height:17.3px; text-align: left;"><b>Anomaly message</b></font></p>
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">On 20/04/2021 at 11:34:38 (+0200) has been received the message "COD CH1102114670 SUB Barclays Bank PLC RISK 4 MAX 1 TYPE Start" sent by "benedict.hermann@barclays.com" and addressed to:</font><br>
+<table border="0" cellpadding="0" cellpadding="0" style="border-spacing: 0;">
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">priips@pec.consob.it</font></td></tr>
+</table>
+<font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">
+These data have not been certified for the following error:<br>
+Messaggio proveniente da utente non certificato<br> 
+The original message is included in attached.</font></p>
+</BODY>
+</HTML>
+
+------=_Part_228774689_1889627225.1618911278964--
+
+------=_Part_228774688_2026467114.1618911278964
+Content-Type: message/rfc822; name=postacert.eml
+Content-Disposition: attachment; filename="postacert.eml"
+
+Received: from mail1.bemta25.messagelabs.com (195.245.230.1) by mx.cert.legalmail.it (5.8.715.01)
+        id 6062BA7B007B01A7 for priips@pec.consob.it; Tue, 20 Apr 2021 11:34:35 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=barclays.com;
+	s=barclayscom20180719; t=1618911275; i=@barclays.com;
+	bh=lqIP0OQ8E5dwKkBeKUM2j1E7JmXAKuPdontB7JMkNlE=;
+	h=From:To:Subject:Sender:Date:Message-ID:Content-Type:MIME-Version;
+	b=iqCztpFJU+D9fXnXss2nfdkYR/NowRX26rzsmlT81VKeGzzBtuusZaIWQrL6dwgCH
+	 PdFKvQ+YkGrUfDaZo5AJm/17GCL2i8+A5mtddsis9FoZryxIL61XWfMXATkQLiZTQK
+	 HGxEH0XerRcShD5XWiU1aZa/S1dVHtSQUFlAEhf5Vb2xRskbQtZ0ZqH6GEa+7pNLSy
+	 amHQgyB/+q7Zvw7buy/0q6HfsV3rKkaLnLkhLFjEZAe2ztG9w/ludHW215cFpV+Zsf
+	 IMp90jOrLmx79XYI3bnCh4wjxfC2xqlUGyl6FLjERR417CmlNj6CFbA8KzIHC4wnKe
+	 5LmG4dH0MB4fA==
+Received: from [100.112.193.211] (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256 bits))
+	by server-1.bemta.az-a.eu-west-1.aws.symcld.net id 00/34-56778-B20AE706; Tue, 20 Apr 2021 09:34:35 +0000
+X-Env-Sender: Benedict.Hermann@barclays.com
+X-Msg-Ref: server-11.tower-263.messagelabs.com!1618911273!172571!3
+X-Originating-IP: [157.83.97.117]
+X-SYMC-ESS-Client-Auth: outbound-route-from=pass
+X-StarScan-Received:
+X-StarScan-Version: 9.75.3; banners=-,-,-
+X-VirusChecked: Checked
+Received: (qmail 2345 invoked from network); 20 Apr 2021 09:34:34 -0000
+Received: from unknown (HELO IMSMGGCB604P.barclays.com) (157.83.97.117)
+  by server-11.tower-263.messagelabs.com with ECDHE-RSA-AES256-GCM-SHA384 encrypted SMTP; 20 Apr 2021 09:34:34 -0000
+Received: from IMSMGGCCP04P.barclays.com (Unknown_Domain [35.49.84.78])
+	(using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by IMSMGGCB604P.barclays.com (Symantec Messaging Gateway) with SMTP id AC.62.47629.A20AE706; Tue, 20 Apr 2021 10:34:34 +0100 (BST)
+X-AuditID: 0a118867-49b9da800000ba0d-35-607ea02aabdc
+Received: from MUKPBCC1MEG0005.collab.barclayscorp.com (Unknown_Domain [10.250.250.254])
+	by IMSMGGCCP04P.barclays.com (Symantec Messaging Gateway) with SMTP id D6.06.11469.920AE706; Tue, 20 Apr 2021 10:34:33 +0100 (BST)
+Received: from MUKPBCC4XSN0037.collab.barclayscorp.com (Not Verified[10.40.84.45]) by MUKPBCC1MEG0005.collab.barclayscorp.com with Barclays Capital Filter ESMTP (using TLS: TLSv1.2, ECDHE-RSA-AES256-SHA384)
+	id <B607ea0290000>; Tue, 20 Apr 2021 10:34:33 +0100
+Received: from MUKPBCC1XHY0008.collab.barclayscorp.com (22.48.77.26) by
+ MUKPBCC4XSN0037.collab.barclayscorp.com (10.37.66.105) with Microsoft SMTP
+ Server (TLS) id 15.0.1395.4; Tue, 20 Apr 2021 10:34:33 +0100
+Received: from XUKPBCC4XEDG005.collab.barclayscorp.com (10.234.4.40) by
+ MUKPBCC1XHY0008.collab.barclayscorp.com (22.48.77.26) with Microsoft SMTP
+ Server (TLS) id 15.0.1497.2; Tue, 20 Apr 2021 10:34:33 +0100
+Received: from EUR01-HE1-obe.outbound.protection.outlook.com (104.47.0.53) by
+ edge.barclays.com (10.234.4.24) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 20 Apr 2021 10:34:32 +0100
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=B882uFTdKWtXLFthhwu0Anq8rEb5/iXA3dA1xs+bu7B3GB6JhgkyVxKGCOI+L30dEmsMuQdpaIcIHWUWl4QLk5Q52Y+k9OnESEocM7/Yob4ZRWeHgWCwl2WkUjMBHcOH3+Y9kl3DHQ2W8rw2fhW54RtGSJl8I8kb/haOjNesePlVU1AONMEH6/ZfBoliCqYDSTDIaOHFFbIacT7wxlj4GLYk4iQbOFxx/uESBb5OSr8WrqAHgJxgAe70SfDM8BFqIdOCxbCfycBeqr1d2Ioj0VF2Spa/XGgIIe/00kCDGEQHe/J56vCPqXH+iPs4PLVzA1kopzuYQCnN4cLGBi1GFQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=REQUVWVJ8Alqo9uZvPflvWZs1hfybHFqM8v9Srzf2iI=;
+ b=Yf73WkbS2rmbKqUT9Ia9lxFIwHcVzSYcK5hoQYj2eV310ZOumys9wo6ImeSplirBkuVrn3x5aeJ4voFaV9oFx66JWsyek89LtsmfV0bDNgbQspTNkF4ozhj8CjUsuqobp+ocWrjh9AOSltCAK4/+LUgHMVY5iGe2LOcRkFovqCOstB7/yD6mio1EYPjq9b99zaqAWa5SXERY+kd3f/g9H6KBFYDKaRAV38g3mtY202BCFUqaySfpP5yLWFeNVPZ0aMlPbUQ4IkiW4+3hG0FPL6B4dZaDD7ADuYbyXNRrHQRVPKRpkC/8NEVrpJZJObVAEh+eCRn55247xzSKEWEHtA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=barclays.com; dmarc=pass action=none header.from=barclays.com;
+ dkim=pass header.d=barclays.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=barclays.onmicrosoft.com; s=selector1-barclays-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=REQUVWVJ8Alqo9uZvPflvWZs1hfybHFqM8v9Srzf2iI=;
+ b=tAtFj787bRk2tVlqENJ20ZxrRYGsrhTy8lxL/q1ppFGx5/BMc4z53bspaDHm/zrYLl72ZD8IfFfAOOIZtSa3nc2OP0M/ijhOeZ6puLNUdHPTQM9eoDNs+xGEjcEZeaNEc6zZVHgnhB5RcJ9v+EEvlStAX30HsWqoj4z9sao8wj8=
+Received: from AS8PR01MB7749.eurprd01.prod.exchangelabs.com
+ (2603:10a6:20b:2a8::20) by AM6PR01MB5074.eurprd01.prod.exchangelabs.com
+ (2603:10a6:20b:33::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4042.16; Tue, 20 Apr
+ 2021 09:34:30 +0000
+Received: from AS8PR01MB7749.eurprd01.prod.exchangelabs.com
+ ([fe80::41f8:1fba:6903:e303]) by AS8PR01MB7749.eurprd01.prod.exchangelabs.com
+ ([fe80::41f8:1fba:6903:e303%6]) with mapi id 15.20.4042.024; Tue, 20 Apr 2021
+ 09:34:30 +0000
+From: <barclaysitaliankids@barclays.com>
+To: <priips@pec.consob.it>
+Subject: COD CH1102114670 SUB Barclays Bank PLC RISK 4 MAX 1 TYPE Start
+Thread-Topic: COD CH1102114670 SUB Barclays Bank PLC RISK 4 MAX 1 TYPE Start
+Thread-Index: Adc1xysNxHL8CWcVQ369fGk8acxlNA==
+Sender: <benedict.hermann@barclays.com>
+Date: Tue, 20 Apr 2021 09:34:30 +0000
+Message-ID: <AS8PR01MB774926EEDF7B365E77B7237AEB489@AS8PR01MB7749.eurprd01.prod.exchangelabs.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels: MSIP_Label_809883c2-c98e-47bb-9665-f01ec16099d6_Enabled=True;
+ MSIP_Label_809883c2-c98e-47bb-9665-f01ec16099d6_SiteId=c4b62f1d-01e0-4107-a0cc-5ac886858b23;
+ MSIP_Label_809883c2-c98e-47bb-9665-f01ec16099d6_Owner=Benedict.Hermann@barclays.com;
+ MSIP_Label_809883c2-c98e-47bb-9665-f01ec16099d6_SetDate=2021-04-20T09:21:48.9175519Z;
+ MSIP_Label_809883c2-c98e-47bb-9665-f01ec16099d6_Name=Restricted - External;
+ MSIP_Label_809883c2-c98e-47bb-9665-f01ec16099d6_Application=Microsoft Azure
+ Information Protection;
+ MSIP_Label_809883c2-c98e-47bb-9665-f01ec16099d6_Extended_MSFT_Method=Manual;
+ barclaysdc=Restricted - External
+x-ms-exchange-messagesentrepresentingtype: 2
+x-originating-ip: [167.203.22.1]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 74a12a63-c54d-485c-30e5-08d903df7fdf
+x-ms-traffictypediagnostic: AM6PR01MB5074:
+x-microsoft-antispam-prvs: <AM6PR01MB507484ACB804517B73651189EB489@AM6PR01MB5074.eurprd01.prod.exchangelabs.com>
+x-ms-oob-tlc-oobclassifiers: OLM:1728;
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: D9m1LkfLuh3//lLg12xV5AMBOfL/NwDKFpKP6BoY/qwLMATuqArO9xJ6SWp/DvgDVojU6ENqy4QLjACcDNCosC3MbJ5S8wXiKEf6bTHzWt/GrXA6MOW4pVfJiHcTSP61LTOnVc7Zi2NuaMvCxEmzNhWLn4KEdwItjP32tM9ORsNLtYvEK1fr6XQzgljtHB9ba/8cBVJRCHDMNqg5rGPXkElZ/0C1BVibygvznr4k61CjnBwYzZSlA61Zd4mCuvpGJMgACWlzp7FdhX5yTskXT2MuGz6FymbvlLrexJgR4PjTdiIYXaxnIr4KjB6qxFU+Og+9ZFXSdXGaqZjEVSwfaIdq1G5OKBGMXyG5tAjHPKCGw8w5PT6e0QtDHpHygT0LfU/G0fTDTVy7rtYm3GYOJSgon4Clefc8jwlwlWYUwwjsiP/G/3mSCM/uJTkZ0iPmnnwegmVA+M48n5vaRk/zpkEsqAfRMviwR19vAiMc+jVhP6CcVSpeC19muAIBJS670sdnEsTuk5byEI6EFaQtK767zp3zbniWFh0prz8e/3W1vU6Wt1DL3H17LXJMzT7pcqnoifMV8T8JL3DLvs0NQMbOD4SodSIFLQ0WKLJ449V9lsAztBRDm2rZwF2jyBe4s9aIA6yjk3uydK59Taw7YA==
+x-forefront-antispam-report: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:AS8PR01MB7749.eurprd01.prod.exchangelabs.com;PTR:;CAT:NONE;SFS:(4636009)(396003)(136003)(346002)(39860400002)(376002)(366004)(478600001)(10290500003)(26005)(558084003)(9686003)(7846003)(38100700002)(7696005)(6506007)(33656002)(76116006)(6916009)(55016002)(316002)(5660300002)(66946007)(2906002)(66556008)(52536014)(8676002)(186003)(122000001)(8936002)(66446008)(71200400001)(64756008)(66476007)(491001);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata: =?us-ascii?Q?CHb84UqhejzoYM7Q+BfhAPHo4IDP+yysushKyChFTF3A8bgvg8ZA+X6ofLOL?=
+ =?us-ascii?Q?zCCTGPsphW5HE0U0Ez3V6NG7PXbG2qN1JTYFbbkswU4hVhKpSxemQZKuWD74?=
+ =?us-ascii?Q?mnJumweA/jV1J33T3NbN0rZKrwmHJM9Iuw2UFlfJdUysmOrFAxvBfnwXgfzk?=
+ =?us-ascii?Q?HUkmfnCWamXk7rhkmzUdWMdl6/qu4ZPKIXLGqaT5+4HBl0LkgaV/snnska1T?=
+ =?us-ascii?Q?WWpayExg5GNX5PqoR4d1c7q9YcacHrEkkyiK7o4SxdiJmXzxFypaDWQ8QyzO?=
+ =?us-ascii?Q?xKWTghBPlFiVbpONqgcePsNYFJ0Y/3/TWTZjUQWjWOZdUf8jQo7bf3d5YcGs?=
+ =?us-ascii?Q?jcjAWoCq/GoS0G0OkTwYhGghodm58WURsJ9I/51AQy9nN0IvyiZ8a99wmtOf?=
+ =?us-ascii?Q?98sQCzOhB5MNHw+2hmyWnbw44y9wVAVsdzrx0q5fO1Uh6fQhvYQSaSoJJGMm?=
+ =?us-ascii?Q?A7bYljQ55fe/WISt4FxpsGPbo58TmZT2fs1d1Zv5VdyZgjtfVP4bR1Y8Itvs?=
+ =?us-ascii?Q?WeBZMPi6ALpIsAAF0bGtgsj0ckd0WOyxN9j9ztKZf6zyPY1/pbXMuEudj8Sr?=
+ =?us-ascii?Q?oL/np4M8aHSHFVPqdm0UPcTScM9k/JX6iWJS4uNEmB58TmOOx0Z6WiAmPDxb?=
+ =?us-ascii?Q?g5YsHWF03uy6K4h6jSkwDMGkq0Nv3HcUya+kDt9+FMdxCEuMuOLu0SOUBDqf?=
+ =?us-ascii?Q?ikIlt4iMEZzuvuPdGpH186tyUlTPVCwjwh65Erv/+EMdH7t+N+hw5OLr58RC?=
+ =?us-ascii?Q?1Lc94QMHva9I5xufddTtrT43plO0l8StsxP1Jo7P7MtqSj6bB/bDj3O0QMaA?=
+ =?us-ascii?Q?mMFqJVKsPyeVE7VFjWzzOpZ6f/vTkZA6t/m4UNo+n0LG7Ef+nMVckYQbcZ5f?=
+ =?us-ascii?Q?Glc+50e2drsKX+1HIWW7C2eETpmshrZvPFNnCHkvuknd7ZfzNArqMm9Afi0S?=
+ =?us-ascii?Q?P7ed1Ufa27XRkCzrJgf4oeHhXm1/H1qWNlMUDkNSAvb/LGjw673n+SawBJIZ?=
+ =?us-ascii?Q?FUubmgt3daa4K2Rfo0+wAkaR4JANx82J3peM0sE9CFmn3JlQjqVaBa24wedp?=
+ =?us-ascii?Q?xIZN0AeTf+xklAJzbLLPm9BHTB6EZX9/WCKQKSruSSOwWu6/nJ/c3304umFN?=
+ =?us-ascii?Q?CCtWO35C9z8STkSNY4Lit+LdvIRwbSnHqb5ETfcV8oMD1KV3DNX6TTwRwtVy?=
+ =?us-ascii?Q?aYjHNNtsTVAYvXx6HyQfE6Q6mOeJ5WMyn70kCz2j25okARnuRyfVFUzoHjT+?=
+ =?us-ascii?Q?padkb2Q5Z51kGGkzYNeEmof3tpbWU5YBTyDxQSyc5Mmfq1mQ+TRsCJh5/K4w?=
+ =?us-ascii?Q?4MJLSK9/oE8PoRklMe6BqYgs?=
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/alternative;
+	boundary="_000_AS8PR01MB774926EEDF7B365E77B7237AEB489AS8PR01MB7749eurp_"
+MIME-Version: 1.0
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: AS8PR01MB7749.eurprd01.prod.exchangelabs.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 74a12a63-c54d-485c-30e5-08d903df7fdf
+X-MS-Exchange-CrossTenant-originalarrivaltime: 20 Apr 2021 09:34:30.6812
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: c4b62f1d-01e0-4107-a0cc-5ac886858b23
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: Weq2w8SkCr27E6L6X7FDbaPYmR3hIcYgXz5cCq3r3yf7TCjVo5Mjt8PomzKLvu+f0tctxu9tYnwm4b/6sY8+a8mNUZea3iVxqRXGVZZKVfA=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM6PR01MB5074
+X-OriginatorOrg: barclays.com
+X-CFilter-Loop: Reflected
+X-Brightmail-Tracker: H4sIAAAAAAAAA01Sa1BMYRie75zd7exOJ1+r9M5iZJFbsmva5H4bciuN4kdj1MqZimrX7grr
+	MkWRXFIol1LRrqLRxUQqYjGjXcqdqWimGhUbW1OMxm1PZ5vx73mf53mv30eR4nK+hIqJ1zGa
+	eGWsVCDiTZCHBs2Yln8gQlbQzPc33ntILEYrX3zORcEozH2+LlbrqWV0upj4qAXSwA0hodKZ
+	CyPcoy2NX0n1g/m7nw4eJBPRidlpSEgB9oW22u9OaUhEiXE1AT3J78hhYfBjD8EJHxCU5Voc
+	rmQCrIUPEesS41cI6spUnPASQWtutSPFhMDyysxnA4SNJDxLySS5wMyDjvIUAZuPcBWCrO4o
+	VuDhShIy04/yuPwbBGTk1jkCK4KigqKhwQR4Chw22fgsdsMSaGpJIlg8EgdAy+3vDn4tXLZW
+	OLAPHGrutxei7J7J8LZoHUvz8CTotJ0mWJrGSmgy67iBRsEPc8lQRRJ7QFNHHsGdA0NhbaPj
+	NO7Q3f5naDUaJ/Ih9WIqwa12FsGRmj7EubzBfPWcE9sAsCccvLmeo8fCy7xjDksgDCQnkafQ
+	nAv/9eOwCqq/dSIW09gV6s938DjeG/Jr+gQcng7Ggi/kMH56v534n89HTteQ86rAkMCAgGVL
+	/WS+wRXI/ndErqlRVai8vsvHhAgK2d+JIqVudOv+fRFieqtyj57RqMI1O2MZrQkp7HfKICXu
+	kSr754vXhcsVCpnMXknh7+8rk3rQy9N/hotxlFLHbGcYNaMZziMooSSRMPjs/muYMzGMiRN5
+	COmyM4rn3r13Jm0bXdp5M6+NF6cfBIFXZJBtas6WgAM4VJjwkyiw2Zb2zorTo3q/sBxJs/io
+	V78sh+5bbgw5IU+InVExqF70ItKzq/Dk6rnGvy1FWSZJsZPLmqzf7cU/Lj1Wp5WseXLly+EM
+	n5KNx1c1jD4dnUxXPt+8xPlR2Z2c+tB5U6es8Oxap6oa8G42/rp7odtWfOT2jl5RwviavQ0p
+	6f2Gkgdux8ZnB7nGZHpV3bgcNkL2vjXPJbsj+LXcYH1z6Y/Qo89qzvZbYBuTXTpQ+dhCbXK5
+	rm9KEum7d51RWy3PxLd6DOOetIXz84sbVKXXSNdPUp42WimfRmq0yn84FpIOxAMAAA==
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFupileLIzCtJLcpLzFFi42Lh+vXrn67mgroEg8XPLCyW7TvM5MDocfHV
+	XMYAxigum5TUnMyy1CJ9uwSujNPn3zEXHLSpOPOribmBsde8i5GTQ0LAROLXvbdMXYxcHEIC
+	dxklNsw9zQ7htDBJvFlymBGkSkjgMqPE/g35EIlLjBL35+6CajnEKHH68ilWEIdRYBmzxNnW
+	ScwQzikWiScbW9lA+hkFdjBKTHuZDpJgEdjKLDGpv5MFon8dk8TEufuhnDeMEisWrmAGaWET
+	0JBoO/SBFcQWEZCSuHWnkQnEFhZwl7iz/RtU3Edi0ZtNULaeRPPtL0CDOIBq1CWurfAHCbMI
+	qEo8/zCZCSTMK5AocetUCcRBYhLfT60Bm8gsIC5x68l8JkhwCEgs2XOeGcIWlXj5+B/Ya7wC
+	DawSHbM7mCBem8oo0b77EyNElY7EqeUz2EEWSAgoSDRtDoIIy0pcmt8NVeIr8bWlEWqolsTu
+	gw2sEHaBxMO/txgnMJrNQnIHhJ0vsev9c0YQm1dAUOLkzCcsEHEdiQW7P7FB2NoSyxa+Zoax
+	zxx4zIQsvoCRfRUjj6dvsK+7u7NzgIFJwCZGYHpRNgzx28HYtjzzECMTByMw+jiYlUR479fW
+	JAjxpiRWVqUW5ccXleakFh9ilOZgURLnLdnhnCAkkJ5YkpqdmlqQWgSTZeLglGpg1P134Vht
+	wCs7/1kRb7IlKi9eW+Q7Z9cp8WeRL6f+mPAq+0XXNU8ph8T0x8HN12/bCB/s92PR0z3gU/pg
+	fezjOfM/HtJMOsKnMsfsZ8znafav37xJ7H8Wl39r1na/k0cb/UqusAStmJD0d3fEWc+UILfA
+	ZXF/kqMuetyQZJrkoCq+60BBUL1ughJLcUaioRZzUXEiAA3LYC8dAwAA
+
+--_000_AS8PR01MB774926EEDF7B365E77B7237AEB489AS8PR01MB7749eurp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Notify Period End: 23/04/2024
+
+
+Restricted - External
+
+_________________________________________________________________________=
+_________________________________________________________________________=
+_________________________________________________________________________=
+______
+=93This message is for information purposes only, it is not a recommendat=
+ion, advice, offer or solicitation to buy or sell a product or service no=
+r an official confirmation of any transaction. It is directed at persons =
+who are professionals and is not intended for retail customer use. Intend=
+ed for recipient only. This message is subject to the terms at: www.barcl=
+ays.com/emaildisclaimer.
+
+For important disclosures, please see: www.barclays.com/salesandtradingdi=
+sclaimer regarding market commentary from Barclays Sales and/or Trading, =
+who are active market participants; https://www.investmentbank.barclays.c=
+om/disclosures/barclays-global-markets-disclosures.html regarding our sta=
+ndard terms for the Investment Bank of Barclays where we trade with you i=
+n principal-to-principal wholesale markets transactions; and in respect o=
+f Barclays Research, including disclosures relating to specific issuers, =
+please see http://publicresearch.barclays.com.=94 =20
+_________________________________________________________________________=
+_________________________________________________________________________=
+_________________________________________________________________________=
+______
+If you are incorporated or operating in Australia, please see https://www=
+.home.barclays/disclosures/importantapacdisclosures.html for important di=
+sclosure.
+_________________________________________________________________________=
+_________________________________________________________________________=
+_________________________________________________________________________=
+______
+How we use personal information  see our privacy notice https://www.inves=
+tmentbank.barclays.com/disclosures/personalinformationuse.html=20
+_________________________________________________________________________=
+_________________________________________________________________________=
+_________________________________________________________________________=
+______
+
+--_000_AS8PR01MB774926EEDF7B365E77B7237AEB489AS8PR01MB7749eurp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-mi=
+crosoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:wo=
+rd" xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D=
+"http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-asci=
+i">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">=
+
+<style><!--
+/* Font Definitions */
+@font-face
+=09{font-family:"Cambria Math";
+=09panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+=09{font-family:Calibri;
+=09panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+=09{margin:0cm;
+=09margin-bottom:.0001pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+=09{mso-style-priority:99;
+=09color:#0563C1;
+=09text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+=09{mso-style-priority:99;
+=09color:#954F72;
+=09text-decoration:underline;}
+span.EmailStyle17
+=09{mso-style-type:personal-compose;
+=09font-family:"Calibri",sans-serif;
+=09color:windowtext;}
+.MsoChpDefault
+=09{mso-style-type:export-only;
+=09font-family:"Calibri",sans-serif;
+=09mso-fareast-language:EN-US;}
+@page WordSection1
+=09{size:612.0pt 792.0pt;
+=09margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+=09{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-GB" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Notify Period End: 23/04/2024=
+<o:p></o:p></span></p>
+<br>
+<p class=3D"msipfootereab17a6a" align=3D"Center" style=3D"margin:0"><span=
+=20style=3D"font-size:10.0pt;font-family:Calibri;color:#000000">Restricte=
+d - External</span></p>
+</div>
+
+<P><SPAN lang=3DEN-US=20
+style=3D"mso-ansi-language: EN-US">______________________________________=
+_________________________________________________________________________=
+_________________________________________________________________________=
+_________________________________________<BR>=93This=20
+message is for information purposes only, it is not a recommendation, adv=
+ice,=20
+offer or solicitation to buy or sell a product or service nor an official=
+=20
+confirmation of any transaction. It is directed at persons who are profes=
+sionals=20
+and is not intended for retail customer use. Intended for recipient only.=
+=20This=20
+message is subject to the terms at: <A=20
+href=3D"http://www.barclays.com/emaildisclaimer">www.barclays.com/emaildi=
+sclaimer</A>.</O:P></SPAN></P>
+<P><SPAN lang=3DEN-US style=3D"mso-ansi-language: EN-US"><O:P>For importa=
+nt=20
+disclosures, please see: <A=20
+href=3D"http://www.barclays.com/salesandtradingdisclaimer">www.barclays.c=
+om/salesandtradingdisclaimer</A>=20
+regarding market commentary from Barclays Sales and/or Trading, who are a=
+ctive=20
+market participants; <A=20
+href=3D"https://www.investmentbank.barclays.com/disclosures/barclays-glob=
+al-markets-disclosures.html">https://www.investmentbank.barclays.com/disc=
+losures/barclays-global-markets-disclosures.html</A>=20
+regarding our standard terms for the Investment Bank of Barclays where we=
+=20trade=20
+with you in principal-to-principal wholesale markets transactions; and in=
+=20
+respect of Barclays Research, including disclosures relating to specific =
+
+issuers, please see <A=20
+href=3D"http://publicresearch.barclays.com">http://publicresearch.barclay=
+s.com</A>.=94&nbsp;=20
+<BR>_____________________________________________________________________=
+_________________________________________________________________________=
+_________________________________________________________________________=
+__________<BR>If=20
+you are incorporated or operating in Australia, please see <A=20
+href=3D"https://www.home.barclays/disclosures/importantapacdisclosures.ht=
+ml">https://www.home.barclays/disclosures/importantapacdisclosures.html</=
+A>=20
+for important=20
+disclosure.<BR>__________________________________________________________=
+_________________________________________________________________________=
+_________________________________________________________________________=
+_____________________<BR>How=20
+we use personal information&nbsp; see our privacy notice <A=20
+href=3D"https://www.investmentbank.barclays.com/disclosures/personalinfor=
+mationuse.html">https://www.investmentbank.barclays.com/disclosures/perso=
+nalinformationuse.html</A>=20
+<BR>_____________________________________________________________________=
+_________________________________________________________________________=
+_________________________________________________________________________=
+__________</O:P></SPAN></P>
+</body>
+</html>
+
+--_000_AS8PR01MB774926EEDF7B365E77B7237AEB489AS8PR01MB7749eurp_--
+
+------=_Part_228774688_2026467114.1618911278964--
+
+------=_Part_228774691_1270470930.1618911278968
+Content-Type: application/pkcs7-signature; name=smime.p7s; smime-type=signed-data
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIAwggWMMIIE
+dKADAgECAhB6e/NzNo7JSbtqHg6wXokyMA0GCSqGSIb3DQEBCwUAMIGQMQswCQYDVQQGEwJJVDEN
+MAsGA1UEBwwEUm9tYTEmMCQGA1UECgwdQWdlbnppYSBwZXIgbCdJdGFsaWEgRGlnaXRhbGUxNzA1
+BgNVBAsMLkFyZWEgU29sdXppb25pIHBlciBsYSBQdWJibGljYSBBbW1pbmlzdHJhemlvbmUxETAP
+BgNVBAMMCEFnSUQgQ0ExMB4XDTIwMTAwNzE0MzYzM1oXDTIzMTAwNzE0MzYzM1owbjELMAkGA1UE
+BhMCSVQxDTALBgNVBAgMBFJvbWExDTALBgNVBAcMBFJvbWExGDAWBgNVBAoMD0luZm9DZXJ0IFMu
+cC5BLjEnMCUGA1UEAwweUG9zdGEgQ2VydGlmaWNhdGEgTGVnYWxtYWlsIDI3MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEA30NNw1BsVm752XPbggqVrtKJAuNLTdc30m8FHD6Vj8m7/EK1
+qgUBrM+7nBIlxGd1OC7WByQ5RWxaR9IJ5r2rTIo3UtLOYe7Bc+2SdhCzcytKcdyMA7WOjR6YRhNa
+44VWt6yFQV8JpsnDUM5K8utoNMqWuchLqOSZ657eO9n7DIjBVzPytM0iVrQxkKWngl/tVmo68zU/
+JuhBNLrtQianPjQ57mm/7hb/1mKXg8yJY8kp+kOFXnwNDPGC0R4EN6CkzmBpEg15kx529j65wS/n
+EzLTumCEHz0pfujB/v9V4w57IR0GoyNkQXOEL9Yp7JNLubDpUicK9x4KK4n1P3xpawIDAQABo4IC
+ATCCAf0wNwYIKwYBBQUHAQEEKzApMCcGCCsGAQUFBzABhhtodHRwOi8vY2ExLmFnaWQuZ292Lml0
+L09DU1AwHQYDVR0OBBYEFDe+1JpOEDIAFpUSv/BTSd7xZO5OMB8GA1UdIwQYMBaAFKX9hQUOw/HW
+ZUogbOLbTWCTK4qgME8GA1UdIARIMEYwRAYGK0wQAwEBMDowOAYIKwYBBQUHAgEWLGh0dHA6Ly93
+d3cuYWdpZC5nb3YuaXQvY2VydGlmaWNhdGktZmlybWEtcGVjMIHgBgNVHR8EgdgwgdUwgbCgga2g
+gaqGgadsZGFwOi8vY2ExLmFnaWQuZ292Lml0L2NuPUFnSUQlMjBDQTEsb3U9QXJlYSUyMFNvbHV6
+aW9uaSUyMHBlciUyMGxhJTIwUHViYmxpY2ElMjBBbW1pbmlzdHJhemlvbmUsbz1BZ2VuemlhJTIw
+cGVyJTIwbCUyN0l0YWxpYSUyMERpZ2l0YWxlLEM9SVQ/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlz
+dDAgoB6gHIYaaHR0cDovL2NhMS5hZ2lkLmdvdi5pdC9DUkwwDgYDVR0PAQH/BAQDAgeAMBMGA1Ud
+JQQMMAoGCCsGAQUFBwMEMCkGA1UdEQQiMCCBHnBvc3RhLWNlcnRpZmljYXRhQGxlZ2FsbWFpbC5p
+dDANBgkqhkiG9w0BAQsFAAOCAQEAVArMFnR48KNbXke5STiGoUqsXM+cDwoKOP2/RYxLmWXvLBR7
+dOJIFfxxKge7TwlipnlI6BEpiSBcxd1ruzc+5clHtBffDd9NbSvz+HySPCoB75+HigHnqbE3xb5m
+I4jzec41Sv7CpCufNjoKEjC/hck+acB5AkZWhJlc20fP82OJxCXGgRy9Qlkh60l8OuJf/hZJtRok
+bWY5iS6x9HLNieygnq2DOvAAXZY20dqNKvbIj01J/v9QvFhDCi4B3ZUNDf5f9yGLLN0aRCdH1UmJ
+3DVqdQ7yEDF0nh9BGQTo0rhSsmUIcEsUp6m0L+t1ocfgeNbbXEGk5L3V/erBnmwWATCCEbwwgg+k
+oAMCAQICCEmBpuNTz9qlMA0GCSqGSIb3DQEBCwUAMGsxCzAJBgNVBAYTAklUMQ4wDAYDVQQHDAVN
+aWxhbjEjMCEGA1UECgwaQWN0YWxpcyBTLnAuQS4vMDMzNTg1MjA5NjcxJzAlBgNVBAMMHkFjdGFs
+aXMgQXV0aGVudGljYXRpb24gUm9vdCBDQTAeFw0xNzEwMTIxMzI5NTNaFw0yNzEwMTIxMzI5NTNa
+MIGQMQswCQYDVQQGEwJJVDENMAsGA1UEBwwEUm9tYTEmMCQGA1UECgwdQWdlbnppYSBwZXIgbCdJ
+dGFsaWEgRGlnaXRhbGUxNzA1BgNVBAsMLkFyZWEgU29sdXppb25pIHBlciBsYSBQdWJibGljYSBB
+bW1pbmlzdHJhemlvbmUxETAPBgNVBAMMCEFnSUQgQ0ExMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEA1TafReuLzB6kjYBqvMlUbkT3+RCleG4ttfexCA3RGNN+G88H1/BdGt+9qvm6mxYa
+/A+5QHZncDaOx4NrWFu8d55+SR+MpP9SRSJ2pkQqmtvXvq3/Mmg1UjuWBEKOPP3QHJWNQcgW7BBQ
+c5Uxt8fJ4FalNCvNizGeh9EpF6ndkRIuWEpqWfj/z+tIgLGcPwql5NDjVCfxVimPRFXQ1TT6T1WB
+H0L8rjNfXPgCicx6ZxE//wHVcXKOTYtqpRce3wsHDpZv45g76f2tcpPykPKv3/N36RInHEjaC+ij
+J7te3fEkao4OSlmu7dDcZvlzxPZRnaacpnA5yI3in/m1w5oLVwIDAQABo4INPDCCDTgwEgYDVR0T
+AQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAQYwTgYDVR0gBEcwRTBDBgUrTBADATA6MDgGCCsG
+AQUFBwIBFixodHRwOi8vd3d3LmFnaWQuZ292Lml0L2NlcnRpZmljYXRpLWZpcm1hLXBlYzAdBgNV
+HQ4EFgQUpf2FBQ7D8dZlSiBs4ttNYJMriqAwgeMGA1UdHwSB2zCB2DCBlqCBk6CBkIaBjWxkYXA6
+Ly9sZGFwMDcuYWN0YWxpcy5pdC9jbiUzZEFjdGFsaXMlMjBBdXRoZW50aWNhdGlvbiUyMFJvb3Ql
+MjBDQSxvJTNkQWN0YWxpcyUyMFMucC5BLiUyZjAzMzU4NTIwOTY3LGMlM2RJVD9jZXJ0aWZpY2F0
+ZVJldm9jYXRpb25MaXN0O2JpbmFyeTA9oDugOYY3aHR0cDovL2NybDA3LmFjdGFsaXMuaXQvUmVw
+b3NpdG9yeS9BVVRILVJPT1QvZ2V0TGFzdENSTDBBBggrBgEFBQcBAQQ1MDMwMQYIKwYBBQUHMAGG
+JWh0dHA6Ly9vY3NwMDcuYWN0YWxpcy5pdC9WQS9BVVRILVJPT1QwHwYDVR0jBBgwFoAUUtiIOsif
+eGbtifN7OHCUyQICNtAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMEMIILOAYDVR0eBIIL
+LzCCCyugggr1MA2BC2FnaWQuZ292Lml0MBmBF2NlcnQuaW5mb3JtYXRpY2EuYWNpLml0MBGBD2Nl
+cnQuaW50ZXJuby5pdDAMgQplbWFyY2hlLml0MBCBDmZhc3R3ZWItcGVjLml0MBWBE2dlc3RvcmVw
+ZWMudW5pbmEuaXQwDIEKa21haWxlci5pdDAOgQxsZWdhbG1haWwuaXQwEIEOcGNlcnQuc29nZWku
+aXQwEIEOcGVjLmFjdGFsaXMuaXQwEIEOcGVjLmFuY2l0ZWwuaXQwDoEMcGVjLmFydWJhLml0MBaB
+FHBlYy5iYXNpbGljYXRhbmV0Lml0MA+BDXBlYy1lbWFpbC5jb20wD4ENcGVjLm51bWVyYS5pdDAS
+gRBwZWMucG9zdGVjZXJ0Lml0MBaBFHBlYy5wb3N0ZWl0YWxpYW5lLml0MBWBE3BlYy5ydXBhci5w
+dWdsaWEuaXQwFoEUcG9zdGFjZXJ0LmNlZGFjcmkuaXQwH4EdcG9zdGFjZXJ0aWZpY2F0YS5ub3Rh
+cmlhdG8uaXQwEoEQcG9zdGFjZXJ0Lml0Lm5ldDAOgQxwb3N0ZWNlcnQuaXQwFYETc2ljdXJlenph
+cG9zdGFsZS5pdDAQgQ50ZWxlY29tcG9zdC5pdDAXgRV0cnVzdGVkbWFpbC5pbnRlc2EuaXQwDIEK
+dHd0Y2VydC5pdDARgQ96dWNjaGV0dGlwZWMuaXQwEoIQYWdpZC1jYTEtdGVzdC5pdDANggthZ2lk
+Lmdvdi5pdDAfgh1hdmFuemFtZW50b2RpZ2l0YWxlLml0YWxpYS5pdDAMggpjZXJ0LXBhLml0MAqC
+CGNuaXBhLml0MBuCGWZhc2NpY29sb3Nhbml0YXJpby5nb3YuaXQwEYIPaW5kaWNlcGEuZ292Lml0
+MA+CDXBhZ29wYS5nb3YuaXQwGYIXcG9zdGFjZXJ0aWZpY2F0YS5nb3YuaXQwDYILcm5kdC5nb3Yu
+aXQwD4INc3Bjb29wLmdvdi5pdDANggtzcGlkLmdvdi5pdDAOggxpY3NwYy5nb3YuaXQwUKROMEwx
+CzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMR8wHQYDVQQKDBZBQ0kg
+SW5mb3JtYXRpY2EgUy5wLkEuMFmkVzBVMQswCQYDVQQGEwJJVDEQMA4GA1UECAwHQmVyZ2FtbzEZ
+MBcGA1UEBwwQUG9udGUgU2FuIFBpZXRybzEZMBcGA1UECgwQQXJ1YmEgUEVDIFMucC5BLjBXpFUw
+UzELMAkGA1UEBhMCSVQxEDAOBgNVBAgMB0JlcmdhbW8xGTAXBgNVBAcMEFBvbnRlIFNhbiBQaWV0
+cm8xFzAVBgNVBAoMDkFjdGFsaXMgUy5wLkEuMFekVTBTMQswCQYDVQQGEwJJVDENMAsGA1UECAwE
+Um9tYTENMAsGA1UEBwwEUm9tYTEmMCQGA1UECgwdQWdlbnppYSBwZXIgbCdJdGFsaWEgRGlnaXRh
+bGUwSKRGMEQxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMRcwFQYD
+VQQKDA5BbmNpdGVsIFMucC5BLjBPpE0wSzELMAkGA1UEBhMCSVQxDjAMBgNVBAgMBVBhcm1hMRMw
+EQYDVQQHDApDb2xsZWNjaGlvMRcwFQYDVQQKDA5DZWRhY3JpIFMucC5BLjBbpFkwVzELMAkGA1UE
+BhMCSVQxDTALBgNVBAgMBFJvbWExDTALBgNVBAcMBFJvbWExKjAoBgNVBAoMIUNvbnNpZ2xpbyBO
+YXppb25hbGUgZGVsIE5vdGFyaWF0bzBMpEowSDELMAkGA1UEBhMCSVQxDzANBgNVBAgMBk1pbGFu
+bzEPMA0GA1UEBwwGTWlsYW5vMRcwFQYDVQQKDA5GYXN0d2ViIFMucC5BLjBKpEgwRjELMAkGA1UE
+BhMCSVQxDzANBgNVBAgMBk1pbGFubzEPMA0GA1UEBwwGQXNzYWdvMRUwEwYDVQQKDAxJVG5ldCBT
+LnIubC4wT6RNMEsxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZUb3Jpbm8xDzANBgNVBAcMBlRvcmlu
+bzEaMBgGA1UECgwRSW4uVGUuUy5BLiBTLnAuQS4wSaRHMEUxCzAJBgNVBAYTAklUMQ0wCwYDVQQI
+DARSb21hMQ0wCwYDVQQHDARSb21hMRgwFgYDVQQKDA9JbmZvQ2VydCBTLnAuQS4wUqRQME4xCzAJ
+BgNVBAYTAklUMQ0wCwYDVQQIDARCYXJpMRIwEAYDVQQHDAlWYWxlbnphbm8xHDAaBgNVBAoME0lu
+bm92YVB1Z2xpYSBTLnAuQS4wVKRSMFAxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZNaWxhbm8xDzAN
+BgNVBAcMBk1pbGFubzEfMB0GA1UECgwWS1BOUXdlc3QgSXRhbGlhIFMucC5BLjBRpE8wTTELMAkG
+A1UEBhMCSVQxDzANBgNVBAgMBkFuY29uYTETMBEGA1UEBwwKU2VuaWdhbGxpYTEYMBYGA1UECgwP
+TmFtaXJpYWwgUy5wLkEuMGOkYTBfMQswCQYDVQQGEwJJVDEQMA4GA1UECAwHU2Fzc2FyaTEQMA4G
+A1UEBwwHU2Fzc2FyaTEsMCoGA1UECgwjTnVtZXJhIFNpc3RlbWkgZSBJbmZvcm1hdGljYSBTLnAu
+QS4wT6RNMEsxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMR4wHAYD
+VQQKDBVQb3N0ZSBJdGFsaWFuZSBTLnAuQS4wUqRQME4xCzAJBgNVBAYTAklUMRAwDgYDVQQIDAdQ
+b3RlbnphMRAwDgYDVQQHDAdQb3RlbnphMRswGQYDVQQKDBJSZWdpb25lIEJhc2lsaWNhdGEwTKRK
+MEgxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZBbmNvbmExDzANBgNVBAcMBkFuY29uYTEXMBUGA1UE
+CgwOUmVnaW9uZSBNYXJjaGUwUqRQME4xCzAJBgNVBAYTAklUMRAwDgYDVQQIDAdGaXJlbnplMRAw
+DgYDVQQHDAdGaXJlbnplMRswGQYDVQQKDBJSZWdpc3Rlci5pdCBTLnAuQS4wRqREMEIxCzAJBgNV
+BAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMRUwEwYDVQQKDAxTb2dlaSBTLnAu
+QS4wSKRGMEQxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZNaWxhbm8xDzANBgNVBAcMBk1pbGFubzET
+MBEGA1UECgwKVFdUIFMucC5BLjBlpGMwYTELMAkGA1UEBhMCSVQxDTALBgNVBAgMBFJvbWExEDAO
+BgNVBAcMB1BvbWV6aWExMTAvBgNVBAoMKFRlbGVjb20gSXRhbGlhIFRydXN0IFRlY2hub2xvZ2ll
+cyBTLnIubC4waqRoMGYxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZOYXBvbGkxDzANBgNVBAcMBk5h
+cG9saTE1MDMGA1UECgwsVU5JVkVSU0lUQSBERUdMSSBTVFVESSBESSBOQVBPTEkgRkVERVJJQ08g
+SUkwSqRIMEYxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARMb2RpMQ0wCwYDVQQHDARMb2RpMRkwFwYD
+VQQKDBBadWNjaGV0dGkgUy5wLkEuoTAwCocIAAAAAAAAAAAwIocgAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAwDQYJKoZIhvcNAQELBQADggIBACeehKY7i4x71aIHNT9a+TnsJhtyk4a8
+r8iSHAToQAahthWtHU0WBAjJWCYAU2ufrmzx58boR4jUE7SD5uz0A9HyQ8hGfTZhpuSt1A4MjgUO
+XfawlXFI3TO5igQ+Yne2wzWZuVikL/tv0JcG0Qu3zbH1ZFGZWX/Y5gineVP0/ElosBa7zOdTr2zE
+AA9CT/pXfTiebpnj5SoCKt8w7lQiA0/R+XOGYHiIjkQ1RoenePUfVp7cA0TQP1KBJiXItPl9GfuP
+EUuAeD6a4+l9+ifkXPCUag4zfzRYzctpINhZ2xrdIFstVBnWYCt4Bzef0LK+kDfbdEDu8lZ9R4L9
+qKODytKXmfSDSNOfP4F/KyLY2qGcFYLIxWIO/4NHkF3xPF4w0lfYUwTXddHSzm0wndNPXMg6M4oL
+cBghf777a2j+y46qpYLlK4t4VyloE3a5gleCUVLYYeke2GK7U94E/QYBhy5Mim3MpHE5ax0gBHqI
+9H1rShBu3dlm8LA8mklTCgSZoGBD2WVz9u/oXc2c1JzxpBaiYdFIKs4mIHN4UusnOxSOp8euBqcZ
+fBHlnav6TQoTD7vY86gdEEhOiz0Qjzm4gaEGLEqMmlVBxin1xtdn3LVMVIKm+iKiNHnUdEtPs8rz
+rS3EoW1SKmxUGCUDanYwm51Jrc3Hw3gskfpNJzB/wcHFAAAxggMfMIIDGwIBATCBpTCBkDELMAkG
+A1UEBhMCSVQxDTALBgNVBAcMBFJvbWExJjAkBgNVBAoMHUFnZW56aWEgcGVyIGwnSXRhbGlhIERp
+Z2l0YWxlMTcwNQYDVQQLDC5BcmVhIFNvbHV6aW9uaSBwZXIgbGEgUHViYmxpY2EgQW1taW5pc3Ry
+YXppb25lMREwDwYDVQQDDAhBZ0lEIENBMQIQenvzczaOyUm7ah4OsF6JMjAJBgUrDgMCGgUAoIIB
+TjAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMTA0MjAwOTM0Mzha
+MCMGCSqGSIb3DQEJBDEWBBS4FXueNEZaG2/EqKJzyC9j5bvHHjA0BgkqhkiG9w0BCQ8xJzAlMAoG
+CCqGSIb3DQMHMA4GCCqGSIb3DQMCAgIAgDAHBgUrDgMCBzCBuAYLKoZIhvcNAQkQAgsxgaiggaUw
+gZAxCzAJBgNVBAYTAklUMQ0wCwYDVQQHDARSb21hMSYwJAYDVQQKDB1BZ2VuemlhIHBlciBsJ0l0
+YWxpYSBEaWdpdGFsZTE3MDUGA1UECwwuQXJlYSBTb2x1emlvbmkgcGVyIGxhIFB1YmJsaWNhIEFt
+bWluaXN0cmF6aW9uZTERMA8GA1UEAwwIQWdJRCBDQTECEHp783M2jslJu2oeDrBeiTIwDQYJKoZI
+hvcNAQEBBQAEggEAVVI3Y2mwZHpFyal9DAkXjtYZV/LEP2fwpzW4sAbxXctEBJFGP+XSLf94TE9U
+tnU2mfNsgv//5kBGHe0vjcK4/9c/rpAsqMBGHBD6bplp0xCpMiCzyAC3IYPWTy6DZaeFA/quEMJa
+4tC4dUsA0z1h+VXRx3Bi0sKSFS9Ljjg0pLzq2N4C8hziu0k33bj/wQZaHFtBrJzqUuKspErp2KIt
+kScqyVfldAKIvSZrZWD5JRxmqryFzHSyUvCpJl3fcDlkX09pjGgYAAhtbXGTzt/1+mKDGHUksO9Q
+Ajd9pQT8joRquJ7ag/5DxVQxZd8BOblk76QOBNZxwCtFNRpabdCl+wAAAAAAAA==
+------=_Part_228774691_1270470930.1618911278968--

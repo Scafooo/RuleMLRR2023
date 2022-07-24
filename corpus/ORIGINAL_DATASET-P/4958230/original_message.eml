@@ -1,0 +1,473 @@
+Return-Path: <simon.wettstein@ubs.com>
+Original-Recipient: rfc822;priips@pec.consob.it
+Received: from pecengine22.print.infocert.it (10.114.64.144) by pecpchig21.print.infocert.it (9.0.034) id 606EEB5D000E6B25 for priips@pec.consob.it; Fri, 23 Apr 2021 08:32:10 +0200
+Received: by pecengine22.print.infocert.it (8.6.147.01) id 601D8B41026C6850 for M4750746@userid.local; Fri, 23 Apr 2021 08:32:10 +0200
+Received: from nzurc707pn2.ubsprod.msad.ubs.net ([10.78.80.190]) by nzurc707pn2.UBSPROD.MSAD.UBS.NET ([10.78.80.190]) with mapi id 15.01.2176.012; Fri, 23 Apr 2021 08:32:06 +0200
+Received: from nzurc707pn2.ubsprod.msad.ubs.net (10.78.80.190) by nzurc707pn8.UBSPROD.MSAD.UBS.NET (10.78.80.193) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id 15.1.2176.2; Fri, 23 Apr 2021 08:32:06 +0200
+Received: from nzurc707pn8.UBSPROD.MSAD.UBS.NET (nzurc707pn8.ubsprod.msad.ubs.net [10.78.80.193]) (using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA (256/256 bits)) (No client certificate requested) by a302-4137-0471.zur.swissbank.com (Postfix) with ESMTPS id 4FRPbC2hkCzYkmL4 for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: from a302-4137-0471.zur.swissbank.com (localhost [10.0.0.1]) by a302-4137-0471.zur.swissbank.com (Postfix) with ESMTP id 4FRPbC3BnGz1qxpC for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: by a302-4137-0471.zur.swissbank.com (Postfix, from userid 103) id 4FRPbC44Mwz1qxpB; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: from a302-4137-0471.zur.swissbank.com (a302-4137-0471.zur.swissbank.com [10.82.125.76]) by a301-5456-3202.rzud.urdorf.ubs.ch (Postfix) with ESMTP id 4FRPbC4B4MzBrNn for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (MEST)
+Received: from a301-5456-3202.rzud.urdorf.ubs.ch (localhost [10.0.0.1]) by a301-5456-3202.rzud.urdorf.ubs.ch (Postfix) with ESMTP id 4FRPbC4VWxz1xnf for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (MEST)
+Received: by a301-5456-3202.rzud.urdorf.ubs.ch (Postfix, from userid 103) id 4FRPbC4hwjz1xnk; Fri, 23 Apr 2021 08:32:07 +0200 (MEST)
+Received: from a301-5456-3202.rzud.urdorf.ubs.ch (unknown [10.82.59.114]) by dmz-urd-gw2-ib.ubs.com (Postfix) with ESMTP id 4FRPbC4wwTzYkhYM for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: by dmz-urd-gw2-ib.ubs.com (Postfix, from userid 103) id 4FRPbC71GfzYkhYN; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: from dmz-urd-gw2-ib.ubs.com ([127.0.0.1]) by localhost (a302-3645-9415.zur.ubs.net [127.0.0.1]) (amavisd-new, port 10024) with ESMTP id kY9n8QpBKaV2 for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:08 +0200 (CEST)
+Received: from localhost (localhost [127.0.0.1]) by postfix.amavisd (Postfix) with ESMTP id 4FRPbD0PBWzYkhYM for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:08 +0200 (CEST)
+Received: from dmz-urd-gw2-ib.ubs.com (165.222.180.159) by mx.cert.legalmail.it (5.8.715.01) id 606ACD37006ABE26 for priips@pec.consob.it; Fri, 23 Apr 2021 08:32:08 +0200
+Date: Fri, 23 Apr 2021 08:32:10 +0200
+From: "Per conto di: simon.wettstein@ubs.com" <posta-certificata@legalmail.it>
+Reply-To: sh-italy-structuredproducts@ubs.com
+To: <sh-italy-structuredproducts@ubs.com>, <priips@pec.consob.it>
+Message-ID: <46ede9e2e639492b9151719917e45add@ubs.com>
+Subject: ANOMALIA MESSAGGIO: COD CH1108500104 SUB UBS AG London Branch RISK 6 MAX 1 CLASS Securities TYPE START
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-1; boundary="----=_Part_233577823_1116816899.1619159530196"
+X-Trasporto: errore
+
+------=_Part_233577823_1116816899.1619159530196
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_233577820_2038554542.1619159530192"
+
+------=_Part_233577820_2038554542.1619159530192
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_233577821_1032083156.1619159530192"
+
+------=_Part_233577821_1032083156.1619159530192
+Content-Type: text/plain; charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Anomalia nel messaggio
+
+Il giorno 23/04/2021 alle ore 08:32:10 (+0200) =E8 stato ricevuto=20
+il messaggio "COD CH1108500104 SUB UBS AG London Branch RISK 6 MAX 1 CLASS =
+Securities TYPE START" proveniente da "simon.wettstein@ubs.com"=20
+ed indirizzato a:
+
+
+
+priips@pec.consob.it
+
+
+sh-italy-structuredproducts@ubs.com
+
+
+
+Tali dati non sono stati certificati per il seguente errore:
+
+
+Messaggio proveniente da utente non certificato
+
+
+Il messaggio originale =E8 incluso in allegato.
+
+
+------------------------------------------------
+
+Anomaly message
+
+On 23/04/2021 at 08:32:10 (+0200) has been received the message "COD CH1108=
+500104 SUB UBS AG London Branch RISK 6 MAX 1 CLASS Securities TYPE START" s=
+ent by "simon.wettstein@ubs.com" and addressed to:
+
+
+priips@pec.consob.it
+
+
+sh-italy-structuredproducts@ubs.com
+
+
+These data have not been certified for the following error:
+
+Messaggio proveniente da utente non certificato
+=20
+The original message is included in attached.
+
+------=_Part_233577821_1032083156.1619159530192
+Content-Type: text/html; charset="ISO-8859-1"
+Content-Transfer-Encoding: 7bit
+
+<HTML><HEAD><TITLE>Anomalia nel messaggio</TITLE></HEAD>
+<BODY>
+
+<H1><p><font style="font-family: Arial; font-size: 20px; font-weight: 400; line-height:17.3px; text-align: left;"><b>Anomalia nel messaggio</b></font></p></H1>
+
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">Il giorno 23/04/2021 alle ore 08:32:10 (+0200) &egrave; stato ricevuto 
+il messaggio "COD CH1108500104 SUB UBS AG London Branch RISK 6 MAX 1 CLASS Securities TYPE START" proveniente da "simon.wettstein@ubs.com" 
+ed indirizzato a:</font><br>
+<table border="0" cellpadding="0" cellpadding="0" style="border-spacing: 0;">
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">priips@pec.consob.it</font></td></tr>
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">sh-italy-structuredproducts@ubs.com</font></td></tr>
+</table>
+<font style="font-family: Arial;  font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">
+Tali dati non sono stati certificati per il seguente errore:<br>
+Messaggio proveniente da utente non certificato</font></p>
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">Il messaggio originale &egrave; incluso in allegato.</font></p>
+
+
+<hr />
+<p><font style="font-family: Arial; font-size: 20px; font-weight: 400; line-height:17.3px; text-align: left;"><b>Anomaly message</b></font></p>
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">On 23/04/2021 at 08:32:10 (+0200) has been received the message "COD CH1108500104 SUB UBS AG London Branch RISK 6 MAX 1 CLASS Securities TYPE START" sent by "simon.wettstein@ubs.com" and addressed to:</font><br>
+<table border="0" cellpadding="0" cellpadding="0" style="border-spacing: 0;">
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">priips@pec.consob.it</font></td></tr>
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">sh-italy-structuredproducts@ubs.com</font></td></tr>
+</table>
+<font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">
+These data have not been certified for the following error:<br>
+Messaggio proveniente da utente non certificato<br> 
+The original message is included in attached.</font></p>
+</BODY>
+</HTML>
+
+------=_Part_233577821_1032083156.1619159530192--
+
+------=_Part_233577820_2038554542.1619159530192
+Content-Type: message/rfc822; name=postacert.eml
+Content-Disposition: attachment; filename="postacert.eml"
+
+Received: from dmz-urd-gw2-ib.ubs.com (165.222.180.159) by mx.cert.legalmail.it (5.8.715.01)
+        id 606ACD37006ABE26 for priips@pec.consob.it; Fri, 23 Apr 2021 08:32:08 +0200
+Received: from localhost (localhost [127.0.0.1])
+	by postfix.amavisd (Postfix) with ESMTP id 4FRPbD0PBWzYkhYM
+	for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:08 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ubs.com; h=
+	content-type:content-type:mime-version:content-language
+	:accept-language:message-id:date:date:subject:subject:from:from
+	:received:received:received:received:received:received:received
+	:received:received:received:received; s=srsa2048; t=1619159528;
+	 bh=9ycEGsILvV4dMcbIV1g8ceeMaNKjndCF19VKqRA+FDs=; b=HS5LiRQSaRqK
+	YbcD0qdcTz8QDDZPwxKhnBG19096tPno1v0mS2boPL3QNGMOU+WWkIOe+pYLtDtN
+	THSKw5Azf+6YIizfD6oESjs8Gr0cvLgsmKo/d+uwUdMLocag6TLq9W089Dp3iW7f
+	7NRkXxM7tnveyyrE5WefN5WwBaMo3toCbZsVQUXKCU0ub8GNVratS/GN7+gYvZAX
+	fz7EF5JvUl/m9ju7vvpsEgOUqWJ5NvUuwLv43OeaQCXhwgZE37zn10pibrzmLVXh
+	K4nc2H0n2zRuI52m9Uyf8GIyaiA2kOCHxBHCd1AuGDEoqIedh0REuwoY+b4ylCKI
+	Nu21ygoDig==
+Received: from dmz-urd-gw2-ib.ubs.com ([127.0.0.1])
+	by localhost (a302-3645-9415.zur.ubs.net [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id kY9n8QpBKaV2 for <priips@pec.consob.it>;
+	Fri, 23 Apr 2021 08:32:08 +0200 (CEST)
+Received: by dmz-urd-gw2-ib.ubs.com (Postfix, from userid 103)
+	id 4FRPbC71GfzYkhYN; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: from a301-5456-3202.rzud.urdorf.ubs.ch (unknown [10.82.59.114])
+	by dmz-urd-gw2-ib.ubs.com (Postfix) with ESMTP id 4FRPbC4wwTzYkhYM
+	for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: by a301-5456-3202.rzud.urdorf.ubs.ch (Postfix, from userid 103)
+	id 4FRPbC4hwjz1xnk; Fri, 23 Apr 2021 08:32:07 +0200 (MEST)
+Received: from a301-5456-3202.rzud.urdorf.ubs.ch (localhost [10.0.0.1])
+	by a301-5456-3202.rzud.urdorf.ubs.ch (Postfix) with ESMTP id 4FRPbC4VWxz1xnf
+	for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (MEST)
+Received: from a302-4137-0471.zur.swissbank.com (a302-4137-0471.zur.swissbank.com [10.82.125.76])
+	by a301-5456-3202.rzud.urdorf.ubs.ch (Postfix) with ESMTP id 4FRPbC4B4MzBrNn
+	for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (MEST)
+Received: by a302-4137-0471.zur.swissbank.com (Postfix, from userid 103)
+	id 4FRPbC44Mwz1qxpB; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: from a302-4137-0471.zur.swissbank.com (localhost [10.0.0.1])
+	by a302-4137-0471.zur.swissbank.com (Postfix) with ESMTP id 4FRPbC3BnGz1qxpC
+	for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: from nzurc707pn8.UBSPROD.MSAD.UBS.NET (nzurc707pn8.ubsprod.msad.ubs.net [10.78.80.193])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by a302-4137-0471.zur.swissbank.com (Postfix) with ESMTPS id 4FRPbC2hkCzYkmL4
+	for <priips@pec.consob.it>; Fri, 23 Apr 2021 08:32:07 +0200 (CEST)
+Received: from nzurc707pn2.ubsprod.msad.ubs.net (10.78.80.190) by
+ nzurc707pn8.UBSPROD.MSAD.UBS.NET (10.78.80.193) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id 15.1.2176.2;
+ Fri, 23 Apr 2021 08:32:06 +0200
+Received: from nzurc707pn2.ubsprod.msad.ubs.net ([10.78.80.190]) by
+ nzurc707pn2.UBSPROD.MSAD.UBS.NET ([10.78.80.190]) with mapi id
+ 15.01.2176.012; Fri, 23 Apr 2021 08:32:06 +0200
+From: <sh-italy-structuredproducts@ubs.com>
+To: <sh-italy-structuredproducts@ubs.com>, <priips@pec.consob.it>
+Subject: COD CH1108500104 SUB UBS AG London Branch RISK 6 MAX 1 CLASS
+ Securities TYPE START
+Thread-Topic: COD CH1108500104 SUB UBS AG London Branch RISK 6 MAX 1 CLASS
+ Securities TYPE START
+Thread-Index: Adc4Clg9PL+We6ehTLyZHDd5G4chiA==
+Sender:  <simon.wettstein@ubs.com>
+Date: Fri, 23 Apr 2021 06:32:06 +0000
+X-$Switch: Processed="1"
+Message-ID: <46ede9e2e639492b9151719917e45add@ubs.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-messagesentrepresentingtype: 2
+x-originating-ip: [10.78.95.254]
+x-ms-exchange-sharedmailbox-routingagent-processed: True
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="retimiled-emim-mijooneldraneldeen"
+X-UBS-Disclaimer: Version $Revision: 1.38 (postfix edition)$
+
+
+--retimiled-emim-mijooneldraneldeen
+Content-Type: multipart/alternative;
+	boundary="_000_46ede9e2e639492b9151719917e45addubscom_"
+
+--_000_46ede9e2e639492b9151719917e45addubscom_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+SGkNCg0KUGxlYXNlIGZpbmQgYXR0YWNoZWQgdGhlIEtJRCBmb3IgQ0gxMTA4NTAwMTA0Lg0KDQpU
+aGFua3MNCg0K
+
+--_000_46ede9e2e639492b9151719917e45addubscom_
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PGh0bWwgeG1sbnM6dj0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp2bWwiIHhtbG5zOm89InVy
+bjpzY2hlbWFzLW1pY3Jvc29mdC1jb206b2ZmaWNlOm9mZmljZSIgeG1sbnM6dz0idXJuOnNjaGVt
+YXMtbWljcm9zb2Z0LWNvbTpvZmZpY2U6d29yZCIgeG1sbnM6eD0idXJuOnNjaGVtYXMtbWljcm9z
+b2Z0LWNvbTpvZmZpY2U6ZXhjZWwiIHhtbG5zOnA9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206
+b2ZmaWNlOnBvd2VycG9pbnQiIHhtbG5zOmE9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206b2Zm
+aWNlOmFjY2VzcyIgeG1sbnM6ZHQ9InV1aWQ6QzJGNDEwMTAtNjVCMy0xMWQxLUEyOUYtMDBBQTAw
+QzE0ODgyIiB4bWxuczpzPSJ1dWlkOkJEQzZFM0YwLTZEQTMtMTFkMS1BMkEzLTAwQUEwMEMxNDg4
+MiIgeG1sbnM6cnM9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206cm93c2V0IiB4bWxuczp6PSIj
+Um93c2V0U2NoZW1hIiB4bWxuczpiPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOm9mZmljZTpw
+dWJsaXNoZXIiIHhtbG5zOnNzPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOm9mZmljZTpzcHJl
+YWRzaGVldCIgeG1sbnM6Yz0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTpvZmZpY2U6Y29tcG9u
+ZW50OnNwcmVhZHNoZWV0IiB4bWxuczpvZGM9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206b2Zm
+aWNlOm9kYyIgeG1sbnM6b2E9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206b2ZmaWNlOmFjdGl2
+YXRpb24iIHhtbG5zOmh0bWw9Imh0dHA6Ly93d3cudzMub3JnL1RSL1JFQy1odG1sNDAiIHhtbG5z
+OnE9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpydGM9
+Imh0dHA6Ly9taWNyb3NvZnQuY29tL29mZmljZW5ldC9jb25mZXJlbmNpbmciIHhtbG5zOkQ9IkRB
+VjoiIHhtbG5zOlJlcGw9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vcmVwbC8iIHhtbG5z
+Om10PSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3NoYXJlcG9pbnQvc29hcC9tZWV0aW5n
+cy8iIHhtbG5zOngyPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL29mZmljZS9leGNlbC8y
+MDAzL3htbCIgeG1sbnM6cHBkYT0iaHR0cDovL3d3dy5wYXNzcG9ydC5jb20vTmFtZVNwYWNlLnhz
+ZCIgeG1sbnM6b2lzPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3NoYXJlcG9pbnQvc29h
+cC9vaXMvIiB4bWxuczpkaXI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc2hhcmVwb2lu
+dC9zb2FwL2RpcmVjdG9yeS8iIHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3ht
+bGRzaWcjIiB4bWxuczpkc3A9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc2hhcmVwb2lu
+dC9kc3AiIHhtbG5zOnVkYz0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9kYXRhL3VkYyIg
+eG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6c3ViPSJo
+dHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3NoYXJlcG9pbnQvc29hcC8yMDAyLzEvYWxlcnRz
+LyIgeG1sbnM6ZWM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZW5jIyIgeG1sbnM6c3A9
+Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc2hhcmVwb2ludC8iIHhtbG5zOnNwcz0iaHR0
+cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9zaGFyZXBvaW50L3NvYXAvIiB4bWxuczp4c2k9Imh0
+dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4bWxuczp1ZGNzPSJodHRw
+Oi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL2RhdGEvdWRjL3NvYXAiIHhtbG5zOnVkY3hmPSJodHRw
+Oi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL2RhdGEvdWRjL3htbGZpbGUiIHhtbG5zOnVkY3AycD0i
+aHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9kYXRhL3VkYy9wYXJ0dG9wYXJ0IiB4bWxuczp3
+Zj0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9zaGFyZXBvaW50L3NvYXAvd29ya2Zsb3cv
+IiB4bWxuczpkc3NzPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL29mZmljZS8yMDA2L2Rp
+Z3NpZy1zZXR1cCIgeG1sbnM6ZHNzaT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9vZmZp
+Y2UvMjAwNi9kaWdzaWciIHhtbG5zOm1kc3NpPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0
+cy5vcmcvcGFja2FnZS8yMDA2L2RpZ2l0YWwtc2lnbmF0dXJlIiB4bWxuczptdmVyPSJodHRwOi8v
+c2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvbWFya3VwLWNvbXBhdGliaWxpdHkvMjAwNiIgeG1s
+bnM6bT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9vZmZpY2UvMjAwNC8xMi9vbW1sIiB4
+bWxuczptcmVscz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAw
+Ni9yZWxhdGlvbnNoaXBzIiB4bWxuczpzcHdwPSJodHRwOi8vbWljcm9zb2Z0LmNvbS9zaGFyZXBv
+aW50L3dlYnBhcnRwYWdlcyIgeG1sbnM6ZXgxMnQ9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5j
+b20vZXhjaGFuZ2Uvc2VydmljZXMvMjAwNi90eXBlcyIgeG1sbnM6ZXgxMm09Imh0dHA6Ly9zY2hl
+bWFzLm1pY3Jvc29mdC5jb20vZXhjaGFuZ2Uvc2VydmljZXMvMjAwNi9tZXNzYWdlcyIgeG1sbnM6
+cHB0c2w9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc2hhcmVwb2ludC9zb2FwL1NsaWRl
+TGlicmFyeS8iIHhtbG5zOnNwc2w9Imh0dHA6Ly9taWNyb3NvZnQuY29tL3dlYnNlcnZpY2VzL1No
+YXJlUG9pbnRQb3J0YWxTZXJ2ZXIvUHVibGlzaGVkTGlua3NTZXJ2aWNlIiB4bWxuczpaPSJ1cm46
+c2NoZW1hcy1taWNyb3NvZnQtY29tOiIgeG1sbnM6dGF4PSJodHRwOi8vc2NoZW1hcy5taWNyb3Nv
+ZnQuY29tL3NoYXJlcG9pbnQvdGF4b25vbXkvc29hcC8iIHhtbG5zOnRucz0iaHR0cDovL3NjaGVt
+YXMubWljcm9zb2Z0LmNvbS9zaGFyZXBvaW50L3NvYXAvcmVjb3Jkc3JlcG9zaXRvcnkvIiB4bWxu
+czpzcHN1cD0iaHR0cDovL21pY3Jvc29mdC5jb20vd2Vic2VydmljZXMvU2hhcmVQb2ludFBvcnRh
+bFNlcnZlci9Vc2VyUHJvZmlsZVNlcnZpY2UiIHhtbG5zOm1tbD0iaHR0cDovL3d3dy53My5vcmcv
+MTk5OC9NYXRoL01hdGhNTCIgeG1sbnM6c3Q9IiYjMTsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y
+Zy9UUi9SRUMtaHRtbDQwIj4NCjxoZWFkPg0KPG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBl
+IiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgiPg0KPG1ldGEgbmFtZT0iR2VuZXJh
+dG9yIiBjb250ZW50PSJNaWNyb3NvZnQgV29yZCAxNCAoZmlsdGVyZWQgbWVkaXVtKSI+DQo8c3R5
+bGU+PCEtLQ0KLyogRm9udCBEZWZpbml0aW9ucyAqLw0KQGZvbnQtZmFjZQ0KCXtmb250LWZhbWls
+eTpDYWxpYnJpOw0KCXBhbm9zZS0xOjIgMTUgNSAyIDIgMiA0IDMgMiA0O30NCi8qIFN0eWxlIERl
+ZmluaXRpb25zICovDQpwLk1zb05vcm1hbCwgbGkuTXNvTm9ybWFsLCBkaXYuTXNvTm9ybWFsDQoJ
+e21hcmdpbjowY207DQoJbWFyZ2luLWJvdHRvbTouMDAwMXB0Ow0KCWZvbnQtc2l6ZToxMS4wcHQ7
+DQoJZm9udC1mYW1pbHk6IkNhbGlicmkiLCJzYW5zLXNlcmlmIjt9DQphOmxpbmssIHNwYW4uTXNv
+SHlwZXJsaW5rDQoJe21zby1zdHlsZS1wcmlvcml0eTo5OTsNCgljb2xvcjpibHVlOw0KCXRleHQt
+ZGVjb3JhdGlvbjp1bmRlcmxpbmU7fQ0KYTp2aXNpdGVkLCBzcGFuLk1zb0h5cGVybGlua0ZvbGxv
+d2VkDQoJe21zby1zdHlsZS1wcmlvcml0eTo5OTsNCgljb2xvcjpwdXJwbGU7DQoJdGV4dC1kZWNv
+cmF0aW9uOnVuZGVybGluZTt9DQpzcGFuLkVtYWlsU3R5bGUxNw0KCXttc28tc3R5bGUtdHlwZTpw
+ZXJzb25hbDsNCglmb250LWZhbWlseToiQ2FsaWJyaSIsInNhbnMtc2VyaWYiOw0KCWNvbG9yOndp
+bmRvd3RleHQ7fQ0Kc3Bhbi5FbWFpbFN0eWxlMTgNCgl7bXNvLXN0eWxlLXR5cGU6cGVyc29uYWw7
+DQoJZm9udC1mYW1pbHk6IkNhbGlicmkiLCJzYW5zLXNlcmlmIjsNCgljb2xvcjojMUY0OTdEO30N
+CnNwYW4uRW1haWxTdHlsZTE5DQoJe21zby1zdHlsZS10eXBlOnBlcnNvbmFsOw0KCWZvbnQtZmFt
+aWx5OiJDYWxpYnJpIiwic2Fucy1zZXJpZiI7DQoJY29sb3I6IzFGNDk3RDt9DQpzcGFuLkVtYWls
+U3R5bGUyMA0KCXttc28tc3R5bGUtdHlwZTpwZXJzb25hbDsNCglmb250LWZhbWlseToiQ2FsaWJy
+aSIsInNhbnMtc2VyaWYiOw0KCWNvbG9yOiMxRjQ5N0Q7fQ0Kc3Bhbi5FbWFpbFN0eWxlMjENCgl7
+bXNvLXN0eWxlLXR5cGU6cGVyc29uYWw7DQoJZm9udC1mYW1pbHk6IkNhbGlicmkiLCJzYW5zLXNl
+cmlmIjsNCgljb2xvcjojMUY0OTdEO30NCnNwYW4uRW1haWxTdHlsZTIyDQoJe21zby1zdHlsZS10
+eXBlOnBlcnNvbmFsOw0KCWZvbnQtZmFtaWx5OiJDYWxpYnJpIiwic2Fucy1zZXJpZiI7DQoJY29s
+b3I6IzFGNDk3RDt9DQpzcGFuLkVtYWlsU3R5bGUyMw0KCXttc28tc3R5bGUtdHlwZTpwZXJzb25h
+bDsNCglmb250LWZhbWlseToiQ2FsaWJyaSIsInNhbnMtc2VyaWYiOw0KCWNvbG9yOiMxRjQ5N0Q7
+fQ0Kc3Bhbi5FbWFpbFN0eWxlMjQNCgl7bXNvLXN0eWxlLXR5cGU6cGVyc29uYWw7DQoJZm9udC1m
+YW1pbHk6IkNhbGlicmkiLCJzYW5zLXNlcmlmIjsNCgljb2xvcjojMUY0OTdEO30NCnNwYW4uRW1h
+aWxTdHlsZTI1DQoJe21zby1zdHlsZS10eXBlOnBlcnNvbmFsLXJlcGx5Ow0KCWZvbnQtZmFtaWx5
+OiJDYWxpYnJpIiwic2Fucy1zZXJpZiI7DQoJY29sb3I6IzFGNDk3RDt9DQouTXNvQ2hwRGVmYXVs
+dA0KCXttc28tc3R5bGUtdHlwZTpleHBvcnQtb25seTsNCglmb250LXNpemU6MTAuMHB0O30NCkBw
+YWdlIFdvcmRTZWN0aW9uMQ0KCXtzaXplOjYxMi4wcHQgNzkyLjBwdDsNCgltYXJnaW46NzAuODVw
+dCA3MC44NXB0IDIuMGNtIDcwLjg1cHQ7fQ0KZGl2LldvcmRTZWN0aW9uMQ0KCXtwYWdlOldvcmRT
+ZWN0aW9uMTt9DQotLT48L3N0eWxlPjwhLS1baWYgZ3RlIG1zbyA5XT48eG1sPg0KPG86c2hhcGVk
+ZWZhdWx0cyB2OmV4dD0iZWRpdCIgc3BpZG1heD0iMTAyNiIgLz4NCjwveG1sPjwhW2VuZGlmXS0t
+PjwhLS1baWYgZ3RlIG1zbyA5XT48eG1sPg0KPG86c2hhcGVsYXlvdXQgdjpleHQ9ImVkaXQiPg0K
+PG86aWRtYXAgdjpleHQ9ImVkaXQiIGRhdGE9IjEiIC8+DQo8L286c2hhcGVsYXlvdXQ+PC94bWw+
+PCFbZW5kaWZdLS0+DQo8L2hlYWQ+DQo8Ym9keSBsYW5nPSJFTi1VUyIgbGluaz0iYmx1ZSIgdmxp
+bms9InB1cnBsZSI+DQo8ZGl2IGNsYXNzPSJXb3JkU2VjdGlvbjEiPg0KPHAgY2xhc3M9Ik1zb05v
+cm1hbCI+PHNwYW4gbGFuZz0iRU4tR0IiPkhpPG86cD48L286cD48L3NwYW4+PC9wPg0KPHAgY2xh
+c3M9Ik1zb05vcm1hbCI+PHNwYW4gbGFuZz0iRU4tR0IiPjxvOnA+Jm5ic3A7PC9vOnA+PC9zcGFu
+PjwvcD4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIGxhbmc9IkVOLUdCIj5QbGVhc2UgZmlu
+ZCBhdHRhY2hlZCB0aGUgS0lEIGZvciA8c3BhbiBzdHlsZT0iY29sb3I6IzFGNDk3RCI+DQpDSDEx
+MDg1MDAxMDQ8L3NwYW4+LjxvOnA+PC9vOnA+PC9zcGFuPjwvcD4NCjxwIGNsYXNzPSJNc29Ob3Jt
+YWwiPjxzcGFuIGxhbmc9IkVOLUdCIj48bzpwPiZuYnNwOzwvbzpwPjwvc3Bhbj48L3A+DQo8cCBj
+bGFzcz0iTXNvTm9ybWFsIj48c3BhbiBsYW5nPSJFTi1HQiI+VGhhbmtzPG86cD48L286cD48L3Nw
+YW4+PC9wPg0KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gbGFuZz0iRU4tR0IiPjxvOnA+Jm5i
+c3A7PC9vOnA+PC9zcGFuPjwvcD4NCjwvZGl2Pg0KPC9ib2R5Pg0KPC9odG1sPg0K
+
+--_000_46ede9e2e639492b9151719917e45addubscom_--
+
+--retimiled-emim-mijooneldraneldeen
+Content-Type: text/plain; charset=us-ascii; name="disclaim.txt"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Content-Description: Legal Disclaimer
+
+This communication is issued by UBS AG and/or affiliates to professional 
+investors only. This is not a personal recommendation, an offer to buy or 
+sell or a solicitation to buy or sell any securities, investment products 
+or other financial instrument or service. This communication is subject 
+to terms available at the following link:
+
+www.ubs.com/salesandtradingdisclaimers
+
+Â© UBS 2021.  All rights reserved.
+
+Intended for recipient only and not for further distribution without the 
+consent of UBS.
+
+UBS reserves the right to retain all messages. Messages are protected and 
+accessed only in legally justified cases.
+
+--retimiled-emim-mijooneldraneldeen--
+
+------=_Part_233577820_2038554542.1619159530192--
+
+------=_Part_233577823_1116816899.1619159530196
+Content-Type: application/pkcs7-signature; name=smime.p7s; smime-type=signed-data
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIAwggWMMIIE
+dKADAgECAhB6e/NzNo7JSbtqHg6wXokyMA0GCSqGSIb3DQEBCwUAMIGQMQswCQYDVQQGEwJJVDEN
+MAsGA1UEBwwEUm9tYTEmMCQGA1UECgwdQWdlbnppYSBwZXIgbCdJdGFsaWEgRGlnaXRhbGUxNzA1
+BgNVBAsMLkFyZWEgU29sdXppb25pIHBlciBsYSBQdWJibGljYSBBbW1pbmlzdHJhemlvbmUxETAP
+BgNVBAMMCEFnSUQgQ0ExMB4XDTIwMTAwNzE0MzYzM1oXDTIzMTAwNzE0MzYzM1owbjELMAkGA1UE
+BhMCSVQxDTALBgNVBAgMBFJvbWExDTALBgNVBAcMBFJvbWExGDAWBgNVBAoMD0luZm9DZXJ0IFMu
+cC5BLjEnMCUGA1UEAwweUG9zdGEgQ2VydGlmaWNhdGEgTGVnYWxtYWlsIDI3MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEA30NNw1BsVm752XPbggqVrtKJAuNLTdc30m8FHD6Vj8m7/EK1
+qgUBrM+7nBIlxGd1OC7WByQ5RWxaR9IJ5r2rTIo3UtLOYe7Bc+2SdhCzcytKcdyMA7WOjR6YRhNa
+44VWt6yFQV8JpsnDUM5K8utoNMqWuchLqOSZ657eO9n7DIjBVzPytM0iVrQxkKWngl/tVmo68zU/
+JuhBNLrtQianPjQ57mm/7hb/1mKXg8yJY8kp+kOFXnwNDPGC0R4EN6CkzmBpEg15kx529j65wS/n
+EzLTumCEHz0pfujB/v9V4w57IR0GoyNkQXOEL9Yp7JNLubDpUicK9x4KK4n1P3xpawIDAQABo4IC
+ATCCAf0wNwYIKwYBBQUHAQEEKzApMCcGCCsGAQUFBzABhhtodHRwOi8vY2ExLmFnaWQuZ292Lml0
+L09DU1AwHQYDVR0OBBYEFDe+1JpOEDIAFpUSv/BTSd7xZO5OMB8GA1UdIwQYMBaAFKX9hQUOw/HW
+ZUogbOLbTWCTK4qgME8GA1UdIARIMEYwRAYGK0wQAwEBMDowOAYIKwYBBQUHAgEWLGh0dHA6Ly93
+d3cuYWdpZC5nb3YuaXQvY2VydGlmaWNhdGktZmlybWEtcGVjMIHgBgNVHR8EgdgwgdUwgbCgga2g
+gaqGgadsZGFwOi8vY2ExLmFnaWQuZ292Lml0L2NuPUFnSUQlMjBDQTEsb3U9QXJlYSUyMFNvbHV6
+aW9uaSUyMHBlciUyMGxhJTIwUHViYmxpY2ElMjBBbW1pbmlzdHJhemlvbmUsbz1BZ2VuemlhJTIw
+cGVyJTIwbCUyN0l0YWxpYSUyMERpZ2l0YWxlLEM9SVQ/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlz
+dDAgoB6gHIYaaHR0cDovL2NhMS5hZ2lkLmdvdi5pdC9DUkwwDgYDVR0PAQH/BAQDAgeAMBMGA1Ud
+JQQMMAoGCCsGAQUFBwMEMCkGA1UdEQQiMCCBHnBvc3RhLWNlcnRpZmljYXRhQGxlZ2FsbWFpbC5p
+dDANBgkqhkiG9w0BAQsFAAOCAQEAVArMFnR48KNbXke5STiGoUqsXM+cDwoKOP2/RYxLmWXvLBR7
+dOJIFfxxKge7TwlipnlI6BEpiSBcxd1ruzc+5clHtBffDd9NbSvz+HySPCoB75+HigHnqbE3xb5m
+I4jzec41Sv7CpCufNjoKEjC/hck+acB5AkZWhJlc20fP82OJxCXGgRy9Qlkh60l8OuJf/hZJtRok
+bWY5iS6x9HLNieygnq2DOvAAXZY20dqNKvbIj01J/v9QvFhDCi4B3ZUNDf5f9yGLLN0aRCdH1UmJ
+3DVqdQ7yEDF0nh9BGQTo0rhSsmUIcEsUp6m0L+t1ocfgeNbbXEGk5L3V/erBnmwWATCCEbwwgg+k
+oAMCAQICCEmBpuNTz9qlMA0GCSqGSIb3DQEBCwUAMGsxCzAJBgNVBAYTAklUMQ4wDAYDVQQHDAVN
+aWxhbjEjMCEGA1UECgwaQWN0YWxpcyBTLnAuQS4vMDMzNTg1MjA5NjcxJzAlBgNVBAMMHkFjdGFs
+aXMgQXV0aGVudGljYXRpb24gUm9vdCBDQTAeFw0xNzEwMTIxMzI5NTNaFw0yNzEwMTIxMzI5NTNa
+MIGQMQswCQYDVQQGEwJJVDENMAsGA1UEBwwEUm9tYTEmMCQGA1UECgwdQWdlbnppYSBwZXIgbCdJ
+dGFsaWEgRGlnaXRhbGUxNzA1BgNVBAsMLkFyZWEgU29sdXppb25pIHBlciBsYSBQdWJibGljYSBB
+bW1pbmlzdHJhemlvbmUxETAPBgNVBAMMCEFnSUQgQ0ExMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEA1TafReuLzB6kjYBqvMlUbkT3+RCleG4ttfexCA3RGNN+G88H1/BdGt+9qvm6mxYa
+/A+5QHZncDaOx4NrWFu8d55+SR+MpP9SRSJ2pkQqmtvXvq3/Mmg1UjuWBEKOPP3QHJWNQcgW7BBQ
+c5Uxt8fJ4FalNCvNizGeh9EpF6ndkRIuWEpqWfj/z+tIgLGcPwql5NDjVCfxVimPRFXQ1TT6T1WB
+H0L8rjNfXPgCicx6ZxE//wHVcXKOTYtqpRce3wsHDpZv45g76f2tcpPykPKv3/N36RInHEjaC+ij
+J7te3fEkao4OSlmu7dDcZvlzxPZRnaacpnA5yI3in/m1w5oLVwIDAQABo4INPDCCDTgwEgYDVR0T
+AQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAQYwTgYDVR0gBEcwRTBDBgUrTBADATA6MDgGCCsG
+AQUFBwIBFixodHRwOi8vd3d3LmFnaWQuZ292Lml0L2NlcnRpZmljYXRpLWZpcm1hLXBlYzAdBgNV
+HQ4EFgQUpf2FBQ7D8dZlSiBs4ttNYJMriqAwgeMGA1UdHwSB2zCB2DCBlqCBk6CBkIaBjWxkYXA6
+Ly9sZGFwMDcuYWN0YWxpcy5pdC9jbiUzZEFjdGFsaXMlMjBBdXRoZW50aWNhdGlvbiUyMFJvb3Ql
+MjBDQSxvJTNkQWN0YWxpcyUyMFMucC5BLiUyZjAzMzU4NTIwOTY3LGMlM2RJVD9jZXJ0aWZpY2F0
+ZVJldm9jYXRpb25MaXN0O2JpbmFyeTA9oDugOYY3aHR0cDovL2NybDA3LmFjdGFsaXMuaXQvUmVw
+b3NpdG9yeS9BVVRILVJPT1QvZ2V0TGFzdENSTDBBBggrBgEFBQcBAQQ1MDMwMQYIKwYBBQUHMAGG
+JWh0dHA6Ly9vY3NwMDcuYWN0YWxpcy5pdC9WQS9BVVRILVJPT1QwHwYDVR0jBBgwFoAUUtiIOsif
+eGbtifN7OHCUyQICNtAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMEMIILOAYDVR0eBIIL
+LzCCCyugggr1MA2BC2FnaWQuZ292Lml0MBmBF2NlcnQuaW5mb3JtYXRpY2EuYWNpLml0MBGBD2Nl
+cnQuaW50ZXJuby5pdDAMgQplbWFyY2hlLml0MBCBDmZhc3R3ZWItcGVjLml0MBWBE2dlc3RvcmVw
+ZWMudW5pbmEuaXQwDIEKa21haWxlci5pdDAOgQxsZWdhbG1haWwuaXQwEIEOcGNlcnQuc29nZWku
+aXQwEIEOcGVjLmFjdGFsaXMuaXQwEIEOcGVjLmFuY2l0ZWwuaXQwDoEMcGVjLmFydWJhLml0MBaB
+FHBlYy5iYXNpbGljYXRhbmV0Lml0MA+BDXBlYy1lbWFpbC5jb20wD4ENcGVjLm51bWVyYS5pdDAS
+gRBwZWMucG9zdGVjZXJ0Lml0MBaBFHBlYy5wb3N0ZWl0YWxpYW5lLml0MBWBE3BlYy5ydXBhci5w
+dWdsaWEuaXQwFoEUcG9zdGFjZXJ0LmNlZGFjcmkuaXQwH4EdcG9zdGFjZXJ0aWZpY2F0YS5ub3Rh
+cmlhdG8uaXQwEoEQcG9zdGFjZXJ0Lml0Lm5ldDAOgQxwb3N0ZWNlcnQuaXQwFYETc2ljdXJlenph
+cG9zdGFsZS5pdDAQgQ50ZWxlY29tcG9zdC5pdDAXgRV0cnVzdGVkbWFpbC5pbnRlc2EuaXQwDIEK
+dHd0Y2VydC5pdDARgQ96dWNjaGV0dGlwZWMuaXQwEoIQYWdpZC1jYTEtdGVzdC5pdDANggthZ2lk
+Lmdvdi5pdDAfgh1hdmFuemFtZW50b2RpZ2l0YWxlLml0YWxpYS5pdDAMggpjZXJ0LXBhLml0MAqC
+CGNuaXBhLml0MBuCGWZhc2NpY29sb3Nhbml0YXJpby5nb3YuaXQwEYIPaW5kaWNlcGEuZ292Lml0
+MA+CDXBhZ29wYS5nb3YuaXQwGYIXcG9zdGFjZXJ0aWZpY2F0YS5nb3YuaXQwDYILcm5kdC5nb3Yu
+aXQwD4INc3Bjb29wLmdvdi5pdDANggtzcGlkLmdvdi5pdDAOggxpY3NwYy5nb3YuaXQwUKROMEwx
+CzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMR8wHQYDVQQKDBZBQ0kg
+SW5mb3JtYXRpY2EgUy5wLkEuMFmkVzBVMQswCQYDVQQGEwJJVDEQMA4GA1UECAwHQmVyZ2FtbzEZ
+MBcGA1UEBwwQUG9udGUgU2FuIFBpZXRybzEZMBcGA1UECgwQQXJ1YmEgUEVDIFMucC5BLjBXpFUw
+UzELMAkGA1UEBhMCSVQxEDAOBgNVBAgMB0JlcmdhbW8xGTAXBgNVBAcMEFBvbnRlIFNhbiBQaWV0
+cm8xFzAVBgNVBAoMDkFjdGFsaXMgUy5wLkEuMFekVTBTMQswCQYDVQQGEwJJVDENMAsGA1UECAwE
+Um9tYTENMAsGA1UEBwwEUm9tYTEmMCQGA1UECgwdQWdlbnppYSBwZXIgbCdJdGFsaWEgRGlnaXRh
+bGUwSKRGMEQxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMRcwFQYD
+VQQKDA5BbmNpdGVsIFMucC5BLjBPpE0wSzELMAkGA1UEBhMCSVQxDjAMBgNVBAgMBVBhcm1hMRMw
+EQYDVQQHDApDb2xsZWNjaGlvMRcwFQYDVQQKDA5DZWRhY3JpIFMucC5BLjBbpFkwVzELMAkGA1UE
+BhMCSVQxDTALBgNVBAgMBFJvbWExDTALBgNVBAcMBFJvbWExKjAoBgNVBAoMIUNvbnNpZ2xpbyBO
+YXppb25hbGUgZGVsIE5vdGFyaWF0bzBMpEowSDELMAkGA1UEBhMCSVQxDzANBgNVBAgMBk1pbGFu
+bzEPMA0GA1UEBwwGTWlsYW5vMRcwFQYDVQQKDA5GYXN0d2ViIFMucC5BLjBKpEgwRjELMAkGA1UE
+BhMCSVQxDzANBgNVBAgMBk1pbGFubzEPMA0GA1UEBwwGQXNzYWdvMRUwEwYDVQQKDAxJVG5ldCBT
+LnIubC4wT6RNMEsxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZUb3Jpbm8xDzANBgNVBAcMBlRvcmlu
+bzEaMBgGA1UECgwRSW4uVGUuUy5BLiBTLnAuQS4wSaRHMEUxCzAJBgNVBAYTAklUMQ0wCwYDVQQI
+DARSb21hMQ0wCwYDVQQHDARSb21hMRgwFgYDVQQKDA9JbmZvQ2VydCBTLnAuQS4wUqRQME4xCzAJ
+BgNVBAYTAklUMQ0wCwYDVQQIDARCYXJpMRIwEAYDVQQHDAlWYWxlbnphbm8xHDAaBgNVBAoME0lu
+bm92YVB1Z2xpYSBTLnAuQS4wVKRSMFAxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZNaWxhbm8xDzAN
+BgNVBAcMBk1pbGFubzEfMB0GA1UECgwWS1BOUXdlc3QgSXRhbGlhIFMucC5BLjBRpE8wTTELMAkG
+A1UEBhMCSVQxDzANBgNVBAgMBkFuY29uYTETMBEGA1UEBwwKU2VuaWdhbGxpYTEYMBYGA1UECgwP
+TmFtaXJpYWwgUy5wLkEuMGOkYTBfMQswCQYDVQQGEwJJVDEQMA4GA1UECAwHU2Fzc2FyaTEQMA4G
+A1UEBwwHU2Fzc2FyaTEsMCoGA1UECgwjTnVtZXJhIFNpc3RlbWkgZSBJbmZvcm1hdGljYSBTLnAu
+QS4wT6RNMEsxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMR4wHAYD
+VQQKDBVQb3N0ZSBJdGFsaWFuZSBTLnAuQS4wUqRQME4xCzAJBgNVBAYTAklUMRAwDgYDVQQIDAdQ
+b3RlbnphMRAwDgYDVQQHDAdQb3RlbnphMRswGQYDVQQKDBJSZWdpb25lIEJhc2lsaWNhdGEwTKRK
+MEgxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZBbmNvbmExDzANBgNVBAcMBkFuY29uYTEXMBUGA1UE
+CgwOUmVnaW9uZSBNYXJjaGUwUqRQME4xCzAJBgNVBAYTAklUMRAwDgYDVQQIDAdGaXJlbnplMRAw
+DgYDVQQHDAdGaXJlbnplMRswGQYDVQQKDBJSZWdpc3Rlci5pdCBTLnAuQS4wRqREMEIxCzAJBgNV
+BAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMRUwEwYDVQQKDAxTb2dlaSBTLnAu
+QS4wSKRGMEQxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZNaWxhbm8xDzANBgNVBAcMBk1pbGFubzET
+MBEGA1UECgwKVFdUIFMucC5BLjBlpGMwYTELMAkGA1UEBhMCSVQxDTALBgNVBAgMBFJvbWExEDAO
+BgNVBAcMB1BvbWV6aWExMTAvBgNVBAoMKFRlbGVjb20gSXRhbGlhIFRydXN0IFRlY2hub2xvZ2ll
+cyBTLnIubC4waqRoMGYxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZOYXBvbGkxDzANBgNVBAcMBk5h
+cG9saTE1MDMGA1UECgwsVU5JVkVSU0lUQSBERUdMSSBTVFVESSBESSBOQVBPTEkgRkVERVJJQ08g
+SUkwSqRIMEYxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARMb2RpMQ0wCwYDVQQHDARMb2RpMRkwFwYD
+VQQKDBBadWNjaGV0dGkgUy5wLkEuoTAwCocIAAAAAAAAAAAwIocgAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAwDQYJKoZIhvcNAQELBQADggIBACeehKY7i4x71aIHNT9a+TnsJhtyk4a8
+r8iSHAToQAahthWtHU0WBAjJWCYAU2ufrmzx58boR4jUE7SD5uz0A9HyQ8hGfTZhpuSt1A4MjgUO
+XfawlXFI3TO5igQ+Yne2wzWZuVikL/tv0JcG0Qu3zbH1ZFGZWX/Y5gineVP0/ElosBa7zOdTr2zE
+AA9CT/pXfTiebpnj5SoCKt8w7lQiA0/R+XOGYHiIjkQ1RoenePUfVp7cA0TQP1KBJiXItPl9GfuP
+EUuAeD6a4+l9+ifkXPCUag4zfzRYzctpINhZ2xrdIFstVBnWYCt4Bzef0LK+kDfbdEDu8lZ9R4L9
+qKODytKXmfSDSNOfP4F/KyLY2qGcFYLIxWIO/4NHkF3xPF4w0lfYUwTXddHSzm0wndNPXMg6M4oL
+cBghf777a2j+y46qpYLlK4t4VyloE3a5gleCUVLYYeke2GK7U94E/QYBhy5Mim3MpHE5ax0gBHqI
+9H1rShBu3dlm8LA8mklTCgSZoGBD2WVz9u/oXc2c1JzxpBaiYdFIKs4mIHN4UusnOxSOp8euBqcZ
+fBHlnav6TQoTD7vY86gdEEhOiz0Qjzm4gaEGLEqMmlVBxin1xtdn3LVMVIKm+iKiNHnUdEtPs8rz
+rS3EoW1SKmxUGCUDanYwm51Jrc3Hw3gskfpNJzB/wcHFAAAxggMfMIIDGwIBATCBpTCBkDELMAkG
+A1UEBhMCSVQxDTALBgNVBAcMBFJvbWExJjAkBgNVBAoMHUFnZW56aWEgcGVyIGwnSXRhbGlhIERp
+Z2l0YWxlMTcwNQYDVQQLDC5BcmVhIFNvbHV6aW9uaSBwZXIgbGEgUHViYmxpY2EgQW1taW5pc3Ry
+YXppb25lMREwDwYDVQQDDAhBZ0lEIENBMQIQenvzczaOyUm7ah4OsF6JMjAJBgUrDgMCGgUAoIIB
+TjAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMTA0MjMwNjMyMTBa
+MCMGCSqGSIb3DQEJBDEWBBSxSWdRiVnQ0H08zxsHiR+Ncmy18TA0BgkqhkiG9w0BCQ8xJzAlMAoG
+CCqGSIb3DQMHMA4GCCqGSIb3DQMCAgIAgDAHBgUrDgMCBzCBuAYLKoZIhvcNAQkQAgsxgaiggaUw
+gZAxCzAJBgNVBAYTAklUMQ0wCwYDVQQHDARSb21hMSYwJAYDVQQKDB1BZ2VuemlhIHBlciBsJ0l0
+YWxpYSBEaWdpdGFsZTE3MDUGA1UECwwuQXJlYSBTb2x1emlvbmkgcGVyIGxhIFB1YmJsaWNhIEFt
+bWluaXN0cmF6aW9uZTERMA8GA1UEAwwIQWdJRCBDQTECEHp783M2jslJu2oeDrBeiTIwDQYJKoZI
+hvcNAQEBBQAEggEADW6vbLQzQaLEPv4LXrKJCxJfzENYqw4e70DMeEvQEHz8FATOpIjobnOL4QGu
+P0CBTh9h2CAZFdaKJUVPgfB3Kue40913PDgkiyBoAkUHIY14mR3pgWfz72zOqvxUUa5HSCMf6cQg
+Vj8iGhjKV8SbstboXAnu554S4dJlGTt8+vge4+OSf1PRW/xmQKTfbLSfqMzba3qUWeYfBMuI+a8x
+RZJGSr3zgknkREy47uZlx/mEu+99Sly5cRZYAC1qHLsuhvECiCQ1w1OACpDKvWdArU7AJO0MU66e
+CVNW0Xz4KPsyjVNt9hc3S46y1C+bDnX/fIknDYNxuG/7ltn1skBo1wAAAAAAAA==
+------=_Part_233577823_1116816899.1619159530196--

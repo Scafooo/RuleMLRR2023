@@ -4,8 +4,8 @@ This guide is intended to guide the reader for reproducing the experiments and t
 
 ## Folders
 
-Le cartelle di questo percorso contengono i file per poter avviare i motori a regole. In ogni cartella troverete una sottoguida che vi aiuterá per la specifica soluzione.
-La cartella del corpus, invece, contiene al suo interno i due corpora presi in considerazione, ovvero quello di ~7100 documenti e quello annotato automaticamente di ~650 documenti.
+The folders in this path contain the files so you can start the rule engines. In each folder you will find a subguide that will help you with the specific solution.
+The corpus folder, on the other hand, contains within it the two corpora considered, namely the one of ~7100 documents(DATASET-P) and the automatically annotated one of ~650 documents(DATASET-Q).
 
 The folders are:
 
@@ -13,3 +13,6 @@ The folders are:
 * CoreNLP
 * SystemT
 * Apache UIMA 
+
+## KID-IE
+

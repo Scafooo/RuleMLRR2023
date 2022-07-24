@@ -1,0 +1,318 @@
+Return-Path: <gabriele.maggio@citi.com>
+Original-Recipient: rfc822;priips@pec.consob.it
+Received: from pecengine31.print.infocert.it (10.114.64.145) by pecpchig21.print.infocert.it (9.0.034) id 606EEB5D004C63FC for priips@pec.consob.it; Fri, 25 Jun 2021 15:31:32 +0200
+Received: by pecengine31.print.infocert.it (8.6.147.01) id 5BBECC351E321A57 for M4750746@userid.local; Fri, 25 Jun 2021 15:31:32 +0200
+Received: from EXFFMP02.msg.net (EXFFMP02.msg.net [10.211.252.22]) by imbdlpbuf-sw03.nam.nsroot.net (Sentrion-MTA-4.4.0/Sentrion-MTA-4.4.0) with ESMTP id 15PDVMvB067603 for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:23 GMT
+Received: from imbdlpbuf-sw03.nam.nsroot.net (namdlpdimpsw20.nam.nsroot.net [169.185.193.80]) by imbdlprt-mw06.nam.nsroot.net (Sentrion-MTA-4.4.0/Sentrion-MTA-4.4.0) with ESMTP id 15PDVNuU079949 for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:24 GMT
+Received: from imbdlprt-mw06.nam.nsroot.net (imbdlprt-mw06.nam.nsroot.net [159.17.254.11]) by imbhub-ru55.nam.nsroot.net (Sentrion-MTA-4.4.0/Sentrion-MTA-4.4.0) with ESMTPS id 15PDVPUo096447 (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:25 GMT
+Received: from imbhub-ru55.nam.nsroot.net (imbhub-ru55.nam.nsroot.net [150.110.175.14]) by smtpinbound.citigroup.com (Sentrion-MTA-4.4.0/Sentrion-MTA-4.4.0) with ESMTPS id 15PDVP6q007861 (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:26 GMT
+Received: from mail.citigroup.com (2._spf.citigroup.com [192.193.222.83]) by mx0a-00123c02.pphosted.com with ESMTP id 399t5pv33t-1 (version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=NOT) for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:26 +0000
+Received: from pps.filterd (m0126712.ppops.net [127.0.0.1]) by mx0a-00123c02.pphosted.com (8.16.0.43/8.16.0.43) with SMTP id 15PDE2T1044777 for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:27 GMT
+Received: from usermailout1.citi.com (67.231.145.221) by mx.cert.legalmail.it (5.8.715.01) id 606AC3D8022BF79E for priips@pec.consob.it; Fri, 25 Jun 2021 15:31:28 +0200
+Date: Fri, 25 Jun 2021 15:31:30 +0200
+From: "Per conto di: gabriele.maggio@citi.com" <posta-certificata@legalmail.it>
+Reply-To: gabriele.maggio@citi.com
+To: "'priips@pec.consob.it'" <priips@pec.consob.it>
+Cc: Citi Retail Italy <retail.italy@citi.com>
+Message-ID: <729ea76967a24867aedb600f729475b7@imceu.eu.ssmb.com>
+Subject: ANOMALIA MESSAGGIO: Recall: COD XS1575029720  SUB Citigroup Inc. RISK 5 MAX 1 CLASS Securities TYPE Start
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-1; boundary="----=_Part_2081391_49527604.1624627890908"
+X-Trasporto: errore
+
+------=_Part_2081391_49527604.1624627890908
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_2081388_1657605745.1624627890904"
+
+------=_Part_2081388_1657605745.1624627890904
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2081389_74403684.1624627890904"
+
+------=_Part_2081389_74403684.1624627890904
+Content-Type: text/plain; charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Anomalia nel messaggio
+
+Il giorno 25/06/2021 alle ore 15:31:30 (+0200) =E8 stato ricevuto=20
+il messaggio "Recall: COD XS1575029720  SUB Citigroup Inc. RISK 5 MAX 1 CLA=
+SS Securities TYPE Start" proveniente da "gabriele.maggio@citi.com"=20
+ed indirizzato a:
+
+
+
+priips@pec.consob.it
+
+
+retail.italy@citi.com
+
+
+
+Tali dati non sono stati certificati per il seguente errore:
+
+
+Messaggio proveniente da utente non certificato
+
+
+Il messaggio originale =E8 incluso in allegato.
+
+
+------------------------------------------------
+
+Anomaly message
+
+On 25/06/2021 at 15:31:30 (+0200) has been received the message "Recall: CO=
+D XS1575029720  SUB Citigroup Inc. RISK 5 MAX 1 CLASS Securities TYPE Start=
+" sent by "gabriele.maggio@citi.com" and addressed to:
+
+
+priips@pec.consob.it
+
+
+retail.italy@citi.com
+
+
+These data have not been certified for the following error:
+
+Messaggio proveniente da utente non certificato
+=20
+The original message is included in attached.
+
+------=_Part_2081389_74403684.1624627890904
+Content-Type: text/html; charset="ISO-8859-1"
+Content-Transfer-Encoding: 7bit
+
+<HTML><HEAD><TITLE>Anomalia nel messaggio</TITLE></HEAD>
+<BODY>
+
+<H1><p><font style="font-family: Arial; font-size: 20px; font-weight: 400; line-height:17.3px; text-align: left;"><b>Anomalia nel messaggio</b></font></p></H1>
+
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">Il giorno 25/06/2021 alle ore 15:31:30 (+0200) &egrave; stato ricevuto 
+il messaggio "Recall: COD XS1575029720  SUB Citigroup Inc. RISK 5 MAX 1 CLASS Securities TYPE Start" proveniente da "gabriele.maggio@citi.com" 
+ed indirizzato a:</font><br>
+<table border="0" cellpadding="0" cellpadding="0" style="border-spacing: 0;">
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">priips@pec.consob.it</font></td></tr>
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">retail.italy@citi.com</font></td></tr>
+</table>
+<font style="font-family: Arial;  font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">
+Tali dati non sono stati certificati per il seguente errore:<br>
+Messaggio proveniente da utente non certificato</font></p>
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">Il messaggio originale &egrave; incluso in allegato.</font></p>
+
+
+<hr />
+<p><font style="font-family: Arial; font-size: 20px; font-weight: 400; line-height:17.3px; text-align: left;"><b>Anomaly message</b></font></p>
+<p><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">On 25/06/2021 at 15:31:30 (+0200) has been received the message "Recall: COD XS1575029720  SUB Citigroup Inc. RISK 5 MAX 1 CLASS Securities TYPE Start" sent by "gabriele.maggio@citi.com" and addressed to:</font><br>
+<table border="0" cellpadding="0" cellpadding="0" style="border-spacing: 0;">
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">priips@pec.consob.it</font></td></tr>
+<tr><td><font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">retail.italy@citi.com</font></td></tr>
+</table>
+<font style="font-family: Arial; font-size: 15px; font-weight: 400; line-height:17.3px; text-align: left;">
+These data have not been certified for the following error:<br>
+Messaggio proveniente da utente non certificato<br> 
+The original message is included in attached.</font></p>
+</BODY>
+</HTML>
+
+------=_Part_2081389_74403684.1624627890904--
+
+------=_Part_2081388_1657605745.1624627890904
+Content-Type: message/rfc822; name=postacert.eml
+Content-Disposition: attachment; filename="postacert.eml"
+
+Received: from usermailout1.citi.com (67.231.145.221) by mx.cert.legalmail.it (5.8.715.01)
+        id 606AC3D8022BF79E for priips@pec.consob.it; Fri, 25 Jun 2021 15:31:28 +0200
+Received: from pps.filterd (m0126712.ppops.net [127.0.0.1])
+	by mx0a-00123c02.pphosted.com (8.16.0.43/8.16.0.43) with SMTP id 15PDE2T1044777
+	for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:27 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=citi.com; h=from : to : cc :
+ subject : date : message-id : content-type : content-transfer-encoding :
+ mime-version; s=maila; bh=QIujCM11P1CVYYfjYhVH88wx2zgbLivy47nlurcXaIw=;
+ b=sKMffp7U1cVVXcHC9fVCuPOi7Viq2uO/4BZ7tqAxpjDiKN7Q5Cgt3VHCHQXS2xXlt19L
+ godEbPZEFS2wNPsXEECCI/031v5TJhJGsyy8cT380dW9qS6pMT2ylFSmJXy4q+w16Qtq
+ Q/zsHB/c+JFkrpWRayTJekPTNomYba9V+axfynjKuyJRyBN80p4KTmCVHN/Igvhv0fCi
+ 3QBZeFjgbTIIUXeN8ZFjF3MpwuZ5AqJEgLTBcpp+WyVR0Dz57K84MPZCEcLO+hM4qj/0
+ r+mLxiPx1CY2CvhoRjFOBOcmkF2V7MckbkbarmCRXJszf3XP0ivo63pu9wgtsaVzAcV6 Hg== 
+Received: from mail.citigroup.com (2._spf.citigroup.com [192.193.222.83])
+	by mx0a-00123c02.pphosted.com with ESMTP id 399t5pv33t-1
+	(version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:26 +0000
+Received: from imbhub-ru55.nam.nsroot.net (imbhub-ru55.nam.nsroot.net [150.110.175.14])
+	by smtpinbound.citigroup.com (Sentrion-MTA-4.4.0/Sentrion-MTA-4.4.0) with ESMTPS id 15PDVP6q007861
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:26 GMT
+Received: from imbdlprt-mw06.nam.nsroot.net (imbdlprt-mw06.nam.nsroot.net [159.17.254.11])
+	by imbhub-ru55.nam.nsroot.net (Sentrion-MTA-4.4.0/Sentrion-MTA-4.4.0) with ESMTPS id 15PDVPUo096447
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:25 GMT
+Received: from imbdlpbuf-sw03.nam.nsroot.net (namdlpdimpsw20.nam.nsroot.net [169.185.193.80])
+	by imbdlprt-mw06.nam.nsroot.net (Sentrion-MTA-4.4.0/Sentrion-MTA-4.4.0) with ESMTP id 15PDVNuU079949
+	for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:24 GMT
+Received: from EXFFMP02.msg.net (EXFFMP02.msg.net [10.211.252.22])
+	by imbdlpbuf-sw03.nam.nsroot.net (Sentrion-MTA-4.4.0/Sentrion-MTA-4.4.0) with ESMTP id 15PDVMvB067603
+	for <priips@pec.consob.it>; Fri, 25 Jun 2021 13:31:23 GMT
+From: "Maggio, Gabriele " <gabriele.maggio@citi.com>
+To: "'priips@pec.consob.it'" <priips@pec.consob.it>
+CC: Citi Retail Italy <retail.italy@citi.com>
+Subject: Recall: COD XS1575029720  SUB Citigroup Inc. RISK 5 MAX 1 CLASS
+ Securities TYPE Start
+Thread-Topic: COD XS1575029720  SUB Citigroup Inc. RISK 5 MAX 1 CLASS
+ Securities TYPE Start
+Thread-Index: AQHXacZi8iv2lT95RRexvsaW4mVE5Q==
+X-CallingTelephoneNumber: IPM.Note
+X-VoiceMessageDuration: 17
+X-FaxNumberOfPages: 0
+Date: Fri, 25 Jun 2021 13:31:21 +0000
+Message-ID: <729ea76967a24867aedb600f729475b7@imceu.eu.ssmb.com>
+Accept-Language: it-IT, en-GB, en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [10.211.111.105]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-CFilter-Loop: Reflected
+X-Proofpoint-GUID: rWSekWVhGrLRVW-aEAc3dzVETPlow-HA
+X-Proofpoint-ORIG-GUID: rWSekWVhGrLRVW-aEAc3dzVETPlow-HA
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.391,18.0.790
+ definitions=2021-06-25_04:2021-06-25,2021-06-25 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 mlxscore=0 malwarescore=0 adultscore=0
+ mlxlogscore=891 phishscore=0 spamscore=0 impostorscore=0 suspectscore=0
+ priorityscore=1501 clxscore=1015 bulkscore=0 lowpriorityscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.12.0-2104190000
+ definitions=main-2106250077
+
+Maggio, Gabriele [ICG-MKTS] would like to recall the message, "COD XS157502=
+9720  SUB Citigroup Inc. RISK 5 MAX 1 CLASS Securities TYPE Start".=
+
+------=_Part_2081388_1657605745.1624627890904--
+
+------=_Part_2081391_49527604.1624627890908
+Content-Type: application/pkcs7-signature; name=smime.p7s; smime-type=signed-data
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIAwggWMMIIE
+dKADAgECAhB6e/NzNo7JSbtqHg6wXokyMA0GCSqGSIb3DQEBCwUAMIGQMQswCQYDVQQGEwJJVDEN
+MAsGA1UEBwwEUm9tYTEmMCQGA1UECgwdQWdlbnppYSBwZXIgbCdJdGFsaWEgRGlnaXRhbGUxNzA1
+BgNVBAsMLkFyZWEgU29sdXppb25pIHBlciBsYSBQdWJibGljYSBBbW1pbmlzdHJhemlvbmUxETAP
+BgNVBAMMCEFnSUQgQ0ExMB4XDTIwMTAwNzE0MzYzM1oXDTIzMTAwNzE0MzYzM1owbjELMAkGA1UE
+BhMCSVQxDTALBgNVBAgMBFJvbWExDTALBgNVBAcMBFJvbWExGDAWBgNVBAoMD0luZm9DZXJ0IFMu
+cC5BLjEnMCUGA1UEAwweUG9zdGEgQ2VydGlmaWNhdGEgTGVnYWxtYWlsIDI3MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEA30NNw1BsVm752XPbggqVrtKJAuNLTdc30m8FHD6Vj8m7/EK1
+qgUBrM+7nBIlxGd1OC7WByQ5RWxaR9IJ5r2rTIo3UtLOYe7Bc+2SdhCzcytKcdyMA7WOjR6YRhNa
+44VWt6yFQV8JpsnDUM5K8utoNMqWuchLqOSZ657eO9n7DIjBVzPytM0iVrQxkKWngl/tVmo68zU/
+JuhBNLrtQianPjQ57mm/7hb/1mKXg8yJY8kp+kOFXnwNDPGC0R4EN6CkzmBpEg15kx529j65wS/n
+EzLTumCEHz0pfujB/v9V4w57IR0GoyNkQXOEL9Yp7JNLubDpUicK9x4KK4n1P3xpawIDAQABo4IC
+ATCCAf0wNwYIKwYBBQUHAQEEKzApMCcGCCsGAQUFBzABhhtodHRwOi8vY2ExLmFnaWQuZ292Lml0
+L09DU1AwHQYDVR0OBBYEFDe+1JpOEDIAFpUSv/BTSd7xZO5OMB8GA1UdIwQYMBaAFKX9hQUOw/HW
+ZUogbOLbTWCTK4qgME8GA1UdIARIMEYwRAYGK0wQAwEBMDowOAYIKwYBBQUHAgEWLGh0dHA6Ly93
+d3cuYWdpZC5nb3YuaXQvY2VydGlmaWNhdGktZmlybWEtcGVjMIHgBgNVHR8EgdgwgdUwgbCgga2g
+gaqGgadsZGFwOi8vY2ExLmFnaWQuZ292Lml0L2NuPUFnSUQlMjBDQTEsb3U9QXJlYSUyMFNvbHV6
+aW9uaSUyMHBlciUyMGxhJTIwUHViYmxpY2ElMjBBbW1pbmlzdHJhemlvbmUsbz1BZ2VuemlhJTIw
+cGVyJTIwbCUyN0l0YWxpYSUyMERpZ2l0YWxlLEM9SVQ/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlz
+dDAgoB6gHIYaaHR0cDovL2NhMS5hZ2lkLmdvdi5pdC9DUkwwDgYDVR0PAQH/BAQDAgeAMBMGA1Ud
+JQQMMAoGCCsGAQUFBwMEMCkGA1UdEQQiMCCBHnBvc3RhLWNlcnRpZmljYXRhQGxlZ2FsbWFpbC5p
+dDANBgkqhkiG9w0BAQsFAAOCAQEAVArMFnR48KNbXke5STiGoUqsXM+cDwoKOP2/RYxLmWXvLBR7
+dOJIFfxxKge7TwlipnlI6BEpiSBcxd1ruzc+5clHtBffDd9NbSvz+HySPCoB75+HigHnqbE3xb5m
+I4jzec41Sv7CpCufNjoKEjC/hck+acB5AkZWhJlc20fP82OJxCXGgRy9Qlkh60l8OuJf/hZJtRok
+bWY5iS6x9HLNieygnq2DOvAAXZY20dqNKvbIj01J/v9QvFhDCi4B3ZUNDf5f9yGLLN0aRCdH1UmJ
+3DVqdQ7yEDF0nh9BGQTo0rhSsmUIcEsUp6m0L+t1ocfgeNbbXEGk5L3V/erBnmwWATCCEeEwgg/J
+oAMCAQICEFSzSvGwY+R/lY0MO/PEV/UwDQYJKoZIhvcNAQELBQAwazELMAkGA1UEBhMCSVQxDjAM
+BgNVBAcMBU1pbGFuMSMwIQYDVQQKDBpBY3RhbGlzIFMucC5BLi8wMzM1ODUyMDk2NzEnMCUGA1UE
+AwweQWN0YWxpcyBBdXRoZW50aWNhdGlvbiBSb290IENBMB4XDTIxMDYyMjA3Mjc0MVoXDTMwMDky
+MjExMjIwMlowgZAxCzAJBgNVBAYTAklUMQ0wCwYDVQQHDARSb21hMSYwJAYDVQQKDB1BZ2Vuemlh
+IHBlciBsJ0l0YWxpYSBEaWdpdGFsZTE3MDUGA1UECwwuQXJlYSBTb2x1emlvbmkgcGVyIGxhIFB1
+YmJsaWNhIEFtbWluaXN0cmF6aW9uZTERMA8GA1UEAwwIQWdJRCBDQTEwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDVNp9F64vMHqSNgGq8yVRuRPf5EKV4bi2197EIDdEY034bzwfX8F0a
+372q+bqbFhr8D7lAdmdwNo7Hg2tYW7x3nn5JH4yk/1JFInamRCqa29e+rf8yaDVSO5YEQo48/dAc
+lY1ByBbsEFBzlTG3x8ngVqU0K82LMZ6H0SkXqd2REi5YSmpZ+P/P60iAsZw/CqXk0ONUJ/FWKY9E
+VdDVNPpPVYEfQvyuM19c+AKJzHpnET//AdVxco5Ni2qlFx7fCwcOlm/jmDvp/a1yk/KQ8q/f83fp
+EiccSNoL6KMnu17d8SRqjg5KWa7t0Nxm+XPE9lGdppymcDnIjeKf+bXDmgtXAgMBAAGjgg1ZMIIN
+VTASBgNVHRMBAf8ECDAGAQH/AgEAMB8GA1UdIwQYMBaAFFLYiDrIn3hm7YnzezhwlMkCAjbQMEEG
+CCsGAQUFBwEBBDUwMzAxBggrBgEFBQcwAYYlaHR0cDovL29jc3AwNy5hY3RhbGlzLml0L1ZBL0FV
+VEgtUk9PVDCCC1UGA1UdHgSCC0wwggtIoIILEjANgQthZ2lkLmdvdi5pdDAZgRdjZXJ0LmluZm9y
+bWF0aWNhLmFjaS5pdDARgQ9jZXJ0LmludGVybm8uaXQwDIEKZW1hcmNoZS5pdDAQgQ5mYXN0d2Vi
+LXBlYy5pdDAVgRNnZXN0b3JlcGVjLnVuaW5hLml0MAyBCmttYWlsZXIuaXQwDoEMbGVnYWxtYWls
+Lml0MBCBDnBjZXJ0LnNvZ2VpLml0MBCBDnBlYy5hY3RhbGlzLml0MBCBDnBlYy5hbmNpdGVsLml0
+MA6BDHBlYy5hcnViYS5pdDAWgRRwZWMuYmFzaWxpY2F0YW5ldC5pdDAPgQ1wZWMtZW1haWwuY29t
+MBKBEHBlYy5wb3N0ZWNlcnQuaXQwFoEUcGVjLnBvc3RlaXRhbGlhbmUuaXQwFYETcGVjLnJ1cGFy
+LnB1Z2xpYS5pdDAWgRRwb3N0YWNlcnQuY2VkYWNyaS5pdDAfgR1wb3N0YWNlcnRpZmljYXRhLm5v
+dGFyaWF0by5pdDASgRBwb3N0YWNlcnQuaXQubmV0MA6BDHBvc3RlY2VydC5pdDAVgRNzaWN1cmV6
+emFwb3N0YWxlLml0MBCBDnRlbGVjb21wb3N0Lml0MBeBFXRydXN0ZWRtYWlsLmludGVzYS5pdDAM
+gQp0d3RjZXJ0Lml0MBGBD3p1Y2NoZXR0aXBlYy5pdDAQgQ5jZXJ0LmludGVzYS5pdDAWgRRjZXJ0
+bWFpbC5rcG5xd2VzdC5pdDAVgRNjZXJ0bWFpbC5pcmlkZW9zLml0MBqBGHB1cGVjLmluZm9ybWF0
+aWNhLmFjaS5pdDAZgRdwcm8uc2ljdXJlenphcG9zdGFsZS5pdDAQgQ5wZWMuYmlsbDRtZS5pdDAR
+gQ9wZWMubm90YXJ0ZWwuaXQwC4EJbWlhcGVjLml0MFCkTjBMMQswCQYDVQQGEwJJVDENMAsGA1UE
+CAwEUm9tYTENMAsGA1UEBwwEUm9tYTEfMB0GA1UECgwWQUNJIEluZm9ybWF0aWNhIFMucC5BLjBZ
+pFcwVTELMAkGA1UEBhMCSVQxEDAOBgNVBAgMB0JlcmdhbW8xGTAXBgNVBAcMEFBvbnRlIFNhbiBQ
+aWV0cm8xGTAXBgNVBAoMEEFydWJhIFBFQyBTLnAuQS4wV6RVMFMxCzAJBgNVBAYTAklUMRAwDgYD
+VQQIDAdCZXJnYW1vMRkwFwYDVQQHDBBQb250ZSBTYW4gUGlldHJvMRcwFQYDVQQKDA5BY3RhbGlz
+IFMucC5BLjBXpFUwUzELMAkGA1UEBhMCSVQxDTALBgNVBAgMBFJvbWExDTALBgNVBAcMBFJvbWEx
+JjAkBgNVBAoMHUFnZW56aWEgcGVyIGwnSXRhbGlhIERpZ2l0YWxlMEikRjBEMQswCQYDVQQGEwJJ
+VDENMAsGA1UECAwEUm9tYTENMAsGA1UEBwwEUm9tYTEXMBUGA1UECgwOQW5jaXRlbCBTLnAuQS4w
+T6RNMEsxCzAJBgNVBAYTAklUMQ4wDAYDVQQIDAVQYXJtYTETMBEGA1UEBwwKQ29sbGVjY2hpbzEX
+MBUGA1UECgwOQ2VkYWNyaSBTLnAuQS4wW6RZMFcxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21h
+MQ0wCwYDVQQHDARSb21hMSowKAYDVQQKDCFDb25zaWdsaW8gTmF6aW9uYWxlIGRlbCBOb3Rhcmlh
+dG8wTKRKMEgxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZNaWxhbm8xDzANBgNVBAcMBk1pbGFubzEX
+MBUGA1UECgwORmFzdHdlYiBTLnAuQS4wSqRIMEYxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZNaWxh
+bm8xDzANBgNVBAcMBkFzc2FnbzEVMBMGA1UECgwMSVRuZXQgUy5yLmwuME+kTTBLMQswCQYDVQQG
+EwJJVDEPMA0GA1UECAwGVG9yaW5vMQ8wDQYDVQQHDAZUb3Jpbm8xGjAYBgNVBAoMEUluLlRlLlMu
+QS4gUy5wLkEuMEmkRzBFMQswCQYDVQQGEwJJVDENMAsGA1UECAwEUm9tYTENMAsGA1UEBwwEUm9t
+YTEYMBYGA1UECgwPSW5mb0NlcnQgUy5wLkEuMFKkUDBOMQswCQYDVQQGEwJJVDENMAsGA1UECAwE
+QmFyaTESMBAGA1UEBwwJVmFsZW56YW5vMRwwGgYDVQQKDBNJbm5vdmFQdWdsaWEgUy5wLkEuMFGk
+TzBNMQswCQYDVQQGEwJJVDEPMA0GA1UECAwGQW5jb25hMRMwEQYDVQQHDApTZW5pZ2FsbGlhMRgw
+FgYDVQQKDA9OYW1pcmlhbCBTLnAuQS4wT6RNMEsxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21h
+MQ0wCwYDVQQHDARSb21hMR4wHAYDVQQKDBVQb3N0ZSBJdGFsaWFuZSBTLnAuQS4wUqRQME4xCzAJ
+BgNVBAYTAklUMRAwDgYDVQQIDAdQb3RlbnphMRAwDgYDVQQHDAdQb3RlbnphMRswGQYDVQQKDBJS
+ZWdpb25lIEJhc2lsaWNhdGEwTKRKMEgxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZBbmNvbmExDzAN
+BgNVBAcMBkFuY29uYTEXMBUGA1UECgwOUmVnaW9uZSBNYXJjaGUwT6RNMEsxCzAJBgNVBAYTAklU
+MRAwDgYDVQQIDAdGaXJlbnplMRAwDgYDVQQHDAdGaXJlbnplMRgwFgYDVQQKDA9SZWdpc3RlciBT
+LnAuQS4wRqREMEIxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARSb21hMQ0wCwYDVQQHDARSb21hMRUw
+EwYDVQQKDAxTb2dlaSBTLnAuQS4wSKRGMEQxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZNaWxhbm8x
+DzANBgNVBAcMBk1pbGFubzETMBEGA1UECgwKVFdUIFMucC5BLjBlpGMwYTELMAkGA1UEBhMCSVQx
+DTALBgNVBAgMBFJvbWExEDAOBgNVBAcMB1BvbWV6aWExMTAvBgNVBAoMKFRlbGVjb20gSXRhbGlh
+IFRydXN0IFRlY2hub2xvZ2llcyBTLnIubC4waqRoMGYxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZO
+YXBvbGkxDzANBgNVBAcMBk5hcG9saTE1MDMGA1UECgwsVU5JVkVSU0lUQSBERUdMSSBTVFVESSBE
+SSBOQVBPTEkgRkVERVJJQ08gSUkwSqRIMEYxCzAJBgNVBAYTAklUMQ0wCwYDVQQIDARMb2RpMQ0w
+CwYDVQQHDARMb2RpMRkwFwYDVQQKDBBadWNjaGV0dGkgUy5wLkEuMFSkUjBQMQswCQYDVQQGEwJJ
+VDEPMA0GA1UECAwGTWlsYW5vMQ8wDQYDVQQHDAZNaWxhbm8xHzAdBgNVBAoMFktQTlFXRVNUIElU
+QUxJQSBTLnIubC4wTKRKMEgxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZNaWxhbm8xDzANBgNVBAcM
+Bk1pbGFubzEXMBUGA1UECgwOSVJJREVPUyBTLnAuQS4wSaRHMEUxCzAJBgNVBAYTAklUMQ0wCwYD
+VQQIDARSb21hMQ0wCwYDVQQHDARSb21hMRgwFgYDVQQKDA9Ob3RhcnRlbCBTLnAuQS4wSqRIMEYx
+CzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZUb3Jpbm8xDzANBgNVBAcMBlRvcmlubzEVMBMGA1UECgwM
+VGVsc3kgUy5wLkEuoTAwCocIAAAAAAAAAAAwIocgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAwTgYDVR0gBEcwRTBDBgUrTBADATA6MDgGCCsGAQUFBwIBFixodHRwOi8vd3d3LmFnaWQu
+Z292Lml0L2NlcnRpZmljYXRpLWZpcm1hLXBlYzAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+AwQwgeMGA1UdHwSB2zCB2DCBlqCBk6CBkIaBjWxkYXA6Ly9sZGFwMDcuYWN0YWxpcy5pdC9jbiUz
+ZEFjdGFsaXMlMjBBdXRoZW50aWNhdGlvbiUyMFJvb3QlMjBDQSxvJTNkQWN0YWxpcyUyMFMucC5B
+LiUyZjAzMzU4NTIwOTY3LGMlM2RJVD9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0O2JpbmFyeTA9
+oDugOYY3aHR0cDovL2NybDA3LmFjdGFsaXMuaXQvUmVwb3NpdG9yeS9BVVRILVJPT1QvZ2V0TGFz
+dENSTDAdBgNVHQ4EFgQUpf2FBQ7D8dZlSiBs4ttNYJMriqAwDgYDVR0PAQH/BAQDAgEGMA0GCSqG
+SIb3DQEBCwUAA4ICAQBFi6bWQ/IweQvtkH+BzdEdBGkGTTkf1x0HmhZvrS8jboIRTLkn6+3slAjj
+Izq+1JzRM74qz9QksB9K4AHHL+9XBt9Bx5Z9bUjTD1PSWvw/mdbuQoaeOG9AqzcrCltr29+HZE2R
+KKGaqadxqN7q/7oYiERiWvIBs4Aq3FaNN1tEO+5CHSeLEg5LqF8pLym4sGp9awcHgMabomW/wYCG
+jOr6NDVNudzE6C1Ar8BdKNQ8ps1/pGBy6O5YNgwO3gFlf3DGL7eEnvECCkkk21G1KmT5Vojf8Qrc
+0HmCYnwgTDioc21TKfpXaTWj6cW4x0pDcR8SGHWBnRqEcd78DXO7vzyReY4WCJBUfy2YVP9utqpB
+RoB5yo9YHFkUOTkDMWSl9YNFHCTZZ8r3JeR/Zj+06YQc+TbDITxaOLXruzvIzs20j0oOEBBVUKKv
+W/AZwB3Zj9R5TkPlgkgwARdMcajjsnnwM94COxUC+KYjjBVr8LpDu4WQIL3E+LVhs85NTi4pdYhc
+7RFxUOUKo7/YAta9pYhu36XzztIkbavFtuR4XcdQuoI0WFXp8AkIE7CX5sA1Rw6WqP0nb5Ed9+G4
+BriWPiHmJoC8EhgrSlCJ7aGfPkIXEjmkuZIqUs1/h9DdxjVNLEWg2m/R9nTsa2Lnizmjdw1KbCPc
+DTFJtAQGCbbx+hFdRAAAMYIDHzCCAxsCAQEwgaUwgZAxCzAJBgNVBAYTAklUMQ0wCwYDVQQHDARS
+b21hMSYwJAYDVQQKDB1BZ2VuemlhIHBlciBsJ0l0YWxpYSBEaWdpdGFsZTE3MDUGA1UECwwuQXJl
+YSBTb2x1emlvbmkgcGVyIGxhIFB1YmJsaWNhIEFtbWluaXN0cmF6aW9uZTERMA8GA1UEAwwIQWdJ
+RCBDQTECEHp783M2jslJu2oeDrBeiTIwCQYFKw4DAhoFAKCCAU4wGAYJKoZIhvcNAQkDMQsGCSqG
+SIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjEwNjI1MTMzMTMwWjAjBgkqhkiG9w0BCQQxFgQUqQmA
+Np3w4dsw3w8eUZDUh6/kxLwwNAYJKoZIhvcNAQkPMScwJTAKBggqhkiG9w0DBzAOBggqhkiG9w0D
+AgICAIAwBwYFKw4DAgcwgbgGCyqGSIb3DQEJEAILMYGooIGlMIGQMQswCQYDVQQGEwJJVDENMAsG
+A1UEBwwEUm9tYTEmMCQGA1UECgwdQWdlbnppYSBwZXIgbCdJdGFsaWEgRGlnaXRhbGUxNzA1BgNV
+BAsMLkFyZWEgU29sdXppb25pIHBlciBsYSBQdWJibGljYSBBbW1pbmlzdHJhemlvbmUxETAPBgNV
+BAMMCEFnSUQgQ0ExAhB6e/NzNo7JSbtqHg6wXokyMA0GCSqGSIb3DQEBAQUABIIBAKyYwIhIfqqh
+Yk4T5DqQEz5lYU5A0CIs4p0sdTYOKfZVm4+KHrWFLNYygeEaIdFhyTt53Qtj/dRqF9zna6jyhqEy
+kGNFu1WiIN2a03isVJgRnBkiu9gKWAlvupH/CmqorEFMfsVAvYFWzgXsWNh2/VK6S3N55FIvqbzg
+2fyhIie9InQ62UjQgrPWaF8RELc36qFF5sNjAaI9wAx+IZtuwXFLjKMXfHYJtH8eqG9Iwd+b27Ye
+bkhXw5koPvhA0qBiHXwp5tXQFy1QcSiiOi1ewn19e8mVlsgxTfXh2s5ObyCwONmKugjFYIRUy2Dx
+B451ATFFwJ63FduUU2LBJLnRoCYAAAAAAAA=
+------=_Part_2081391_49527604.1624627890908--
