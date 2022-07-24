@@ -37,8 +37,14 @@ For the RAM and CPU utlized use the VisualVM program with administrator permissi
 
 For ease we report the performance related to CPU and RAM through the following plots.
 
-##RAM
-![]()
+##RAM JAPE
+![](https://github.com/Scafooo/EMNLP2022/blob/main/GATE/RAM.png)
 
-##CPU
-![]()
+##CPU JAPE
+![](https://github.com/Scafooo/EMNLP2022/blob/main/GATE/CPU.png)
+
+##RAM JAPE Plus
+![](https://github.com/Scafooo/EMNLP2022/blob/main/GATE/Ram_Plus.png)
+
+##CPU JAPE Plus
+![](https://github.com/Scafooo/EMNLP2022/blob/main/GATE/CPU_Plus.png)
