@@ -11,7 +11,13 @@ To check performance, CPU and RAM use [link](https://visualvm.github.io)
 For ease we report the performance related to CPU and RAM through the following plots.
 
 ##RAM
+
+If the image is not displayed correctly, cause anonymization, see the RAM.png file in this folder.
+
 ![](https://github.com/Scafooo/EMNLP2022/blob/main/UIMA%20Ruta/RAM.png)
 
 ##CPU
+
+If the image is not displayed correctly, cause anonymization, see the CPU.png file in this folder.
+
 ![](https://github.com/Scafooo/EMNLP2022/blob/main/UIMA%20Ruta/CPU.png)
