@@ -14,8 +14,8 @@ For ease we report the performance related to CPU and RAM through the following 
 
 ##RAM
 
-![](https://github.com/Scafooo/EMNLP2022/blob/main/Stanford/RAM.png)
+![](https://github.com/Scafooo/EMNLP2022/blob/main/CoreNLP/RAM.png)
 
 ##CPU
 
-![](https://github.com/Scafooo/EMNLP2022/blob/main/Stanford/CPU.png)
+![](https://github.com/Scafooo/EMNLP2022/blob/main/CoreNLP/CPU.png)
