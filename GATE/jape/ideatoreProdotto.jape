@@ -1,0 +1,11 @@
+Phase: ideatoreProdotto  
+Input: sectionIdeatore ideatore
+Options: control = first debug = true
+ 
+Rule: ideatoreProdotto 
+(
+	{ideatore within sectionIdeatore}
+):data
+
+-->
+:data.ideatoreProdotto = { rule = "ideatoreProdotto" }

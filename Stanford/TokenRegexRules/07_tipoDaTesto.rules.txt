@@ -1,0 +1,60 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 66
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+tipo = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$DescriptionType"}
+
+
+$InizioTipo = (
+    /Prodotto/ /\?/  /Tipo/ /:/ |
+    /@nl/ /tipo/ /@nl/ /@nl/* |
+    /tipo/ /:/ |
+    /tipo:/ |
+    /questo/ /prodotto/ /\?/ /@nl/ |
+    /questo/ /prodotto?/ /@nl/ |
+    /Cos/ /'/ /è/ /questo/ /prodotto/ /@nl/ |
+    /Si/ /sta/ /per/ /fare/ |
+    /@nl/ /Tipo/ |
+    /questo/ /prodotto/ /\?/ /@nl/ /il|Il/ /prodotto/ /è/ |
+    /cosa/ /è/ /questo/ /prodotto/ /\?/ /@nl/
+)
+
+$FineTipo = (
+    /Obiettivi/ /@nl/ |
+    /Obiettivi/ /:/ |
+    /@nl/ /Cos/ /'/ /è/ /un/ |
+    /@nl/ /Obiettivi|Obiettivo/ |
+    /L'obiettivo/ /del/ /prodotto/ |
+    /@nl/ /Quali/ /sono/ /i/ /rischi/ /e/ /cosa/ /potrei/ /ottenere/
+)
+
+ENV.defaults["stage"] = 6
+{
+    ruleType: "tokens",
+    pattern: (
+        ($InizioTipo)  (?$tipo []+?) ($FineTipo)
+        ),
+    action: ( Annotate($tipo, tipo, "TIPO")),
+    result: "TIPO"
+}
+
+$CancellaTipo = (
+    /Tipo/ |
+    /TIPO/ |
+    /:/ |
+    /Prodotto/
+
+)
+
+#Clean Annotations 1
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$tipo $CancellaTipo)
+        ),
+    action: ( Annotate($tipo, tipo, "0"))
+}
+

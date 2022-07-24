@@ -1,0 +1,10 @@
+PACKAGE uima.ruta.example;
+
+WORDLIST startProdottoList = 'startProdotto.txt';
+WORDLIST endProdottoList = 'endProdotto.txt';
+
+DECLARE startProdotto, endProdotto, sectionProdotto;
+
+Document{-> MARKFAST(startProdotto, startProdottoList)};
+Document{-> MARKFAST(endProdotto, endProdottoList)};
+startProdotto #{-PARTOF(sectionProdotto) -> MARK(sectionProdotto)} endProdotto;

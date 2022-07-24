@@ -1,0 +1,7 @@
+PACKAGE uima.ruta.example;
+
+WORDLIST valutalist = 'valuta.txt';
+
+DECLARE valuta;
+
+Document{-> MARKFAST(valuta, valutalist)};

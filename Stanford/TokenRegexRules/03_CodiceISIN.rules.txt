@@ -1,0 +1,63 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 0
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+isin = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$ISIN"}
+
+
+$InizioCodiceISIN = (
+    /CODICE|Codice/ /IDENTIFICATIVO|Idenfiticativo/ /ISIN/ /:/* /Code/* /:/* |
+    /Identificatori|Identificatore/ /del/ /presente/* /prodotto/ /Codice/ /ISIN/ /:/* |
+    /Codice/ /del/ /Prodotto|prodotto/ /:/|
+    /Codice/ /ISIN/ /:/ |
+    /ISIN/ /:/* |
+    /Codice/ /ISIN/ /Diritti/ /di/ /@nl/ /Opzione/ /:/ /@nl/ |
+    #roberto inizio
+        /Codice/ /prodotto/ /:/ |
+        /Codice/ /ISIN/ /Diritti/ /di/ /@nl/? /Opzione/ /:/? |
+        #AGGIUNTA il 21/05/2019 per prendere tutti gli ISIN di KID 3 blocco 130827_7 cartella 1342514
+        /quote/ /di/ /Classe/ /./
+    #roberto fine
+)
+
+$FineCodiceISIN = (
+    /@nl/
+)
+
+ENV.defaults["stage"] = 8
+
+#AGGIUNGERE TAG TABELLA
+
+{
+    ruleType: "tokens",
+    pattern: (
+        ($InizioCodiceISIN)  (?$CodiceISIN [{section:"SEZIONE_PRODOTTO"}]+?) ($FineCodiceISIN)
+        ),
+    action: ( Annotate($CodiceISIN, isin, "FIRSTISIN")),
+    result: "FIRSTISIN"
+}
+
+ENV.defaults["stage"] = 9
+
+#Clean Annotations
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$Cancella /Code/ /:/)
+        ),
+    action: ( Annotate($Cancella, isin, "0"))
+}
+
+$code = "/([A-Za-z][A-Za-z][A-Z0-9]{10})/"
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$CodiceISIN [{word:$code} & {isin:"FIRSTISIN"}])
+        ),
+    action: ( Annotate($CodiceISIN, isin, "ISIN")),
+    result: "ISIN"
+}

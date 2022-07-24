@@ -1,0 +1,50 @@
+/**
+* @author Federico Scafoglieri
+*/
+
+module section;
+
+import view _Document from module IEWTDocument as _Document;
+
+/**
+* Start Scopo Section
+*/
+create dictionary startSectionScopo
+	from file 'dictionaries/scopo/startScopo.dict';
+
+create view startScopo as
+  extract dictionary 'startSectionScopo'
+    with flags 'Exact'
+    on D.text as start
+  from _Document D;
+
+/**
+* Ending Scopo Section
+*/
+create dictionary endSectionScopo
+	from file 'dictionaries/scopo/endScopo.dict';
+
+create view endScopo as
+  extract dictionary 'endSectionScopo'
+    with flags 'Exact'
+    on D.text as end
+  from _Document D;
+
+create view ScopoToBeConsolidated as
+   select
+        CombineSpans('IgnoreOrder', s1.start, s2.end) as sectionScopo
+   from startScopo s1,
+        endScopo s2;
+
+/**
+* Consolidate the results
+*/
+
+
+create view Scopo as
+    select s.sectionScopo
+    from ScopoToBeConsolidated s
+    consolidate on s.sectionScopo
+        using 'ContainedWithin';
+
+export view Scopo;

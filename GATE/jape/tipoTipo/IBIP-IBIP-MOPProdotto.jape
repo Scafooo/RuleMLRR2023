@@ -1,0 +1,11 @@
+Phase: tipoTipo-IBIP-IBIP-MOPProdotto  
+Input: tipoDaTestoProdotto tipoTipo-IBIP-IBIP-MOP
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoTipo-IBIP-IBIP-MOP within tipoDaTestoProdotto}
+):match
+
+-->
+:match.tipoTipo-IBIP-IBIP-MOPProdotto = { rule = "tipoTipo-IBIP-IBIP-MOPProdotto" }

@@ -1,0 +1,11 @@
+Phase: tipoTipo-SECURITIES-CERTIFICATI-BONUS_BONUS_CAPProdotto  
+Input: tipoDaTestoProdotto tipoTipo-SECURITIES-CERTIFICATI-BONUS_BONUS_CAP
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoTipo-SECURITIES-CERTIFICATI-BONUS_BONUS_CAP within tipoDaTestoProdotto}
+):match
+
+-->
+:match.tipoTipo-SECURITIES-CERTIFICATI-BONUS_BONUS_CAPProdotto = { rule = "tipoTipo-SECURITIES-CERTIFICATI-BONUS_BONUS_CAPProdotto" }

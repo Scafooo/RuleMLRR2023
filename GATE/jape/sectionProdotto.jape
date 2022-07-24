@@ -1,0 +1,17 @@
+Phase: sectionProdotto  
+Input: Token Lookup  
+Options: control = appelt  
+ 
+Rule: sectionProdotto
+(
+	{Lookup.majorType == "startProdotto"}
+)
+(
+	{Token}
+)* :section
+(
+	{Lookup.majorType == "endProdotto"}
+)
+
+-->
+: section.Prodotto = { kind= "Prodotto", rule = "sectionProdotto" }

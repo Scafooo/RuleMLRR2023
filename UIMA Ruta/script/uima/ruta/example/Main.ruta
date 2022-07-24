@@ -1,0 +1,24 @@
+PACKAGE uima.ruta.example;
+
+SCRIPT uima.ruta.example.Scopo;
+SCRIPT uima.ruta.example.Prodotto;
+SCRIPT uima.ruta.example.NomeProdotto;
+SCRIPT uima.ruta.example.ComprensionAlert;
+SCRIPT uima.ruta.example.DataProduzione;
+SCRIPT uima.ruta.example.Ideatore;
+SCRIPT uima.ruta.example.TipoDaTesto;
+SCRIPT uima.ruta.example.Valuta;
+SCRIPT uima.ruta.example.TipoNome;
+SCRIPT uima.ruta.example.TipoTipo;
+
+Document{-> CALL(Scopo)};
+Document{-> CALL(Prodotto)};
+Document{-> CALL(NomeProdotto)};
+Document{-> CALL(ComprensionAlert)};
+Document{-> CALL(DataProduzione)};
+Document{-> CALL(Ideatore)};
+Document{-> CALL(TipoDaTesto)};
+Document{-> CALL(Valuta)};
+
+Document{-> CALL(TipoNome)};
+Document{-> CALL(TipoTipo)};

@@ -1,0 +1,60 @@
+module dataProduzione;
+
+import view _Document from module IEWTDocument as _Document;
+import view Prodotto from module section as sectionProdotto;
+
+-------------------------------------------------------- START SECTION ----------------------------------------------------------------
+-- create dictionarty
+create dictionary startDataProduzione
+	from file 'dictionaries/startDataProduzione.dict';
+
+create view startDataProduzione as
+  extract dictionary 'startDataProduzione'
+    with flags 'Exact'
+    on sP.sectionProdotto as start
+  from sectionProdotto sP;
+
+-- First appear in prodotto section
+create view startDataProduzioneFirst as
+   select Min(sp.start) as start
+   from startDataProduzione sp;
+
+
+-------------------------------------------------------- END SECTION ----------------------------------------------------------------
+-- create dictionarty
+create dictionary endDataProduzione
+	from file 'dictionaries/endDataProduzione.dict';
+
+create view endDataProduzione as
+  extract dictionary 'endDataProduzione'
+    with flags 'Exact'
+    on sP.sectionProdotto as end
+  from sectionProdotto sP;
+
+-- Cartesian product Spans
+create view possibleSpanDataProduzione as
+    select sp.start as start, ep.end as end
+    from startDataProduzioneFirst sp, endDataProduzione ep
+    where GreaterThan(ep.end, sp.start)
+    consolidate on ep.end;
+
+create view endDataProduzioneFirst as
+   select Min(p.end) as end
+   from possibleSpanDataProduzione p;
+
+create view DataProduzioneToBeConsolidated as
+   select
+        SpanBetween('IgnoreOrder', s1.start, s2.end) as DataProduzione
+   from startDataProduzioneFirst s1,
+        endDataProduzioneFirst s2;
+
+/**
+* Consolidate the results
+*/
+create view DataProduzione as
+    select s.DataProduzione
+    from DataProduzioneToBeConsolidated s
+    consolidate on s.DataProduzione
+        using 'ContainedWithin';
+
+export view DataProduzione;

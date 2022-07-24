@@ -1,0 +1,12 @@
+Phase: tipoNome-SECURITIES-ETP-ETP
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-SECURITIES-ETP-ETP
+(
+	{Lookup.majorType == "tipoNome-SECURITIES-ETP-ETP"}
+) :match
+
+-->
+:match.tipoNome-SECURITIES-ETP-ETP = {rule = "tipoNome-SECURITIES-ETP-ETP" }

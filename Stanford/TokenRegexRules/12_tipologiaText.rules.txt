@@ -1,0 +1,513 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+# 66
+ENV.defaultStringPatternFlags = 2
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+nomeProdotto = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+category = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$CategoryAnnotation"}
+nomeProdotto = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$ProductName"}
+tipo = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$DescriptionType"}
+
+EquityProtectionText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$EquityProtectionText"}
+DigitalProtecionCashCollectExpressText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$DigitalProtecionCashCollectExpressText"}
+BonusBonusCapText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$BonusBonusCapText"}
+TwinWinText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$TwinWinText"}
+BenchmarkCertificatesText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$BenchmarkCertificatesText"}
+ReverseConvertibleCertificatesText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$ReverseConvertibleCertificatesText"}
+MinifuturesText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$MinifuturesText"}
+LevaFissaText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$LevaFissaText"}
+TurboText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$TurboText"}
+CorridorText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$CorridorText"}
+CoveredWarrantText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$CoveredWarrantText"}
+WarrantText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$WarrantText"}
+OrdinaryBondsText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$OrdinaryBondsText"}
+StructuredBondsText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$StructuredBondsText"}
+CreditLinkedNotesText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$CreditLinkedNotesText"}
+ETPText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$ETPText"}
+OptionsText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$OptionsText"}
+FuturesText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$FuturesText"}
+SWAPText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$SWAPText"}
+ForwardsText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$ForwardsText"}
+CFDText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$CFDText"}
+DepositiStrutturatiText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$DepositiStrutturatiText"}
+MOPText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$MOPText"}
+NonMOPText = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductText$NonMOPText"}
+
+
+ENV.defaults["stage"] = 20
+
+
+
+# SECURITIES - CERTIFICATI - Equity Protection
+
+$EquityProtectionName = (
+    [{word:/partecipazione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $EquityProtectionName)
+    ),
+    action: ( Annotate($TipologiaTesto, EquityProtectionText, "SECURITIES:CERTIFICATI:EQUITY_PROTECTION")),
+    result: "EquityProtectionText"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Digital Protection/Cash Collect/Express Protection/Express
+
+$DigitalProtectionCashCollectExpressProtectionExpressName = (
+    [{word:/digital/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/importi/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/addizionali/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/Digital/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Protected/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/liquidazione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/anticipata/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/rimborso/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/anticipato/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/scadenza/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/anticipata/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  [{word:/automatica/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/autocallable/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/autocallability/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/liquidazione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/anticipata/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/rimborso/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/anticipato/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/automatico/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $DigitalProtectionCashCollectExpressProtectionExpressName)
+    ),
+    action: ( Annotate($TipologiaTesto, DigitalProtecionCashCollectExpressText, "SECURITIES:CERTIFICATI:DIGITAL_PROTECTION_CASH_COLLECT_EXPRESS")),
+    result: "DigitalProtectionCashCollectExpressProtectionExpressText"
+}
+
+
+
+# SECURITIES - CERTIFICATI -  Bonus - Bonus Cap
+
+$BonusBonusCapName = (
+    [{word:/bonus/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [!{word:/cap|capped/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/strike/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]* [{word:/cap/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/barriera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]* [{word:/cap/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/pagamento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/massimo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/importo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/massimo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/cap/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/capped/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]  |
+    [{word:/lock-in/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $BonusBonusCapName)
+    ),
+    action: ( Annotate($TipologiaTesto, BonusBonusCapText, "SECURITIES:CERTIFICATI:BONUS_BONUS_CAP")),
+    result: "BonusBonusCapText"
+}
+
+
+
+# SECURITIES - CERTIFICATI -  Twin win
+
+# $TwinWinName = (
+
+# )
+
+# {
+#     ruleType: "tokens",
+#     pattern: (
+#         (?$TipologiaTesto $TwinWinName)
+#     ),
+#     action: ( Annotate($TipologiaTesto, TwinWinText, "SECURITIES:CERTIFICATI:TWIN_WIN")),
+#     result: "TwinWinText"
+# }
+
+
+
+# SECURITIES - CERTIFICATI - Benchmark Certificates
+
+$BenchmarkName = (
+    [{word:/importo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/legato/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/replicare/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/la/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/performance/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/replicare/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/l'andamento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $BenchmarkName)
+    ),
+    action: ( Annotate($TipologiaTesto, BenchmarkCertificatesText, "SECURITIES:CERTIFICATI:BENCHMARK")),
+    result: "BenchmarkCertificatesText"
+}
+
+
+
+# SECURITIES - CERTIFICATI  - Reverse Convertible Certificates
+
+$ReverseConvertibleName = (
+    [{word:/collegato/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/alla/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/performance/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/del/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/sottostante/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/quantità/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/interna/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/del/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/sottostante/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $ReverseConvertibleName)
+    ),
+    action: ( Annotate($TipologiaTesto, ReverseConvertibleCertificatesText, "SECURITIES:CERTIFICATI:REVERSE_CONVERTIBLE")),
+    result: "ReverseConvertibleCertificatesText"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Minifutures
+
+$MiniFutureName = (
+    [{word:/Importo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Knock-out/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Livello/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Knock-out/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $MiniFutureName)
+    ),
+    action: ( Annotate($TipologiaTesto, MinifuturesText, "SECURITIES:CERTIFICATI:MINIFUTURE")),
+    result: "MinifuturesText"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Leva fissa
+
+$LevaFissaName = (
+    [{word:/Evento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/reset/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Barriera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Rettifica/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Ricalcolo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/infragiornaliero/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/rettifica/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/infragiornaliera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/restrike/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/infragiornaliero/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/restike/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/infragiornaliero/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $LevaFissaName)
+    ),
+    action: ( Annotate($TipologiaTesto, LevaFissaText, "SECURITIES:CERTIFICATI:LEVA_FISSA")),
+    result: "LevaFissaText"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Turbo
+
+$TurboName = (
+    [{word:/Evento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Knock-out/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]* [{word:/il/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/valore/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/del/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/prodotto/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/si/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/azzera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/importo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/liquidato/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/pari/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/a/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/0/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $TurboName)
+    ),
+    action: ( Annotate($TipologiaTesto, TurboText, "SECURITIES:CERTIFICATI:TURBO")),
+    result: "TurboText"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Corridor
+
+$CorridorName = (
+    [{word:/Barriera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/inferiore/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Barriera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/superiore/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Barriera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/inferiore/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Knock-out/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Barriera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/superiore/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Knock-out/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $CorridorName)
+    ),
+    action: ( Annotate($TipologiaTesto, CorridorText, "SECURITIES:CERTIFICATI:CORRIDOR")),
+    result: "CorridorText"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Covered Warrant
+
+$CoveredWarrantName = (
+    [{word:/Differenza/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/tra/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/il/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Valore/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Riferimento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Finale/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/e/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/il/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/prezzo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Esercizio/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Differenza/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/tra/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/il/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/prezzo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/riferimento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/e/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/lo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Strike/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/tra/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/il/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Prezzo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Riferimento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/del/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Sottostante/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/e/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/il/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Prezzo/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Esercizio/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $CoveredWarrantName)
+    ),
+    action: ( Annotate($TipologiaTesto, CoveredWarrantText, "SECURITIES:COVERED_WARRANT:COVERED_WARRANT")),
+    result: "CoveredWarrantText"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Warrant
+
+$WarrantName = (
+    [{word:/warrant/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [!{word:/covered/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $WarrantName)
+    ),
+    action: ( Annotate($TipologiaTesto, WarrantText, "SECURITIES:WARRANT:WARRANT")),
+    result: "WarrantText"
+}
+
+
+
+# SECURITIES - OBBLIGAZIONI - ORDINARY BONDS
+
+$OrdinaryBondsName = (
+    [{word:/tasso/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/fisso/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/tasso/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/variabile/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/tasso/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/misto/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $OrdinaryBondsName)
+    ),
+    action: ( Annotate($TipologiaTesto, OrdinaryBondsText, "SECURITIES:OBBLIGAZIONI:ORDINARY_BONDS")),
+    result: "OrdinaryBondsText"
+}
+
+
+
+# SECURITIES - OBBLIGAZIONI - STRUCTURED BONDS
+
+$StructuredBondsName = (
+    [{word:/cedola/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/indicizzata/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/floor/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $StructuredBondsName)
+    ),
+    action: ( Annotate($TipologiaTesto, StructuredBondsText, "SECURITIES:OBBLIGAZIONI:STRUCTURED_BONDS")),
+    result: "StructuredBondsText"
+}
+
+
+
+# SECURITIES - OBBLIGAZIONI - CREDIT LINKED NOTES
+
+$CreditLinkedNotesName = (
+    [{word:/affidabilità/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/creditizia/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/evento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/di/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/credito/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $CreditLinkedNotesName)
+    ),
+    action: ( Annotate($TipologiaTesto, CreditLinkedNotesText, "SECURITIES:OBBLIGAZIONI:CREDIT_LINKED_NOTES")),
+    result: "CreditLinkedNotesText"
+}
+
+
+
+# SECURITIES - ETP - ETP
+
+$ETPName = (
+    [{word:/replica/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/l'andamento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/esposizione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/lunga/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/esposizione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/corta/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/exchange/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/traded/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/product/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $ETPName)
+    ),
+    action: ( Annotate($TipologiaTesto, ETPText, "SECURITIES:ETP:ETP")),
+    result: "ETPText"
+}
+
+
+
+
+# DERIVATIVES - DERIVATIVES - OPTIONS
+
+$OptionsName = (
+    [{word:/Opzione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Option/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Put/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Call/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Collar/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Interest/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Rate/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Cap/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [!{word:/swap/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Interest/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Rate/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Floor/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [!{word:/swap/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $OptionsName)
+    ),
+    action: ( Annotate($TipologiaTesto, OptionsText, "DERIVATIVES:DERIVATIVES:OPTIONS")),
+    result: "OptionsText"
+}
+
+
+
+
+# DERIVATIVES - DERIVATIVES - FUTURES
+
+$FuturesName = (
+    [{word:/Future/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [!{word:/opzione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Futures/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/option/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $FuturesName)
+    ),
+    action: ( Annotate($TipologiaTesto, FuturesText, "DERIVATIVES:DERIVATIVES:FUTURES")),
+    result: "FuturesText"
+}
+
+
+
+# DERIVATIVES - DERIVATIVES - SWAP
+
+$SwapName = (
+    [{word:/Swap/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/IRS/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Interest/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Rate/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Swap/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]    
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $SwapName)
+    ),
+    action: ( Annotate($TipologiaTesto, SwapText, "DERIVATIVES:DERIVATIVES:SWAP")),
+    result: "SwapText"
+}
+
+
+
+# DERIVATIVES - DERIVATIVES - FORWARDS
+
+$ForwardsName = (
+    [{word:/Forward/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/OTC/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Outright/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/NDF/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/CAMBIO/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $ForwardsName)
+    ),
+    action: ( Annotate($TipologiaTesto, ForwardsText, "DERIVATIVES:DERIVATIVES:FORWARDS")),
+    result: "ForwardsText"
+}
+
+
+
+# DERIVATIVES - DERIVATIVES - CFD
+
+$CFDName = (
+    [{word:/CFD/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Contratto/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/per/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Differenza/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Contracts/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/for/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/Difference/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $CFDName)
+    ),
+    action: ( Annotate($TipologiaTesto, CFDText, "DERIVATIVES:DERIVATIVES:CFD")),
+    result: "CFDText"
+}
+
+
+
+# DEPOSITI STRUTTURATI - DEPOSITI STRUTTURATI - DEPOSITI STRUTTURATI
+
+$DepositiStrutturatiName = (
+    [{word:/Deposit/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Deposito/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/strutturato/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $DepositiStrutturatiName)
+    ),
+    action: ( Annotate($TipologiaTesto, DepositiStrutturatiText, "DEPOSITI_STRUTTURATI:DEPOSITI_STRUTTURATI:DEPOSITI_STRUTTURATI")),
+    result: "DepositiStrutturatiText"
+}
+
+
+
+# IBIP - IBIP - MOP
+
+$MOPName = (
+    [{word:/gestione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/separata/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]* [{word:/fondo|fondi/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/gestione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/separata/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]* [{word:/OICR/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/opzione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/d'investimento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/allegato|documento/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/informazioni/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/specifiche/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $MOPName)
+    ),
+    action: ( Annotate($TipologiaTesto, MOPText, "IBIP:IBIP:MOP")),
+    result: "MOPText"
+}
+
+
+
+
+# IBIP - IBIP - NON MOP
+
+$NONMOPName = (
+    [{word:/caso/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/vita/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/caso/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/morte/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/vita/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/intera/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/assicurazione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] [{word:/mista/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}] |
+    [{word:/Capitalizzazione/}  & {section:"SEZIONE_DESCRIZIONE_PRODOTTO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTesto $NONMOPName)
+    ),
+    action: ( Annotate($TipologiaTesto, NonMOPText, "IBIP:IBIP:NONMOP")),
+    result: "NonMOPText"
+}

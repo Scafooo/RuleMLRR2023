@@ -1,0 +1,11 @@
+Phase: ideatore  
+Input: Token Lookup sectionIdeatore
+Options: control = all  
+ 
+Rule: ideatore 
+(
+	{Lookup.majorType == "ideatori"}
+) :data
+
+-->
+:data.ideatore = { rule = "ideatore" }

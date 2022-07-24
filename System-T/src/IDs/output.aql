@@ -1,0 +1,5 @@
+module IDs;
+
+--output view DocumentID;
+--output view ProductID;
+--output view FinancialID;

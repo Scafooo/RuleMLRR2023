@@ -1,0 +1,12 @@
+Phase: tipoNome-SECURITIES-CERTIFICATI-TURBO
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-SECURITIES-CERTIFICATI-TURBO
+(
+	{Lookup.majorType == "tipoNome-SECURITIES-CERTIFICATI-TURBO"}
+) :match
+
+-->
+:match.tipoNome-SECURITIES-CERTIFICATI-TURBO = {rule = "tipoNome-SECURITIES-CERTIFICATI-TURBO" }

@@ -1,0 +1,12 @@
+Phase: sitoweb  
+Input: Token Lookup  
+Options: control = appelt
+
+///(https?:\/\/)?(www\.)?([a-zA-Z0-9]+(-?[a-zA-Z0-9])*\.)+[\w]{2,}(\/\S*)?/
+Rule: ISIN 
+(
+	{Token.string =~ "https?:\\\\"}///(https?:\/\/)?(www\.)?([a-zA-Z0-9]+(-?[a-zA-Z0-9])*\.)+[\w]{2,}(\/\S*)?/
+) :match
+
+-->
+:match. sitoweb = {rule = "sitoweb" }

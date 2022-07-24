@@ -1,0 +1,17 @@
+Phase: dataProduzione  
+Input: Token Lookup Prodotto
+Options: control = once  
+ 
+Rule: dataProduzione 
+(
+	{Lookup.majorType == "startDataProduzione"}
+)
+(
+	{Token}
+)* :data
+(
+	{Lookup.majorType == "endDataProduzione"}
+)
+
+-->
+:data.Produzione = { rule = "dataProduzione" }

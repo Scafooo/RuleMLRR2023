@@ -1,0 +1,12 @@
+PACKAGE uima.ruta.example;
+
+SCRIPT uima.ruta.example.Prodotto;
+
+WORDLIST startDataProduzioneList = 'startDataProduzione.txt';
+WORDLIST endDataProduzioneList = 'endDataProduzione.txt';
+
+DECLARE startDataProduzione, endDataProduzione, dataProduzione;
+
+Document{-> MARKFAST(startDataProduzione, startDataProduzioneList)};
+Document{-> MARKFAST(endDataProduzione, endDataProduzioneList)};
+startDataProduzione #{-PARTOF(dataProduzione),PARTOF(sectionProdotto) -> MARK(dataProduzione)} endDataProduzione;

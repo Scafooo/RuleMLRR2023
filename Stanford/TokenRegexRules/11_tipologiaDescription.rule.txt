@@ -1,0 +1,538 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+# 66
+ENV.defaultStringPatternFlags = 2
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+nomeProdotto = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+category = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$CategoryAnnotation"}
+nomeProdotto = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$ProductName"}
+tipo = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$DescriptionType"}
+
+EquityProtectionDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$EquityProtectionDescription"}
+DigitalProtecionCashCollectExpressDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$DigitalProtecionCashCollectExpressDescription"}
+BonusBonusCapDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$BonusBonusCapDescription"}
+TwinWinDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$TwinWinDescription"}
+BenchmarkCertificatesDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$BenchmarkCertificatesDescription"}
+ReverseConvertibleCertificatesDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$ReverseConvertibleCertificatesDescription"}
+MinifuturesDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$MinifuturesDescription"}
+LevaFissaDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$LevaFissaDescription"}
+TurboDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$TurboDescription"}
+CorridorDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$CorridorDescription"}
+CoveredWarrantDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$CoveredWarrantDescription"}
+WarrantDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$WarrantDescription"}
+OrdinaryBondsDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$OrdinaryBondsDescription"}
+StructuredBondsDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$StructuredBondsDescription"}
+CreditLinkedNotesDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$CreditLinkedNotesDescription"}
+ETPDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$ETPDescription"}
+OptionsDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$OptionsDescription"}
+FuturesDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$FuturesDescription"}
+SWAPDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$SWAPDescription"}
+ForwardsDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$ForwardsDescription"}
+CFDDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$CFDDescription"}
+DepositiStrutturatiDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$DepositiStrutturatiDescription"}
+MOPDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$MOPDescription"}
+NonMOPDescription = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.TypeProductDescription$NonMOPDescription"}
+
+
+ENV.defaults["stage"] = 21
+
+
+
+# SECURITIES - CERTIFICATI - Equity Protection
+
+$EquityProtectionDescription = (
+    [{word:/top/}  & ({tipo:"TIPO"} | {tipo:"TIPO"})] [{word:/rank/}  & {tipo:"TIPO"}] [{word:/cliquet/}  & {tipo:"TIPO"}] |
+    [{word:/equity/}  & {tipo:"TIPO"}] [{word:/protection/}  & {tipo:"TIPO"}] |
+    [{word:/PAC/}  & {tipo:"TIPO"}] [{word:/Certificate/}  & {tipo:"TIPO"}] |
+    [{word:/PAC/}  & {tipo:"TIPO"}] [{word:/crescendo/}  & {tipo:"TIPO"}] [{word:/plus/}  & {tipo:"TIPO"}] |
+    [{word:/lock/}  & {tipo:"TIPO"}] [{word:/in/}  & {tipo:"TIPO"}] |
+    [{word:/lock-in/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $EquityProtectionDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, EquityProtectionDescription, "SECURITIES:CERTIFICATI:EQUITY_PROTECTION")),
+    result: "EquityProtectionDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Digital Protection/Cash Collect/Express Protection/Express
+
+$DigitalProtectionCashCollectExpressProtectionExpressDescription = (
+    [{word:/digital/}  & {tipo:"TIPO"}] |
+    [{word:/cash/}  & {tipo:"TIPO"}] [{word:/collect/}  & {tipo:"TIPO"}] |
+    [{word:/coupon/}  & {tipo:"TIPO"}] |
+    [{word:/cedola/}  & {tipo:"TIPO"}] |
+    [{word:/memory/}  & {tipo:"TIPO"}] |
+    [{word:/premium/}  & {tipo:"TIPO"}] |
+    [{word:/phoenix/}  & {tipo:"TIPO"}] |
+    [{word:/standard/}  & {tipo:"TIPO"}] [{word:/autocallable/}  & {tipo:"TIPO"}] |
+    [{word:/autocallable/}  & {tipo:"TIPO"}] [{word:/step/}  & {tipo:"TIPO"}] |
+    [{word:/express/}  & {tipo:"TIPO"}] |
+    [{word:/athena/}  & {tipo:"TIPO"}] |
+    [{word:/gap/}  & {tipo:"TIPO"}] |
+    [{word:/airbag/}  & {tipo:"TIPO"}] |
+    [{word:/lock/}  & {tipo:"TIPO"}] | [{word:/lock/}  & {tipo:"TIPO"}] [{word:/in/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $DigitalProtectionCashCollectExpressProtectionExpressDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, DigitalProtecionCashCollectExpressDescription, "SECURITIES:CERTIFICATI:DIGITAL_PROTECTION_CASH_COLLECT_EXPRESS")),
+    result: "DigitalProtecionCashCollectExpressProtectionExpressDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI -  Bonus
+
+$BonusBonusCapDescription = (
+    # [{word:/bonus/}  & {tipo:"TIPO"}] [{tipo:"TIPO"}]* [!{word:/cap/}  & {tipo:"TIPO"}] |
+    # [{word:/bonus/}  & {tipo:"TIPO"}] [!{word:/capped/}  & {tipo:"TIPO"}] |
+    [{word:/bonus/}  & {tipo:"TIPO"}] |
+    [{word:/bonus/}  & {tipo:"TIPO"}] [{tipo:"TIPO"}]* [{word:/cap/}  & {tipo:"TIPO"}] |
+    [{word:/bonus/}  & {tipo:"TIPO"}] [{word:/capped/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $BonusBonusCapDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, BonusBonusCapDescription, "SECURITIES:CERTIFICATI:BONUS_BONUS_CAP")),
+    result: "BonusBonusCapDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI -  Twin win
+
+$TwinWinDescription = (
+    [{word:/Twin/}  & {tipo:"TIPO"}] [{word:/Win/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $TwinWinDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, TwinWinDescription, "SECURITIES:CERTIFICATI:TWIN_WIN")),
+    result: "TwinWinDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Benchmark Certificates
+
+$BenchmarkDescription = (
+    [{word:/benchmark/}  & {tipo:"TIPO"}] |
+    [{word:/Tracker/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $BenchmarkDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, BenchmarkCertificatesDescription, "SECURITIES:CERTIFICATI:BENCHMARK")),
+    result: "BenchmarkCertificatesDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI  - Reverse Convertible Certificates
+
+$ReverseConvertibleDescription = (
+    [{word:/reverse/}  & {tipo:"TIPO"}] [{word:/convertible/}  & {tipo:"TIPO"}] |
+    [{word:/discount/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $ReverseConvertibleDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, ReverseConvertibleCertificatesDescription, "SECURITIES:CERTIFICATI:REVERSE_CONVERTIBLE")),
+    result: "ReverseConvertibleCertificatesDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Minifutures
+
+$MiniFutureDescription = (
+    [{word:/minifuture/}  & {tipo:"TIPO"}] |
+    [{word:/mini/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $MiniFutureDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, MinifuturesDescription, "SECURITIES:CERTIFICATI:MINIFUTURE")),
+    result: "MinifuturesDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Leva fissa
+
+$LevaFissaDescription = (
+    [{word:/Leva/}  & {tipo:"TIPO"}] [{word:/fissa/}  & {tipo:"TIPO"}] |
+    [{word:/Unlimited/}  & {tipo:"TIPO"}] [{word:/index/}  & {tipo:"TIPO"}] |
+    [{word:/Daily/}  & {tipo:"TIPO"}]  [{word:/leveraged/}  & {tipo:"TIPO"}] |
+    [{word:/constant/}  & {tipo:"TIPO"}]  [{word:/leverage/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $LevaFissaDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, LevaFissaDescription, "SECURITIES:CERTIFICATI:LEVA_FISSA")),
+    result: "LevaFissaDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Turbo
+
+$TurboDescription = (
+    [{word:/Turbo/}  & {tipo:"TIPO"}] |
+    [{word:/Turbo/}  & {tipo:"TIPO"}] [{word:/warrant/}  & {tipo:"TIPO"}] |
+    [{word:/Stay/}  & {tipo:"TIPO"}] [{word:/High/}  & {tipo:"TIPO"}] |
+    [{word:/Stay/}  & {tipo:"TIPO"}] [{word:/Low/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $TurboDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, TurboDescription, "SECURITIES:CERTIFICATI:TURBO")),
+    result: "TurboDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Corridor
+
+$CorridorDescription = (
+    [{word:/Corridor/}  & {tipo:"TIPO"}] |
+    [{word:/Corridor/}  & {tipo:"TIPO"}] [{word:/Warrant/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $CorridorDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, CorridorDescription, "SECURITIES:CERTIFICATI:CORRIDOR")),
+    result: "CorridorDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Covered Warrant
+
+$CoveredWarrantDescription = (
+    [{word:/Covered/}  & {tipo:"TIPO"}] [{word:/Warrant/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $CoveredWarrantDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, CoveredWarrantDescription, "SECURITIES:COVERED_WARRANT:COVERED_WARRANT")),
+    result: "CoveredWarrantDescription"
+}
+
+
+
+# SECURITIES - CERTIFICATI - Warrant
+
+$WarrantDescription = (
+    [{word:/Warrant/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $WarrantDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, WarrantDescription, "SECURITIES:WARRANT:WARRANT")),
+    result: "WarrantDescription"
+}
+
+$WarrantDescriptionDelete = (
+    [{word:/Covered/}  & {tipo:"TIPO"}] [{word:/Warrant/}  & {tipo:"TIPO"}] |
+    [{word:/Turbo/}  & {tipo:"TIPO"}] [{word:/Warrant/} & {tipo:"TIPO"}]
+)
+
+#Clean Warrant
+{
+     ruleType: "tokens",
+     pattern: (
+         (?$Cancella ($WarrantDescriptionDelete))
+         ),
+     action: ( Annotate($Cancella, WarrantDescription, "0"))
+}
+
+
+# SECURITIES - OBBLIGAZIONI - ORDINARY BONDS
+
+$OrdinaryBondsDescription = (
+    [{word:/Tasso/}  & {tipo:"TIPO"}] [{word:/fisso/}  & {tipo:"TIPO"}] |
+    [{word:/Tasso/}  & {tipo:"TIPO"}] [{word:/variable/}  & {tipo:"TIPO"}] |
+    [{word:/Tasso/}  & {tipo:"TIPO"}] [{word:/misto/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $OrdinaryBondsDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, OrdinaryBondsDescription, "SECURITIES:OBBLIGAZIONI:ORDINARY_BONDS")),
+    result: "OrdinaryBondsDescription"
+}
+
+
+
+# SECURITIES - OBBLIGAZIONI - STRUCTURED BONDS
+
+$StructuredBondsDescription = (
+    [{word:/strutturata/}  & {tipo:"TIPO"}] |
+    [{word:/structured/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $StructuredBondsDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, StructuredBondsDescription, "SECURITIES:OBBLIGAZIONI:STRUCTURED_BONDS")),
+    result: "StructuredBondsDescription"
+}
+
+
+
+# SECURITIES - OBBLIGAZIONI - CREDIT LINKED NOTES
+
+$CreditLinkedNotesDescription = (
+    [{word:/credit/}  & {tipo:"TIPO"}] [{word:/linked/}  & {tipo:"TIPO"}] [{word:/notes/}  & {tipo:"TIPO"}] |
+    [{word:/credit/}  & {tipo:"TIPO"}] [{word:/linked/}  & {tipo:"TIPO"}] [{word:/Certificate/}  & {tipo:"TIPO"}] |
+    [{word:/CLC/}  & {tipo:"TIPO"}] |
+    [{word:/CLN/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $CreditLinkedNotesDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, CreditLinkedNotesDescription, "SECURITIES:OBBLIGAZIONI:CREDIT_LINKED_NOTES")),
+    result: "CreditLinkedNotesDescription"
+}
+
+
+
+# SECURITIES - ETP - ETP
+
+$ETPDescription = (
+    [{word:/ETP/}  & {tipo:"TIPO"}] |
+    [{word:/ETPs/}  & {tipo:"TIPO"}] |
+    [{word:/Exchange/}  & {tipo:"TIPO"}] [{word:/Traded/}  & {tipo:"TIPO"}] [{word:/Product/}  & {tipo:"TIPO"}] |
+    [{word:/ETC/}  & {tipo:"TIPO"}] |
+    [{word:/ETCs/}  & {tipo:"TIPO"}] |
+    [{word:/Exchange/}  & {tipo:"TIPO"}] [{word:/Traded/}  & {tipo:"TIPO"}] [{word:/Commodities/}  & {tipo:"TIPO"}] |
+    [{word:/ETN/}  & {tipo:"TIPO"}] |
+    [{word:/ETNs/}  & {tipo:"TIPO"}] |
+    [{word:/Exchange/}  & {tipo:"TIPO"}] [{word:/Traded/}  & {tipo:"TIPO"}] [{word:/Noted/}  & {tipo:"TIPO"}] |
+    [{word:/ETF/}  & {tipo:"TIPO"}] |
+    [{word:/ETFs/}  & {tipo:"TIPO"}] |
+    [{word:/Exchange/}  & {tipo:"TIPO"}] [{word:/Traded/}  & {tipo:"TIPO"}] [{word:/Fund/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $ETPDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, ETPDescription, "SECURITIES:ETP:ETP")),
+    result: "ETPDescription"
+}
+
+
+
+
+# DERIVATIVES - DERIVATIVES - OPTIONS
+
+$OptionsDescription = (
+    [{word:/Opzione/}  & {tipo:"TIPO"}] |
+    [{word:/Option/}  & {tipo:"TIPO"}] |
+    [{word:/Put/}  & {tipo:"TIPO"}] |
+    [{word:/Call/}  & {tipo:"TIPO"}] |
+    [{word:/Collar/}  & {tipo:"TIPO"}] |
+    [{word:/Interest/}  & {tipo:"TIPO"}] [{word:/Rate/}  & {tipo:"TIPO"}] [{word:/Cap/}  & {tipo:"TIPO"}] [!{word:/swap/}  & {tipo:"TIPO"}]|
+    [{word:/Interest/}  & {tipo:"TIPO"}] [{word:/Rate/}  & {tipo:"TIPO"}] [{word:/Floor/}  & {tipo:"TIPO"}] [!{word:/swap/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $OptionsDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, OptionsDescription, "DERIVATIVES:DERIVATIVES:OPTIONS")),
+    result: "OptionsDescription"
+}
+
+
+
+
+# DERIVATIVES - DERIVATIVES - FUTURES
+
+$FuturesDescription = (
+    [{word:/Future/}  & {tipo:"TIPO"}] [!{word:/opzione|option/}  & {tipo:"TIPO"}] |
+    [{word:/Futures/}  & {tipo:"TIPO"}] [!{word:/opzione|option/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $FuturesDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, FuturesDescription, "DERIVATIVES:DERIVATIVES:FUTURES")),
+    result: "FuturesDescription"
+}
+
+
+
+# DERIVATIVES - DERIVATIVES - SWAP
+
+$SwapDescription = (
+    [{word:/Swap/}  & {tipo:"TIPO"}] |
+    [{word:/IRS/}  & {tipo:"TIPO"}] |
+    [{word:/Interest/}  & {tipo:"TIPO"}] [{word:/Rate/}  & {tipo:"TIPO"}] [{word:/Swap/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $SwapDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, SWAPDescription, "DERIVATIVES:DERIVATIVES:SWAP")),
+    result: "SWAPDescription"
+}
+
+
+
+# DERIVATIVES - DERIVATIVES - FORWARDS
+
+$ForwardsDescription = (
+    [{word:/Forward/}  & {tipo:"TIPO"}] |
+    [{word:/OTC/}  & {tipo:"TIPO"}] |
+    [{word:/Outright/}  & {tipo:"TIPO"}] |
+    [{word:/NDF/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $ForwardsDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, ForwardsDescription, "DERIVATIVES:DERIVATIVES:FORWARDS")),
+    result: "ForwardsDescription"
+}
+
+
+
+# DERIVATIVES - DERIVATIVES - CFD
+
+$CFDDescription = (
+    [{word:/CFD/}  & {tipo:"TIPO"}] |
+    [{word:/Contratto/}  & {tipo:"TIPO"}] [{word:/per/}  & {tipo:"TIPO"}] [{word:/Differenza/}  & {tipo:"TIPO"}] |
+    [{word:/Contracts/}  & {tipo:"TIPO"}] [{word:/for/}  & {tipo:"TIPO"}] [{word:/Difference/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $CFDDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, CFDDescription, "DERIVATIVES:DERIVATIVES:CFD")),
+    result: "CFDDescription"
+}
+
+
+
+# DEPOSITI STRUTTURATI - DEPOSITI STRUTTURATI - DEPOSITI STRUTTURATI
+
+$DepositiStrutturatiDescription = (
+    [{word:/Deposit/}  & {tipo:"TIPO"}] |
+    [{word:/Deposito/}  & {tipo:"TIPO"}] [{word:/strutturato/}  & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $DepositiStrutturatiDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, DepositiStrutturatiDescription, "DEPOSITI_STRUTTURATI:DEPOSITI_STRUTTURATI:DEPOSITI_STRUTTURATI")),
+    result: "DepositiStrutturatiDescription"
+}
+
+
+
+# IBIP - IBIP - MOP
+
+$MOPDescription = (
+    [{word:/multiramo/}  & {tipo:"TIPO"}] |
+    [{word:/unit/}  & {tipo:"TIPO"}] [{word:/linked/}  & {tipo:"TIPO"}] |
+    [{word:/opzione/}  & {tipo:"TIPO"}] [{tipo:"TIPO"}]* [{word:/investimento/}  & {tipo:"TIPO"}]
+
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $MOPDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, MOPDescription, "IBIP:IBIP:MOP")),
+    result: "MOPDescription"
+}
+
+
+
+
+# IBIP - IBIP - NON MOP
+
+$NONMOPDescription = (
+    [{word:/gestione/}  & {tipo:"TIPO"}] [{word:/separata/}  & {tipo:"TIPO"}] |
+    [{word:/Assicurazione/} & {tipo:"TIPO"}] |
+    [{word:/contratto/} & {tipo:"TIPO"}] [{word:/di/} & {tipo:"TIPO"}] [{word:/assicurazione/} & {tipo:"TIPO"}] |
+    [{word:/contratto/} & {tipo:"TIPO"}] [{word:/assicurativo/} & {tipo:"TIPO"}] |
+    [{word:/prodotto/} & {tipo:"TIPO"}] [{word:/di/} & {tipo:"TIPO"}] [{word:/investimento/} & {tipo:"TIPO"}] [{word:/assicurativo/} & {tipo:"TIPO"}] |
+    [{word:/prodotto/} & {tipo:"TIPO"}] [{word:/di/} & {tipo:"TIPO"}] [{word:/investimento/} & {tipo:"TIPO"}] [{word:/finanziario-assicurativo/} & {tipo:"TIPO"}] |
+    [{word:/polizza/} & {tipo:"TIPO"}] |
+    [{word:/partecipazione/} & {tipo:"TIPO"}] [{word:/agli/} & {tipo:"TIPO"}] [{word:/utili/} & {tipo:"TIPO"}] |
+    [{word:/IBIP/} & {tipo:"TIPO"}]
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$TipologiaTipo $NONMOPDescription)
+    ),
+    action: ( Annotate($TipologiaTipo, NonMOPDescription, "IBIP:IBIP:NONMOP")),
+    result: "NonMOPDescription"
+}

@@ -1,0 +1,11 @@
+Phase: tipoTipo-SECURITIES-CERTIFICATI-BENCHMARKProdotto  
+Input: tipoDaTestoProdotto tipoTipo-SECURITIES-CERTIFICATI-BENCHMARK
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoTipo-SECURITIES-CERTIFICATI-BENCHMARK within tipoDaTestoProdotto}
+):match
+
+-->
+:match.tipoTipo-SECURITIES-CERTIFICATI-BENCHMARKProdotto = { rule = "tipoTipo-SECURITIES-CERTIFICATI-BENCHMARKProdotto" }

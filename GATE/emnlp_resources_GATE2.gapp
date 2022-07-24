@@ -1,0 +1,163 @@
+<gate.util.persistence.GateApplication>
+  <urlList class="gate.util.persistence.CollectionPersistence">
+    <localList>
+      <gate.creole.Plugin-Maven>
+        <group>uk.ac.gate.plugins</group>
+        <artifact>annie</artifact>
+        <version>9.1</version>
+      </gate.creole.Plugin-Maven>
+      <gate.creole.Plugin-Maven>
+        <group>uk.ac.gate.plugins</group>
+        <artifact>annie</artifact>
+        <version>8.6</version>
+      </gate.creole.Plugin-Maven>
+      <gate.creole.Plugin-Maven>
+        <group>uk.ac.gate.plugins</group>
+        <artifact>jape-plus</artifact>
+        <version>8.6</version>
+      </gate.creole.Plugin-Maven>
+    </localList>
+    <collectionType>java.util.ArrayList</collectionType>
+  </urlList>
+  <application class="gate.util.persistence.ControllerPersistence">
+    <prList class="gate.util.persistence.CollectionPersistence">
+      <localList>
+        <gate.util.persistence.LanguageAnalyserPersistence>
+          <document class="gate.util.persistence.LRPersistence">
+            <resourceType>gate.corpora.DocumentImpl</resourceType>
+            <resourceName>KID_CH0419050700_Ita.txt_002A9</resourceName>
+            <initParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>sourceUrl</string>
+                  <gate.util.persistence.PersistenceManager-URLHolder>
+                    <urlString>$relpath$../emnlpCorpus/KID_CH0419050700_Ita.txt</urlString>
+                  </gate.util.persistence.PersistenceManager-URLHolder>
+                </entry>
+                <entry>
+                  <string>stringContent</string>
+                  <string></string>
+                </entry>
+              </localMap>
+            </initParams>
+          </document>
+          <runtimeParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>document</string>
+                <gate.util.persistence.LRPersistence reference="../../../../document"/>
+              </entry>
+            </localMap>
+          </runtimeParams>
+          <resourceType>gate.creole.annotdelete.AnnotationDeletePR</resourceType>
+          <resourceName>Document Reset PR 002C0</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </initParams>
+          <features class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </features>
+        </gate.util.persistence.LanguageAnalyserPersistence>
+        <gate.util.persistence.LanguageAnalyserPersistence>
+          <document class="gate.util.persistence.LRPersistence" reference="../../gate.util.persistence.LanguageAnalyserPersistence/document"/>
+          <runtimeParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>document</string>
+                <gate.util.persistence.LRPersistence reference="../../../../../gate.util.persistence.LanguageAnalyserPersistence/document"/>
+              </entry>
+            </localMap>
+          </runtimeParams>
+          <resourceType>gate.creole.tokeniser.SimpleTokeniser</resourceType>
+          <resourceName>GATE Unicode Tokeniser 002D6</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </initParams>
+          <features class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </features>
+        </gate.util.persistence.LanguageAnalyserPersistence>
+        <gate.util.persistence.LanguageAnalyserPersistence>
+          <document class="gate.util.persistence.LRPersistence" reference="../../gate.util.persistence.LanguageAnalyserPersistence/document"/>
+          <runtimeParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>document</string>
+                <gate.util.persistence.LRPersistence reference="../../../../../gate.util.persistence.LanguageAnalyserPersistence/document"/>
+              </entry>
+            </localMap>
+          </runtimeParams>
+          <resourceType>gate.creole.gazetteer.DefaultGazetteer</resourceType>
+          <resourceName>ANNIE Gazetteer 002D5</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>gazetteerFeatureSeparator</string>
+                <string>$$$$</string>
+              </entry>
+              <entry>
+                <string>listsURL</string>
+                <gate.util.persistence.PersistenceManager-RRPersistence>
+                  <uriString>$relpath$gazetteer/lists.def</uriString>
+                </gate.util.persistence.PersistenceManager-RRPersistence>
+              </entry>
+            </localMap>
+          </initParams>
+          <features class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </features>
+        </gate.util.persistence.LanguageAnalyserPersistence>
+        <gate.util.persistence.LanguageAnalyserPersistence>
+          <document class="gate.util.persistence.LRPersistence" reference="../../gate.util.persistence.LanguageAnalyserPersistence/document"/>
+          <runtimeParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>document</string>
+                <gate.util.persistence.LRPersistence reference="../../../../../gate.util.persistence.LanguageAnalyserPersistence/document"/>
+              </entry>
+            </localMap>
+          </runtimeParams>
+          <resourceType>gate.jape.plus.Transducer</resourceType>
+          <resourceName>JAPE-Plus Transducer 00021</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>grammarURL</string>
+                <gate.util.persistence.PersistenceManager-RRPersistence>
+                  <uriString>$relpath$jape/main.jape</uriString>
+                </gate.util.persistence.PersistenceManager-RRPersistence>
+              </entry>
+            </localMap>
+          </initParams>
+          <features class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </features>
+        </gate.util.persistence.LanguageAnalyserPersistence>
+      </localList>
+      <collectionType>java.util.ArrayList</collectionType>
+    </prList>
+    <resourceType>gate.creole.SerialController</resourceType>
+    <resourceName>Pipeline 00008</resourceName>
+    <initParams class="gate.util.persistence.MapPersistence">
+      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+      <localMap/>
+    </initParams>
+    <features class="gate.util.persistence.MapPersistence">
+      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+      <localMap/>
+    </features>
+  </application>
+</gate.util.persistence.GateApplication>

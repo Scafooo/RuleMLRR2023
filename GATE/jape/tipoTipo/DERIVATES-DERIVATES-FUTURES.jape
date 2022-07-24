@@ -1,0 +1,12 @@
+Phase: tipoTipo-DERIVATES-DERIVATES-FUTURES
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoTipo-DERIVATES-DERIVATES-FUTURES
+(
+	{Lookup.majorType == "tipoTipo-DERIVATES-DERIVATES-FUTURES"}
+) :match
+
+-->
+:match.tipoTipo-DERIVATES-DERIVATES-FUTURES = {rule = "tipoTipo-DERIVATES-DERIVATES-FUTURES" }

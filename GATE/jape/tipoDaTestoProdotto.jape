@@ -1,0 +1,11 @@
+Phase: tipoDaTestoProdotto
+Input: tipoDaTesto Prodotto
+Options: control = first debug = true
+ 
+Rule: tipoDaTestoProdotto 
+(
+	{tipoDaTesto within Prodotto}
+):data
+
+-->
+:data.tipoDaTestoProdotto = { rule = "tipoDaTestoProdotto" }

@@ -1,0 +1,12 @@
+Phase: tipoNome-DERIVATES-DERIVATES-OPTIONS
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-DERIVATES-DERIVATES-OPTIONS 
+(
+	{Lookup.majorType == "tipoNome-DERIVATES-DERIVATES-OPTIONS"}
+) :match
+
+-->
+:match.tipoNome-DERIVATES-DERIVATES-OPTIONS = {rule = "tipoNome-DERIVATES-DERIVATES-OPTIONS" }

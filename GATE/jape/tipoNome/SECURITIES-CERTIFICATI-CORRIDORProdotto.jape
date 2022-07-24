@@ -1,0 +1,11 @@
+Phase: tipoNome-SECURITIES-CERTIFICATI-CORRIDORProdotto  
+Input: nomeProdottoProdotto tipoNome-SECURITIES-CERTIFICATI-CORRIDOR
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoNome-SECURITIES-CERTIFICATI-CORRIDOR within nomeProdottoProdotto}
+):match
+
+-->
+:match.tipoNome-SECURITIES-CERTIFICATI-CORRIDORProdotto = { rule = "tipoNome-SECURITIES-CERTIFICATI-CORRIDORProdotto" }

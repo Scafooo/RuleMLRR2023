@@ -1,0 +1,12 @@
+Phase: tipoNome-SECURITIES-CERTIFICATI-LEVA_FISSA
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-SECURITIES-CERTIFICATI-LEVA_FISSA
+(
+	{Lookup.majorType == "tipoNome-SECURITIES-CERTIFICATI-LEVA_FISSA"}
+) :match
+
+-->
+:match.tipoNome-SECURITIES-CERTIFICATI-LEVA_FISSA = {rule = "tipoNome-SECURITIES-CERTIFICATI-LEVA_FISSA" }

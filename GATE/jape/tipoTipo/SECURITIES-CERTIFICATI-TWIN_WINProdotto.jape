@@ -1,0 +1,11 @@
+Phase: tipoTipo-SECURITIES-CERTIFICATI-TWIN_WINProdotto  
+Input: tipoDaTestoProdotto tipoTipo-SECURITIES-CERTIFICATI-TWIN_WIN
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoTipo-SECURITIES-CERTIFICATI-TWIN_WIN within tipoDaTestoProdotto}
+):match
+
+-->
+:match.tipoTipo-SECURITIES-CERTIFICATI-TWIN_WINProdotto = { rule = "tipoTipo-SECURITIES-CERTIFICATI-TWIN_WINProdotto" }

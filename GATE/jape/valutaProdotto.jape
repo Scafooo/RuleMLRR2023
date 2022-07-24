@@ -1,0 +1,11 @@
+Phase: valutaProdotto  
+Input: Prodotto valuta
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{valuta within Prodotto}
+):match
+
+-->
+:match. valutaProdotto = { rule = "valutaProdotto" }

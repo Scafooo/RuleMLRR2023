@@ -1,0 +1,35 @@
+module comprensionAlert;
+
+import view _Document from module IEWTDocument as _Document;
+
+create dictionary startComprensionAlert
+	from file 'dictionaries/startComprensionAlert.dict';
+
+create view startComprensionAlert as
+  extract dictionary 'startComprensionAlert'
+    with flags 'IgnoreCase'
+        on D.text as start
+    from _Document D;
+
+create dictionary endComprensionAlert
+	from file 'dictionaries/endComprensionAlert.dict';
+
+create view endComprensionAlert as
+  extract dictionary 'endComprensionAlert'
+    with flags 'IgnoreCase'
+        on D.text as end
+    from _Document D;
+
+create view comprensionAlertSpan as
+   select
+        SpanBetween('IgnoreOrder', s1.start, s2.end) as comprensionAlertSpan
+   from startComprensionAlert s1,
+        endComprensionAlert s2;
+
+create view comprensionAlert as
+    select
+    case
+        when NotNull(c.comprensionAlertSpan) then 'YES'
+        else 'NO'
+    as comprensionAlert
+    from comprensionAlertSpan c;

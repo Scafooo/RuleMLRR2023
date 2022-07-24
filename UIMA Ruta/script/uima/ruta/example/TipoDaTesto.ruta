@@ -1,0 +1,10 @@
+PACKAGE uima.ruta.example;
+
+WORDLIST startTipoDaTestoList = 'startTipoDaTesto.txt';
+WORDLIST endTipoDaTestoList = 'endTipoDaTesto.txt';
+
+DECLARE startTipoDaTesto, endTipoDaTesto, tipoDaTesto;
+
+Document{-> MARKFAST(startTipoDaTesto, startTipoDaTestoList)};
+Document{-> MARKFAST(endTipoDaTesto, endTipoDaTestoList)};
+startTipoDaTesto #{-PARTOF(tipoDaTesto) -> MARK(tipoDaTesto)} endTipoDaTesto;

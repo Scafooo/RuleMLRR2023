@@ -1,0 +1,11 @@
+Phase: tipoNome-SECURITIES-CERTIFICATI-REVERSE_CONVERTIBLEProdotto  
+Input: nomeProdottoProdotto tipoNome-SECURITIES-CERTIFICATI-REVERSE_CONVERTIBLE
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoNome-SECURITIES-CERTIFICATI-REVERSE_CONVERTIBLE within nomeProdottoProdotto}
+):match
+
+-->
+:match.tipoNome-SECURITIES-CERTIFICATI-REVERSE_CONVERTIBLEProdotto = { rule = "tipoNome-SECURITIES-CERTIFICATI-REVERSE_CONVERTIBLEProdotto" }

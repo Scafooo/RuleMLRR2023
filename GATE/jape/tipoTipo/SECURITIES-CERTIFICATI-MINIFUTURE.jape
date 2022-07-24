@@ -1,0 +1,12 @@
+Phase: tipoTipo-SECURITIES-CERTIFICATI-MINIFUTURE
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoTipo-SECURITIES-CERTIFICATI-MINIFUTURE
+(
+	{Lookup.majorType == "tipoTipo-SECURITIES-CERTIFICATI-MINIFUTURE"}
+) :match
+
+-->
+:match.tipoTipo-SECURITIES-CERTIFICATI-MINIFUTURE = {rule = "tipoTipo-SECURITIES-CERTIFICATI-MINIFUTURE" }

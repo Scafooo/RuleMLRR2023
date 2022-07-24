@@ -1,0 +1,12 @@
+Phase: tipoNome-SECURITIES-CERTIFICATI-TWIN_WIN
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-SECURITIES-CERTIFICATI-TWIN_WIN
+(
+	{Lookup.majorType == "tipoNome-SECURITIES-CERTIFICATI-TWIN_WIN"}
+) :match
+
+-->
+:match.tipoNome-SECURITIES-CERTIFICATI-TWIN_WIN = {rule = "tipoNome-SECURITIES-CERTIFICATI-TWIN_WIN" }

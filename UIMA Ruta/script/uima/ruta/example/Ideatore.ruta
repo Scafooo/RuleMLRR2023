@@ -1,0 +1,14 @@
+PACKAGE uima.ruta.example;
+
+SCRIPT uima.ruta.example.Prodotto;
+
+WORDLIST startIdeatoreList = 'startIdeatore.txt';
+WORDLIST endIdeatoreList = 'endIdeatore.txt';
+WORDLIST ideatoriList = 'ideatori.txt';
+
+DECLARE startIdeatore, endIdeatore, ideatore, ideatoreText;
+
+Document{-> MARKFAST(startIdeatore, startIdeatoreList)};
+Document{-> MARKFAST(endIdeatore, endIdeatoreList)};
+Document{-> MARKFAST(ideatoreText, ideatoriList)};
+startIdeatore #{-PARTOF(ideatore),PARTOF(sectionProdotto),PARTOF(ideatoreText) -> MARK(ideatore)} endIdeatore;

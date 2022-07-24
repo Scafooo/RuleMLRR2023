@@ -1,0 +1,12 @@
+Phase: tipoTipo-SECURITIES-WARRANT-WARRANT
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoTipo-SECURITIES-WARRANT-WARRANT
+(
+	{Lookup.majorType == "tipoTipo-SECURITIES-WARRANT-WARRANT"}
+) :match
+
+-->
+:match.tipoTipo-SECURITIES-WARRANT-WARRANT = {rule = "tipoTipo-SECURITIES-WARRANT-WARRANT" }

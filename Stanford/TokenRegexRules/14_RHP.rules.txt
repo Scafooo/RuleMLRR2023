@@ -1,0 +1,50 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 0
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+RHP = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$RHP"}
+
+
+$InizioRHP = (
+    /Periodo/ /di/ /detenzione/ /raccomandato/ /:/ |
+    /Il/ /periodo/ /di/ /detenzione/ /raccomandato/ /per/ /il/ /prodotto/ /è/ /:/ |
+    /Periodo/ /di/ /mantenimento/ /raccomandato/ /:/ |
+    /Il/ /periodo/ /di/ /detenzione/ /raccomandato/ /per/ /il/ /prodotto/ /è/ |
+    /Periodo/ /dì/ /detenzione/ /raccomandato/ |
+    /Periodo/ /di/ /detenzione/ /raccomandato/ /-LSB-/ /minimo/ /richiesto/ /-RSB-/ /:/ |
+    /Per/ /realizzare/ /gli/ /obiettivi/ /del/ /prodotto/ /abbiamo/ /scelto/ /un/ /periodo/ /di/ /detenzione/ /raccomandato/ /pari/ /a/ |
+    /PERIODO/ /DI/ /DETENZIONE/ /RACCOMANDATO/ /:/ |
+    /Periodo/ /di/ /detenzione/ /raccomandato/ /minimo/ /:/
+)
+
+$FineRHP = (
+    /@nl/ /Questo/ /prodotto/ |
+    /@nl/ /L'obiet/ |
+    /./ /@nl/ |
+    /@nl/ /La/ /forma/ |
+    /@nl/ /Il/ /prodotto/ |
+    /@nl/ /Il/ /periodo/ /di/ |
+    /@nl/ /Non/ /è/ /possibile/ |
+    /Tuttavia/ /non/ /è/ /possibile/ /prevedere/ |
+    /L'obiettivo/ /del/ /prodotto/ /è/ /fornire/ /all/ /'/ /investitore/ |
+    /@nl/ /Al/ /fine/ /di/ /consentire/ |
+    /@nl/ /L'operazione/ /può/ /essere/ |
+    /@nl/ /Per/ /realizzare/ |
+    /@nl/ /Il/ /Contraente/ |
+    /@nl/ /Il/ /periodo/ /di/ /detenzione/ /raccomandato/ /espresso/ /in/ /anni/ |
+    /./ /@nl/ /@nl/ /Siete/ /in/ /grado/ /di/
+)
+
+ENV.defaults["stage"] = 4
+
+{
+    ruleType: "tokens",
+    pattern: (
+        ($InizioRHP)  (?$RHP [section:SEZIONE_DETENZIONE_PRODOTTO]+?) ($FineRHP)
+        ),
+    action: ( Annotate($RHP, RHP, "RHP")),
+    result: "RHP"
+}

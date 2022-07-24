@@ -1,0 +1,12 @@
+Phase: tipoNome-SECURITIES-CERTIFICATI-BONUS_BONUS_CAP
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-SECURITIES-CERTIFICATI-BONUS_BONUS_CAP
+(
+	{Lookup.majorType == "tipoNome-SECURITIES-CERTIFICATI-BONUS_BONUS_CAP"}
+) :match
+
+-->
+:match.tipoNome-SECURITIES-CERTIFICATI-BONUS_BONUS_CAP = {rule = "tipoNome-SECURITIES-CERTIFICATI-BONUS_BONUS_CAP" }

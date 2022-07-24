@@ -1,0 +1,211 @@
+# DESCRIPTION:
+# FIX SECTION DESCRIZIONE_SEZIONE_PRODOTTO!!!!!
+# Extract Section from KID
+
+ENV.defaultStringPatternFlags = 0
+
+
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+
+
+############ Section SCOPO ##############
+
+$InizioSezioneScopo = (
+    /Scopo/ /@nl/* /Il|ll/ /presente/ |
+    /SCOPO/ /@nl/* /Il|ll/ /presente/ |
+    /@nl/ /Il/ /presente/ /documento/ /contiene/ |
+    /Documento/ /di/ /informazioni/ /chiave/ /@nl/ |
+    /Scopo:/ /Il/ /presente/ /Documento/ |
+    /Scopo/ /:/ /Il|il/ /presente/ /Documento/ |
+    /@nl/ /SCOPO/ /@nl/ |
+    # va in conflitto con KID_3 sottogruppo 130150_5 cartella 1492603 Fervi S.p.A.
+    #/@nl/ /Informazioni/ /generali/ /@nl/ |
+    /Questo/ /documento/ /fornisce/ /informazioni/ /chiave/ |
+    /@nl/ /Il/ /presente/ /documento/ /fornisce/ /le/ /informazioni/ |
+    /@nl/ /doCumento/ /Contenente/ /le/ /informazioni/ /Chiave/|
+    /@nl/ /Scopo/ /@nl/ /II/ |
+    /Scopo/ /@nl/ /Questo/ /documento/ |
+    /Intendo/ |
+    #roberto
+    /Scopo/ /:/ |
+    /Allegato/ /-/
+    )
+
+$FineSezioneScopo = (
+    /con/ /altri/ /prodotti/ /d'investimento/ /@nl/ /@nl/ |
+    /con/ /altri/ /prodotti/ /d'investimento/ /@nl/ |
+    /con/ /altri/ /prodotti/ /d'investimento/ /./ /@nl/ |
+    /con/ /altri/ /@nl/* /prodotti/ /./ /@nl/ |
+    /d'investimento/ /./ /@nl/ |
+    /d’investimento/ /./ /@nl/ |
+    /d’investimento./ /@nl/ |
+    /di/ /@nl/* /investimento/ /./ /@nl/ |
+    /altri/ /@nl/* /prodotti/ /di/ /copertura/ /./ /@nl/ |
+    /con/ /altri/ /prodotti/ /d'investimento/ /./ /@nl/ |
+    /compararli/ /con/ /altri/ /prodotti/ /./ /@nl/ |
+    /di/ /tasso/ /d'interesse/ /./ /@nl/ |
+    /./ /@nl/ /Prodotto/ |
+    /e/ /aiutarvi/ /a/ /confrontarlo/ /con/ /altri/ /prodotti/ /./ |
+    /con/ /alt/ /ri/ /prodot/ /t/ /i./ /@nl/ |
+    /e/ /ad/ /aiutare/ /i/ /clienti/ /a/ /confrontarlo/ /con/ /altri/ /prodotti/ /./ |
+    /./ /@nl/ /@nl/ /Prodotto/ |
+    /ALLEGATO/ /@nl/ /Prodotto/ /:/
+)
+
+ENV.defaults["stage"] = 1
+
+{
+    ruleType: "tokens",
+    pattern: ((?$section $InizioSezioneScopo []*? $FineSezioneScopo)),
+    action: ( Annotate($section, section, "SEZIONE_SCOPO")),
+    result: "SEZIONE_SCOPO"
+}
+
+
+
+
+
+############ Section PRODOTTO ##############
+
+ENV.defaults["stage"] = 2
+
+$InizioSezioneProdotto = (
+    [{word:/ALLEGATO/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] [{word:/Prodotto/} & {section:"SEZIONE_SCOPO"}] [{word:/:/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/Allegato/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] [{word:/Prodotto/} & {section:"SEZIONE_SCOPO"}] [{word:/:/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] [{word:/Prodotto/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/prodotti|d'investimento|d’investimento|investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]*|
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/d’investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/d’investimento./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/di/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* [{word:/investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/di/} & {section:"SEZIONE_SCOPO"}] [{word:/copertura/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/compararli/} & {section:"SEZIONE_SCOPO"}] [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/di/} & {section:"SEZIONE_SCOPO"}] [{word:/tasso/} & {section:"SEZIONE_SCOPO"}] [{word:/d'interesse/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/e/} & {section:"SEZIONE_SCOPO"}] [{word:/aiutarvi/} & {section:"SEZIONE_SCOPO"}] [{word:/a/} & {section:"SEZIONE_SCOPO"}] [{word:/confrontarlo/} & {section:"SEZIONE_SCOPO"}] [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/alt/} & {section:"SEZIONE_SCOPO"}] [{word:/ri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodot/} & {section:"SEZIONE_SCOPO"}] [{word:/t/} & {section:"SEZIONE_SCOPO"}] [{word:/i./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]*
+)
+
+$FineSezioneProdotto = (
+    /@nl/ /CHE/ /COSA/ /È/ /QUESTO/ /PRODOTTO/ /\?/ /@nl/ |
+    /@nl/ /Cos/ /'/ /è/ /questo/ /prodotto/ /\?/ /@nl/ /Tipo/ |
+    /@nl/ /Cosa/ /è/ /questo/ /Prodotto/ /@nl/ |
+    /@nl/ /Cos/ /'/ /è/ /questo/ /prodotto/ /@nl/ |
+    /@nl/ /Che/ /cos/ /'/ /è/ /questo/ /Prodotto/ /\?/ |
+    /Cos/ /'/ /è|È/ /questo|Questo/ /prodotto|Prodotto/ /\?/ /@nl/ |
+    /COS/ /'/ /È/ /QUESTO/ /PRODOTTO/ /\?/ /@nl/ |
+    /COS/ /'/ /È/ /QUESTO/ /PRODOTTO\?/ /@nl/ |
+    /COS/ /`/ /E/ /'/ /QUESTO/ /PRODOTTO/ /@nl/ |
+    /Cos/ /'/ /è/ /questo/ /prodotto/ /\?/ /@nl/ |
+    /@nl/ /tipo/ /@nl/ |
+    /@nl/ /Tipo/ /:/ |
+    /@nl/ /Avvisi/ /di/ /rischio/ /associati/ /:/ |
+    /@nl/* [!{word: /S\.p\.A\./}] /State/ /per/ /acquistare/ /un/  |
+    /@nl/* /Attenzione/ /:/ /Lei/ /sta/ /per/ /acquistare/ |
+    /@nl/ /Quali/ /sono/ /i/ /rischi/ /e/ /qual/ /è/ /il/ |
+    /./ /Stai/ /per/ /acquistare/ /un/ /prodotto/ |
+    /@nl/* /AVVISO/ /@nl/ |
+    /@nl/* /SI/ /PREGA/ /DI/ /NOTARE/ |
+    /@nl/ /ATTENZIONE/ |
+    /Che/ /cos/ /'/ /è/ /questo/ /prodotto/ /\?/ |
+    /COS/ /E/ /QUESTO/ /PRODOTTO/ /\?/ |
+    /Cosa/ /è/ /questo/ /prodotto/ /\?/ /@nl/ |
+    /finanziario/ /./ /@nl/ /Quali/ /sono/ /i/ /rischi/
+)
+
+{
+    ruleType: "tokens",
+    pattern: ($InizioSezioneProdotto (?$section [!{section:"SEZIONE_SCOPO"}]*?) $FineSezioneProdotto),
+    action: ( Annotate($section, section, "SEZIONE_PRODOTTO")),
+    result: "SEZIONE_PRODOTTO"
+}
+
+
+
+
+
+
+############ Section DESCRIZIONE_PRODOTTO ##############
+
+ENV.defaults["stage"] = 3
+
+$InizioSezioneDescrizioneProdotto = (
+   /Cos/ /'/ /è|È/ /questo|Questo/ /prodotto|Prodotto/ /\?/ /@nl/ |
+   /COS/ /'/ /È/ /QUESTO/ /PRODOTTO/ /\?/ /@nl/ |
+   #roberto inizio
+   /COS/ /'/ /E/ /'/ /QUESTO/ /PRODOTTO/ /\?/ |
+   /WHAT/ /IS/ /THIS/ /PRODUCT/ /\?/ |
+   /Che/ /cos/ /'/ /è/ /questo/ /prodotto/ /\?/ |
+   /COS/ /E/ /QUESTO/ /PRODOTTO/ /\?/ |
+   /C/ /os/ /'/ /è/ /questo/ /prodotto/ /\?/ |
+   /COS/ /'/ /E/ /QUESTO/ /PRODOTTO/ /\?/ |
+   /@nl/ /Cos/ /'/ /è/ /questo/ /Prodotto/ |
+   /Cosa/ /è/ /questo/ /prodotto/ /\?/ /@nl/
+)
+
+$FineSezioneDescrizioneProdotto = (
+    #roberto inizio
+    /Quali|QUALI/ /sono|Sono|SONO/ /i|I/ /rischi|Rischi|RISCHI/ /e|E/ /qual|Qual|QUAL|qualè|cosa|Cosa|COSA|QUALE|quale/
+    #roberto fine
+)
+
+{
+    ruleType: "tokens",
+    pattern: ((?$section $InizioSezioneDescrizioneProdotto) [{section:"SEZIONE_SCOPO"} | {section:"SEZIONE_PRODOTTO"}]* (?$section []*) $FineSezioneDescrizioneProdotto),
+    action: ( Annotate($section, section, "SEZIONE_DESCRIZIONE_PRODOTTO")),
+    result: "SEZIONE_DESCRIZIONE_PRODOTTO"
+}
+
+
+{
+    ruleType: "tokens",
+    pattern: ($InizioSezioneDescrizioneProdotto (?$section []*) $FineSezioneDescrizioneProdotto),
+    action: ( Annotate($section, section, "SEZIONE_DESCRIZIONE_PRODOTTO")),
+    result: "SEZIONE_DESCRIZIONE_PRODOTTO"
+}
+
+
+ENV.defaults["stage"] = 4
+
+$InizioSezioneDetenzioneProdotto = (
+    /Per/ /quanto/ /tempo/ /devo/ /detenerlo/ /\?/ /Posso/ /ritirare/ /il/ /capitale/ /prematuramente/ /\?/ |
+    /PER/ /QUANTO/ /TEMPO/ /DEVO/ /DETENERLO/ /\?/ /POSSO/ /RITIRARE/ /IL/ /CAPITALE/ /PREMATURAMENTE/ /\?/ |
+    /Per/ /quanto/ /tempo/ /dovrei/ /detenerlo/ /\?/ /Posso/ /ritirare/ /il/ /capitale/ /prematuramente/ /\?/ |
+    /@nl/ /PER/ /QUANTO/ /TEMPO/ /DEVO/ /DETENERLO/ /\?/ /POSSO/ /RICEVERE/ /IL/ /CAPITALE/ /@nl/ /ANTICIPATAMENTE/ /\?/ /@nl/ |
+    /Per/ /quanto/ /tempo/ /devo/ /mantenerlo/ /\?/ /Posso/ /ritirare/ /il/ /capitale/ /in/ /anticipo/ /\?/ |
+    /Per/ /quanto/ /tempo/ /devo/ /detenerlo/ /\?/ /Posso/ /ricevere/ /il/ /capitale/ /anticipatamente/ /\?/ |
+    /PER/ /QUANTO/ /TEMPO/ /DEVO/ /DETENERLO/ /\?/ /POSSO/ /RITIRARE/ /IL/ /CAPITALE/ /@nl/ /PREMATURAMENTE/ /\?/ /@nl/ |
+    /Per/ /quanto/ /tempo/ /va/ /mantenuto/ /l'investimento/ /\?/ /Posso/ /liquidarlo/ /anticipatamente/ /\?/ /@nl/ |
+    /Per/ /quanto/ /tempo/ /l'investitore/ /dovrebbe/ /detenere/ /il/ /prodotto/ /e/ /può/ /disinvestire/ /prima/ /della/ /scadenza/ /\?/ |
+    /Per/ /quanto/ /tempo/ /l'investitore/ /dovrebbe/ /detenere/ /il/ /prodotto/ /e/ /può/ /ritirare/ /il/ /capitale/ /prematuramente/ /\?/ |
+    /Per/ /quanto/ /tempo/ /è/ /consigliato/ /mantenere/ /l'investimento/ /\?/ /È/ /possibile/ /disinvestire/ /anticipatamente/ /\?/ |
+    /Per/ /quanto/ /tempo/ /devo/ /detenerlo/ /\?/ /Posso/ /ritirare/ /il/ /capitale/ /prematuramente/ /\?/ |
+    /PER/ /QUANTO/ /TEMPO/ /DEVO/ /DETENERLO/ /\?/ /POSSO/ /RITIRARE/ /IL/ /CAPITALE/ /ANTICIPATAMENTE/ /\?/ /@nl/ |
+    /PER/ /QUANTO/ /TEMPO/ /DEVO/ /DETENERLO/ /\?/ /POSSO/ /RITIRARE/ /IL/ /CAPITALE/ /PREMATURAMENTE/ /\?/
+
+)
+
+
+$FineSezioneDetenzioneProdotto = (
+    /Come/ /presentare/ /reclami/ /\?/ |
+    /COME/ /PRESTARE/ /I/ /RECLAMI/ |
+    /COME/ /PRESENTARE/ /RECLAMI/ /\?/ |
+    /@nl/ /Come/ /presentare/ /un/ /reclamo/ /\?/ |
+    /Come/ /può/ /l'investitore/ /presentare/ /reclamo/ /\?/ |
+    /COME/ /PRESENTARE/ /RECLAMI/ /\?/
+)
+
+
+ENV.defaults["stage"] = 1
+
+{
+    ruleType: "tokens",
+    pattern: ((?$section $InizioSezioneDetenzioneProdotto []*? $FineSezioneDetenzioneProdotto)),
+    action: ( Annotate($section, section, "SEZIONE_DETENZIONE_PRODOTTO")),
+    result: "SEZIONE_DETENZIONE_PRODOTTO"
+}

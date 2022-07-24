@@ -1,0 +1,11 @@
+Phase: tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDSProdotto  
+Input: tipoDaTestoProdotto tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDS
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDS within tipoDaTestoProdotto}
+):match
+
+-->
+:match.tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDSProdotto = { rule = "tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDSProdotto" }

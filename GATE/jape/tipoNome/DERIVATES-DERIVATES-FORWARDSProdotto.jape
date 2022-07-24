@@ -1,0 +1,11 @@
+Phase: tipoNome-DERIVATES-DERIVATES-FORWARDSProdotto  
+Input: nomeProdottoProdotto tipoNome-DERIVATES-DERIVATES-FORWARDS
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoNome-DERIVATES-DERIVATES-FORWARDS within nomeProdottoProdotto}
+):match
+
+-->
+:match.tipoNome-DERIVATES-DERIVATES-FORWARDSProdotto = { rule = "tipoNome-DERIVATES-DERIVATES-FORWARDSProdotto" }

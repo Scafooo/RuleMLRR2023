@@ -1,0 +1,10 @@
+PACKAGE uima.ruta.example;
+
+WORDLIST startScopoList = 'startScopo.txt';
+WORDLIST endScopoList = 'endScopo.txt';
+
+DECLARE startScopo, endScopo, sectionScopo;
+
+Document{-> MARKFAST(startScopo, startScopoList)};
+Document{-> MARKFAST(endScopo, endScopoList)};
+ANY+{AFTER(startScopo),-PARTOF(sectionScopo),BEFORE(endScopo) -> MARK(sectionScopo)};

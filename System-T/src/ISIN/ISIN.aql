@@ -1,0 +1,25 @@
+/**
+* @author Federico Scafoglieri
+*/
+
+module ISIN;
+import view _Document from module IEWTDocument as _Document;
+import view Prodotto from module section as sectionProdotto;
+
+create view ISINToBeConsolidated as
+  extract
+   regex /([A-Za-z][A-Za-z][A-Z0-9]{10})/
+   on sP.sectionProdotto as isin
+   from sectionProdotto sP;
+
+create view ISIN as
+   select Min(i.isin) as isin
+   from ISINToBeConsolidated i;
+
+create view DD as
+    select _Document.text
+    from _Document;
+
+export view DD;
+
+export view ISIN;

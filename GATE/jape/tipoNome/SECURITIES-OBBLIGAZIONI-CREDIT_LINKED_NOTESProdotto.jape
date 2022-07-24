@@ -1,0 +1,11 @@
+Phase: tipoNome-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTESProdotto  
+Input: nomeProdottoProdotto tipoNome-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTES
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoNome-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTES within nomeProdottoProdotto}
+):match
+
+-->
+:match.tipoNome-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTESProdotto = { rule = "tipoNome-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTESProdotto" }

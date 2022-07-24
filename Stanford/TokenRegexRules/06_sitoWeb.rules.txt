@@ -1,0 +1,32 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 2
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+web = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$WebSite"}
+nomeProdotto = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$ProductName"}
+
+
+ENV.defaults["stage"] = 10
+
+$web = "/(https?:\/\/)?(www\.)?[-a-zA-Z0-9:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9:%_\+.~#?&//=]*)/"
+
+{
+    ruleType: "tokens",
+    pattern: (
+        ((?$sitoWeb [{word:$web} & {section:"SEZIONE_PRODOTTO"} & !{nomeProdotto:"NOME_PRODOTTO"}]))
+        ),
+    action: ( Annotate($sitoWeb, web, "SITO_WEB")),
+    result: "SITO_WEB"
+}
+
+
+{
+    ruleType: "tokens",
+    pattern: (
+        ((?$Cancella /S.p.A.Nome/))
+        ),
+    action: ( Annotate($Cancella, web, "0"))
+}

@@ -1,0 +1,12 @@
+Phase: tipoNome-IBIP-IBIP-NONMOP
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-IBIP-IBIP-MOP 
+(
+	{Lookup.majorType == "tipoNome-IBIP-IBIP-NONMOP"}
+) :match
+
+-->
+:match.tipoNome-IBIP-IBIP-NONMOP = {rule = "tipoNome-IBIP-IBIP-NONMOP" }

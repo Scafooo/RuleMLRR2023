@@ -1,0 +1,106 @@
+module tipologiaTipo;
+
+import view nomeProdotto from module nomeProdotto as nomeProdotto;
+
+create dictionary DEPOSITI_STRUTTURATI_DEPOSITI_STRUTTURATI_DEPOSITI_STRUTTURATI
+	from file 'dictionaries/DEPOSITI_STRUTTURATI:DEPOSITI_STRUTTURATI:DEPOSITI_STRUTTURATI.dict';
+
+create dictionary DERIVATES_DERIVATES_CFD
+	from file 'dictionaries/DERIVATES:DERIVATES:CFD.dict';
+
+create dictionary DERIVATES_DERIVATES_FORWARDS
+	from file 'dictionaries/DERIVATES:DERIVATES:FORWARDS.dict';
+
+create dictionary DERIVATES_DERIVATES_FUTURES
+	from file 'dictionaries/DERIVATES:DERIVATES:FUTURES.dict';
+
+create dictionary DERIVATES_DERIVATES_OPTIONS
+	from file 'dictionaries/DERIVATES:DERIVATES:OPTIONS.dict';
+
+create dictionary DERIVATES_DERIVATES_SWAP
+	from file 'dictionaries/DERIVATES:DERIVATES:SWAP.dict';
+
+create dictionary IBIP_IBIP_MOP
+	from file 'dictionaries/IBIP:IBIP:MOP.dict';
+
+create dictionary IBIP_IBIP_NONMOP
+	from file 'dictionaries/IBIP:IBIP:NONMOP.dict';
+
+create dictionary SECURITIES_CERTIFICATI_BENCHMARK
+	from file 'dictionaries/SECURITIES:CERTIFICATI:BENCHMARK.dict';
+
+create dictionary SECURITIES_CERTIFICATI_BONUS_BONUS_CAP
+	from file 'dictionaries/SECURITIES:CERTIFICATI:BONUS_BONUS_CAP.dict';
+
+create dictionary SECURITIES_CERTIFICATI_CORRIDOR
+	from file 'dictionaries/SECURITIES:CERTIFICATI:CORRIDOR.dict';
+
+create dictionary SECURITIES_CERTIFICATI_DIGITAL_PROTECTION_CASH_COLLECT_EXPRESS
+	from file 'dictionaries/SECURITIES:CERTIFICATI:DIGITAL_PROTECTION_CASH_COLLECT_EXPRESS.dict';
+
+create dictionary SECURITIES_CERTIFICATI_EQUITY_PROTECTION
+	from file 'dictionaries/SECURITIES:CERTIFICATI:EQUITY_PROTECTION.dict';
+
+create dictionary SECURITIES_CERTIFICATI_LEVA_FISSA
+	from file 'dictionaries/SECURITIES:CERTIFICATI:LEVA_FISSA.dict';
+
+create dictionary SECURITIES_CERTIFICATI_MINIFUTURE
+	from file 'dictionaries/SECURITIES:CERTIFICATI:MINIFUTURE.dict';
+
+create dictionary SECURITIES_CERTIFICATI_REVERSE_CONVERTIBLE
+	from file 'dictionaries/SECURITIES:CERTIFICATI:REVERSE_CONVERTIBLE.dict';
+
+create dictionary SECURITIES_CERTIFICATI_TURBO
+	from file 'dictionaries/SECURITIES:CERTIFICATI:TURBO.dict';
+
+create dictionary SECURITIES_CERTIFICATI_TWIN_WIN
+	from file 'dictionaries/SECURITIES:CERTIFICATI:TWIN_WIN.dict';
+
+create dictionary SECURITIES_COVERED_WARRANT_COVERED_WARRANT
+	from file 'dictionaries/SECURITIES:COVERED_WARRANT:COVERED_WARRANT.dict';
+
+create dictionary SECURITIES_ETP_ETP
+	from file 'dictionaries/SECURITIES:ETP:ETP.dict';
+
+create dictionary SECURITIES_OBBLIGAZIONI_CREDIT_LINKED_NOTES
+	from file 'dictionaries/SECURITIES:OBBLIGAZIONI:CREDIT_LINKED_NOTES.dict';
+
+create dictionary SECURITIES_OBBLIGAZIONI_ORDINARY_BONDS
+	from file 'dictionaries/SECURITIES:OBBLIGAZIONI:ORDINARY_BONDS.dict';
+
+create dictionary SECURITIES_OBBLIGAZIONI_STRUCTURED_BONDS
+	from file 'dictionaries/SECURITIES:OBBLIGAZIONI:STRUCTURED_BONDS.dict';
+
+create dictionary SECURITIES_WARRANT_WARRANT
+	from file 'dictionaries/SECURITIES:WARRANT:WARRANT.dict';
+
+create view tipologiaTipo as
+    select
+    case
+        when ContainsDict ('DEPOSITI_STRUTTURATI_DEPOSITI_STRUTTURATI_DEPOSITI_STRUTTURATI',np.nomeProdotto) then 'DEPOSITI_STRUTTURATI:DEPOSITI_STRUTTURATI:DEPOSITI_STRUTTURATI'
+        when ContainsDict ('DERIVATES_DERIVATES_CFD',np.nomeProdotto) then 'DERIVATES:DERIVATES:CFD'
+        when ContainsDict ('DERIVATES_DERIVATES_FORWARDS',np.nomeProdotto) then 'DERIVATES:DERIVATES:FORWARDS'
+        when ContainsDict ('DERIVATES_DERIVATES_FUTURES',np.nomeProdotto) then 'DERIVATES_DERIVATES:FUTURES'
+        when ContainsDict ('DERIVATES_DERIVATES_OPTIONS',np.nomeProdotto) then 'DERIVATES:DERIVATES:OPTIONS'
+        when ContainsDict ('DERIVATES_DERIVATES_SWAP',np.nomeProdotto) then 'DERIVATES:DERIVATES:SWAP'
+        when ContainsDict ('IBIP_IBIP_MOP',np.nomeProdotto) then 'IBIP:IBIP:MOP'
+        when ContainsDict ('IBIP_IBIP_NONMOP',np.nomeProdotto) then 'IBIP:IBIP:NONMOP'
+        when ContainsDict ('SECURITIES_CERTIFICATI_BENCHMARK',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:BENCHMARK'
+        when ContainsDict ('SECURITIES_CERTIFICATI_BONUS_BONUS_CAP',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:BONUS_BONUS_CAP'
+        when ContainsDict ('SECURITIES_CERTIFICATI_CORRIDOR',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:CORRIDOR'
+        when ContainsDict ('SECURITIES_CERTIFICATI_DIGITAL_PROTECTION_CASH_COLLECT_EXPRESS',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:DIGITAL_PROTECTION_CASH_COLLECT_EXPRESS'
+        when ContainsDict ('SECURITIES_CERTIFICATI_EQUITY_PROTECTION',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:EQUITY_PROTECTION'
+        when ContainsDict ('SECURITIES_CERTIFICATI_LEVA_FISSA',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:LEVA_FISSA'
+        when ContainsDict ('SECURITIES_CERTIFICATI_MINIFUTURE',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:MINIFUTURE'
+        when ContainsDict ('SECURITIES_CERTIFICATI_REVERSE_CONVERTIBLE',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:REVERSE_CONVERTIBLE'
+        when ContainsDict ('SECURITIES_CERTIFICATI_TURBO',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:TURBO'
+        when ContainsDict ('SECURITIES_CERTIFICATI_TWIN_WIN',np.nomeProdotto) then 'SECURITIES:CERTIFICATI:TWIN_WIN'
+        when ContainsDict ('SECURITIES_COVERED_WARRANT_COVERED_WARRANT',np.nomeProdotto) then 'SECURITIES:COVERED_WARRANT:COVERED_WARRANT'
+        when ContainsDict ('SECURITIES_ETP_ETP',np.nomeProdotto) then 'SECURITIES:ETP:ETP'
+        when ContainsDict ('SECURITIES_OBBLIGAZIONI_CREDIT_LINKED_NOTES',np.nomeProdotto) then 'SECURITIES:OBBLIGAZIONI:CREDIT_LINKED_NOTES'
+        when ContainsDict ('SECURITIES_OBBLIGAZIONI_ORDINARY_BONDS',np.nomeProdotto) then 'SECURITIES:OBBLIGAZIONI:ORDINARY_BONDS'
+        when ContainsDict ('SECURITIES_OBBLIGAZIONI_STRUCTURED_BONDS',np.nomeProdotto) then 'SECURITIES:OBBLIGAZIONI:STRUCTURED_BONDS'
+        when ContainsDict ('SECURITIES_WARRANT_WARRANT',np.nomeProdotto) then 'SECURITIES:WARRANT:WARRANT'
+    else 'Unknown'
+    as tipologiaTipo
+    from nomeProdotto np;

@@ -1,0 +1,11 @@
+Phase: dataProduzioneProdotto  
+Input: Prodotto Produzione
+Options: control = first debug = true
+ 
+Rule: dataProduzioneProdotto 
+(
+	{Produzione within Prodotto}
+):data
+
+-->
+:data.dataProduzioneProdotto = { rule = "dataProduzioneProdotto" }

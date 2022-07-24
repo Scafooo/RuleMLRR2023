@@ -1,0 +1,12 @@
+PACKAGE uima.ruta.example;
+
+SCRIPT uima.ruta.example.Prodotto;
+
+WORDLIST startComprensionAlertList = 'startComprensionAlert.txt';
+WORDLIST endComprensionAlertList = 'endComprensionAlert.txt';
+
+DECLARE startComprensionAlert, endComprensionAlert, comprensionAlert;
+
+Document{-> MARKFAST(startComprensionAlert, startComprensionAlertList)};
+Document{-> MARKFAST(endComprensionAlert, endComprensionAlertList)};
+startComprensionAlert #{-PARTOF(comprensionAlert) -> MARK(comprensionAlert)} endComprensionAlert;

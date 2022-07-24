@@ -1,0 +1,25 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 0
+
+# Map variable names to annotation keys
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+alert = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$ComprehensionAlert"}
+
+
+ENV.defaults["stage"] = 9
+
+
+$Alert = (
+    /State|Stai/ /per/ /acquistare/ []+? /difficile/ /comprensione/
+)
+
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$CAlert $Alert)
+        ),
+    action: ( Annotate($CAlert, alert, "ALERT")),
+    result: "ALERT"
+}

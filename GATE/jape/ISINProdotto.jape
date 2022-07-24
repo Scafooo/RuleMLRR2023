@@ -1,0 +1,11 @@
+Phase: ISINProdotto  
+Input: Prodotto ISIN
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{ISIN within Prodotto}
+):match
+
+-->
+:match.ISINProdotto = { rule = "ISINProdotto" }

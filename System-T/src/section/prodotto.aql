@@ -1,0 +1,50 @@
+/**
+* @author Federico Scafoglieri
+*/
+
+module section;
+
+import view _Document from module IEWTDocument as _Document;
+
+/**
+* Start Scopo Section
+*/
+create dictionary startSectionProdotto
+	from file 'dictionaries/prodotto/startProdotto.dict';
+
+create view startProdotto as
+  extract dictionary 'startSectionProdotto'
+    with flags 'Exact'
+    on D.text as start
+  from _Document D;
+
+/**
+* Ending Scopo Section
+*/
+create dictionary endSectionProdotto
+	from file 'dictionaries/prodotto/endProdotto.dict';
+
+create view endProdotto as
+  extract dictionary 'endSectionProdotto'
+    with flags 'Exact'
+    on D.text as end
+  from _Document D;
+
+create view ProdottoToBeConsolidated as
+   select
+        CombineSpans('IgnoreOrder', s1.start, s2.end) as sectionProdotto
+   from startProdotto s1,
+        endProdotto s2;
+
+/**
+* Consolidate the results
+*/
+
+
+create view Prodotto as
+    select s.sectionProdotto
+    from ProdottoToBeConsolidated s
+    consolidate on s.sectionProdotto
+        using 'ContainedWithin';
+
+export view Prodotto;

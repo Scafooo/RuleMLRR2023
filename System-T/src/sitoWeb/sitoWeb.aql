@@ -1,0 +1,19 @@
+/**
+* @author Federico Scafoglieri
+*/
+
+module sitoWeb;
+import view _Document from module IEWTDocument as _Document;
+import view Prodotto from module section as sectionProdotto;
+
+create view sitoWebToBeConsolidated as
+  extract
+   regex /(https?:\/\/)?(www\.)?([a-zA-Z0-9]+(-?[a-zA-Z0-9])*\.)+[\w]{2,}(\/\S*)?/
+   on sP.sectionProdotto as sitoWeb
+   from sectionProdotto sP;
+
+create view sitoWeb as
+   select Min(i.sitoWeb) as sitoWeb
+   from sitoWebToBeConsolidated i;
+
+export view sitoWeb;

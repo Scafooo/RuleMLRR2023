@@ -1,0 +1,11 @@
+Phase: tipoTipo-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTESProdotto  
+Input: tipoDaTestoProdotto tipoTipo-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTES
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoTipo-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTES within tipoDaTestoProdotto}
+):match
+
+-->
+:match.tipoTipo-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTESProdotto = { rule = "tipoTipo-SECURITIES-OBBLIGAZIONI-CREDIT_LINKED_NOTESProdotto" }

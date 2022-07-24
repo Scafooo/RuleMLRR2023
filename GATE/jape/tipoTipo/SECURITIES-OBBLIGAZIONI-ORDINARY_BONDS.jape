@@ -1,0 +1,12 @@
+Phase: tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDS
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDS
+(
+	{Lookup.majorType == "tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDS"}
+) :match
+
+-->
+:match.tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDS = {rule = "tipoTipo-SECURITIES-OBBLIGAZIONI-ORDINARY_BONDS" }

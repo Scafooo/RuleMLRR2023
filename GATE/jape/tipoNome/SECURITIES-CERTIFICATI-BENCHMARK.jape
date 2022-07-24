@@ -1,0 +1,12 @@
+Phase: tipoNome-SECURITIES-CERTIFICATI-BENCHMARK 
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-SECURITIES-CERTIFICATI-BENCHMARK 
+(
+	{Lookup.majorType == "tipoNome-SECURITIES-CERTIFICATI-BENCHMARK"}
+) :match
+
+-->
+:match.tipoNome-SECURITIES-CERTIFICATI-BENCHMARK = {rule = "tipoNome-SECURITIES-CERTIFICATI-BENCHMARK" }

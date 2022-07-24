@@ -1,0 +1,43 @@
+module IDs;
+
+import view _Document from module IEWTDocument as _Document;
+
+create function DocumentIDfunct(t text)
+return String
+external_name 'udfjars/IDUDFs.jar:com.ibm.biginsights.textanalytics.udf.IDUDFs!DocumentID'
+language java
+deterministic
+return null on null input;
+
+create function ProductIDfunct(t text)
+return String
+external_name 'udfjars/IDUDFs.jar:com.ibm.biginsights.textanalytics.udf.IDUDFs!ProductID'
+language java
+deterministic
+return null on null input;
+
+create function FinancialIDfunct(t text)
+return String
+external_name 'udfjars/IDUDFs.jar:com.ibm.biginsights.textanalytics.udf.IDUDFs!FinancialID'
+language java
+deterministic
+return null on null input;
+
+
+create view DocumentID as
+select DocumentIDfunct(_Document.text) as id
+from _Document;
+
+export view DocumentID;
+
+create view ProductID as
+select ProductIDfunct(_Document.text) as id
+from _Document;
+
+export view ProductID;
+
+create view FinancialID as
+select FinancialIDfunct(_Document.text) as id
+from _Document;
+
+export view FinancialID;

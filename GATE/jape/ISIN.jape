@@ -1,0 +1,13 @@
+Phase: ISIN  
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: ISIN 
+(
+	{Token.string =~ "[A-Za-z][A-Za-z]"}
+	{Token.string =~ "[A-Z0-9]{10}"}
+) :match
+
+-->
+:match.ISIN = {rule = "ISIN" }

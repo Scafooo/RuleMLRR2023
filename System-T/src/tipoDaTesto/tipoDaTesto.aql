@@ -1,0 +1,66 @@
+/**
+* @author Federico Scafoglieri
+*/
+
+module tipoDaTesto;
+
+import view _Document from module IEWTDocument as _Document;
+
+create dictionary startTipoDaTesto
+	from file 'dictionaries/startTipoDaTesto.dict';
+
+create view startTipoDaTesto as
+  extract dictionary 'startTipoDaTesto'
+    with flags 'Exact'
+    on D.text as start
+  from _Document D;
+
+-- First appear in prodotto section
+create view startTipoDaTestoFirst as
+   select Min(sp.start) as start
+   from startTipoDaTesto sp;
+
+create dictionary endTipoDaTesto
+	from file 'dictionaries/endTipoDaTesto.dict';
+
+create view endTipoDaTesto as
+  extract dictionary 'endTipoDaTesto'
+    with flags 'Exact'
+    on D.text as end
+  from _Document D;
+
+
+
+-------------------------
+
+create view possibleSpanTipoDaTesto as
+    select sp.start as start, ep.end as end
+    from startTipoDaTestoFirst sp, endTipoDaTesto ep
+    where GreaterThan(ep.end, sp.start)
+    consolidate on ep.end;
+
+create view endTipoDaTestoFirst as
+   select Min(p.end) as end
+   from possibleSpanTipoDaTesto p;
+
+create view tipoDaTestoToBeConsolidated as
+   select
+        SpanBetween('IgnoreOrder', s1.start, s2.end) as tipoDaTesto
+   from startTipoDaTestoFirst s1,
+        endTipoDaTestoFirst s2;
+
+/**
+* Consolidate the results
+*/
+create view tipoDaTesto as
+    select s.tipoDaTesto
+    from tipoDaTestoToBeConsolidated s
+    consolidate on s.tipoDaTesto
+        using 'ContainedWithin';
+
+export view tipoDaTesto;
+
+
+
+
+

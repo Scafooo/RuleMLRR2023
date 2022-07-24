@@ -1,0 +1,18 @@
+Phase: comprensionAlert  
+Input: Token Lookup  
+Options: control = appelt  
+ 
+Rule: comprensionAlert
+Priority: 100  
+(
+	{Lookup.majorType == "startComprensionAlert"}
+)
+(
+	{Token}
+)* :comprensionAlert
+(
+	{Lookup.majorType == "endComprensionAlert"}
+)
+
+-->
+: comprensionAlert.Alert = { rule = "comprensionAlert" }

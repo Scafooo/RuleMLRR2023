@@ -1,0 +1,64 @@
+/**
+* @author Federico Scafoglieri
+*/
+
+module nomeProdotto;
+import view _Document from module IEWTDocument as _Document;
+import view Prodotto from module section as sectionProdotto;
+
+-------------------------------------------------------- START SECTION ----------------------------------------------------------------
+-- create dictionarty
+create dictionary startNomeProdotto
+	from file 'dictionaries/startNomeProdotto.dict';
+
+create view startNomeProdotto as
+  extract dictionary 'startNomeProdotto'
+    with flags 'Exact'
+    on sP.sectionProdotto as start
+  from sectionProdotto sP;
+
+-- First appear in prodotto section
+create view startNomeProdottoFirst as
+   select Min(sp.start) as start
+   from startNomeProdotto sp;
+
+
+
+-------------------------------------------------------- END SECTION ----------------------------------------------------------------
+-- create dictionarty
+create dictionary endNomeProdotto
+	from file 'dictionaries/endNomeProdotto.dict';
+
+create view endNomeProdotto as
+  extract dictionary 'endNomeProdotto'
+    with flags 'Exact'
+    on sP.sectionProdotto as end
+  from sectionProdotto sP;
+
+-- Cartesian product Spans
+create view possibleSpanNomeProdotto as
+    select sp.start as start, ep.end as end
+    from startNomeProdottoFirst sp, endNomeProdotto ep
+    where GreaterThan(ep.end, sp.start)
+    consolidate on ep.end;
+
+create view endNomeProdottoFirst as
+   select Min(p.end) as end
+   from possibleSpanNomeProdotto p;
+
+create view nomeProdottoToBeConsolidated as
+   select
+        SpanBetween('IgnoreOrder', s1.start, s2.end) as nomeProdotto
+   from startNomeProdottoFirst s1,
+        endNomeProdottoFirst s2;
+
+/**
+* Consolidate the results
+*/
+create view nomeProdotto as
+    select s.nomeProdotto
+    from nomeProdottoToBeConsolidated s
+    consolidate on s.nomeProdotto
+        using 'ContainedWithin';
+
+export view nomeProdotto;

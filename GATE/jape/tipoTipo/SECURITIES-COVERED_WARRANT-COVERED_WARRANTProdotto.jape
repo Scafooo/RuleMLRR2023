@@ -1,0 +1,11 @@
+Phase: tipoTipo-SECURITIES-COVERED_WARRANT-COVERED_WARRANTProdotto  
+Input: tipoDaTestoProdotto tipoTipo-SECURITIES-COVERED_WARRANT-COVERED_WARRANT
+Options: control = first debug = true
+ 
+Rule: ISIN 
+(
+	{tipoTipo-SECURITIES-COVERED_WARRANT-COVERED_WARRANT within tipoDaTestoProdotto}
+):match
+
+-->
+:match.tipoTipo-SECURITIES-COVERED_WARRANT-COVERED_WARRANTProdotto = { rule = "tipoTipo-SECURITIES-COVERED_WARRANT-COVERED_WARRANTProdotto" }

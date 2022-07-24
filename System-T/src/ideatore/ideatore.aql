@@ -1,0 +1,63 @@
+/**
+* @author Federico Scafoglieri
+*/
+
+module ideatore;
+import view _Document from module IEWTDocument as _Document;
+import view Prodotto from module section as sectionProdotto;
+
+-------------------------------------------------------- START SECTION ----------------------------------------------------------------
+-- create dictionary
+create dictionary startIdeatore
+	from file 'dictionaries/startIdeatore.dict';
+
+create view startIdeatore as
+  extract dictionary 'startIdeatore'
+    with flags 'Exact'
+    on sP.sectionProdotto as start
+  from sectionProdotto sP;
+
+-- First appear in prodotto section
+create view startIdeatoreFirst as
+   select Min(si.start) as start
+   from startIdeatore si;
+
+
+-------------------------------------------------------- END SECTION ----------------------------------------------------------------
+-- create dictionarty
+create dictionary endIdeatore
+	from file 'dictionaries/endIdeatore.dict';
+
+create view endIdeatore as
+  extract dictionary 'endIdeatore'
+    with flags 'Exact'
+    on sP.sectionProdotto as end
+  from sectionProdotto sP;
+
+-- Cartesian product Spans
+create view possibleIdeatore as
+    select si.start as start, ei.end as end
+    from startIdeatore si, endIdeatore ei
+    where GreaterThan(ei.end, si.start)
+    consolidate on ei.end;
+
+create view endIdeatoreFirst as
+   select Min(p.end) as end
+   from possibleIdeatore p;
+
+create view ideatoreToBeConsolidated as
+   select
+        SpanBetween('IgnoreOrder', s1.start, s2.end) as ideatore
+   from startIdeatoreFirst s1,
+        endIdeatoreFirst s2;
+
+/**
+* Consolidate the results
+*/
+create view ideatore as
+    select i.ideatore
+    from ideatoreToBeConsolidated i
+    consolidate on i.ideatore
+        using 'ContainedWithin';
+
+export view ideatore;

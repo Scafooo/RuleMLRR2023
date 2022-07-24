@@ -1,0 +1,16 @@
+module valuta;
+
+import view _Document from module IEWTDocument as _Document;
+
+create dictionary valuta
+	from file 'dictionaries/valuta.dict';
+
+create view valutaToBeConsolidated as
+  extract dictionary 'valuta'
+    with flags 'Exact'
+    on D.text as valuta
+  from _Document D;
+
+create view valuta as
+    select Min(v.valuta) as valuta
+    from valutaToBeConsolidated v;

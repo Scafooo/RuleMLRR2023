@@ -1,0 +1,17 @@
+Phase: sectionScopo  
+Input: Token Lookup  
+Options: control = appelt  
+ 
+Rule: sectionScopo
+(
+	{Lookup.majorType == "startScopo"}
+)
+(
+	{Token}
+)* :section
+(
+	{Lookup.majorType == "endScopo"}
+)
+
+-->
+:section.Scopo = { kind="Scopo", rule = "sectionScopo" }

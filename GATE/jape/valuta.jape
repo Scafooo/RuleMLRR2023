@@ -1,0 +1,12 @@
+Phase: valuta  
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: valuta 
+(
+	{Lookup.majorType == "valuta"}
+) :match
+
+-->
+:match. valuta = {rule = "valuta" }

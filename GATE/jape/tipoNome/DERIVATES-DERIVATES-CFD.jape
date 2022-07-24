@@ -1,0 +1,12 @@
+Phase: tipoNome-DERIVATES-DERIVATES-CFD 
+Input: Token Lookup  
+Options: control = appelt
+
+
+Rule: tipoNome-DERIVATES-DERIVATES-CFD 
+(
+	{Lookup.majorType == "tipoNome-DERIVATES-DERIVATES-CFD"}
+) :match
+
+-->
+:match.tipoNome-DERIVATES-DERIVATES-CFD = {rule = "tipoNome-DERIVATES-DERIVATES-CFD" }

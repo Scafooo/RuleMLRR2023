@@ -1,0 +1,125 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 1
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+dataProduzione = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$ProductionDate"}
+
+
+ENV.defaults["stage"] = 7
+
+$date = "/(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})/"
+
+$InizioDataProduzione = (
+    /Data/ /di/ /produzione/ /del/ /documento/ /@nl/ |
+    /Data/ /di/ /redazione/ /del/ /presente/ /@nl/ /documento/ /@nl/ |
+    /Data/ /di/ /@nl/ /pubblicazione/ /:/ |
+    /Data/ /di/ /realizzazione/ /del/ /@nl/ /documento/ /@nl/ |
+    /il/ /documento/ /è/ /stato/ /depositato/ /presso/ /CONSOB/ /il/ |
+    /Questo/ /documento/ /è/ /stato/ /prodotto/ /in/ /data/ /:/ |
+    /Data/ /di/ /realizzazione/ /del/ /documento/ /contenente/ /le/ /informazioni/ /@nl/ /chiave/ /:/ |
+    /Data/ /documento/ |
+    /DATA/ /DEL/ /DOCUMENTO/ /CONTENENTE/ /LE/ /INFORMAZIONI/ /CHIAVE/ /:/ |
+    /Questo/ /documento/ /è/ /stato/ /@nl/ /aggiornato/ /l'ultima/ /volta/ /il/ |
+    /Il/ /presente/ /documento/ /contenente/ /le/ /informazioni/ /chiave/ /è/ /stato/ /@nl/? /predisposto/ /in/ /data/ |
+    /Questo/ /Documento/ /Contenente/ /le/ /Informazioni/ /Chiave/ /e/ /'/ /stato/ /prodotto/ |
+    /Data/ /di/ /redazione/ /del/ /@nl/ /presente/ /documento/ /@nl/ |
+    /DATA/ /DI/ /AGGIORNAMENTO/ |
+    /documento/ /è/ /stato/ /creato/ |
+    /Data/ /di/ /emissione/ /del/ /KID/ |
+    /Ultimo/ /aggiornamento/ /del/ /documento/ /contenente/ /le/ /informazioni/ /chiave/ /:/* |
+    /DATA/ /DI/ /REALIZZAZIONE/ /DEL/ /DOCUMENTO/ /CONTENENTE/ /LE/ /INFORMAZIONI/ /CHIAVE/ /:/ |
+    #roberto inizio
+    /Data/ /di/ /produzione/ /del/ /@nl/? /documento/ /contenente/ /le/ /@nl/? /informazioni/ /chiave/ /:/ /@nl/? |
+    /Data/ /di/ /realizzazione/ /del/ /@nl/? /documento/ /contenente/ /le/ /informazioni/ /chiave/ /:/|
+    /Data/ /di/ /redazione/ /del/ /@nl/? /presente/ /documento/ |
+    /Data/ /di/* /pubblicazione/ /del/ /KID/ /:/? |
+    /Data/ /di/ /realizzazione/ /del/ /documento/ /contenente/ /le/ /informazioni/ /chiave/ /per/ /gli/ /investitori/ /:/ /@nl/? |
+    /DATA|Data/ /DI|di/* /AGGIORNAMENTO|Aggiornamento|aggiornamento|PRODUZIONE|Produzione|produzione|REALIZZAZIONE|realizzazione|REDAZIONE|redazione|Emissione|EMISSIONE|emissione/ /DEL|del/ /KID/|
+    /DATA|Data/ /DI|di/* /AGGIORNAMENTO|Aggiornamento|aggiornamento|PRODUZIONE|Produzione|produzione|REALIZZAZIONE|realizzazione|REDAZIONE|redazione|Emissione|EMISSIONE|emissione/ [{ner:"TABELLA"}]* /:/|
+    /DATA|Data/ /DI|di/* /AGGIORNAMENTO|Aggiornamento|aggiornamento|PRODUZIONE|Produzione|produzione|REALIZZAZIONE|realizzazione|REDAZIONE|redazione|Emissione|EMISSIONE|emissione/ /:/*|
+    /Data/ /di/ /questo/ /documento/|
+    /informazioni/ /@nl/* /chiave/ /@nl/ |
+    /Data/ /generazione/ /:/ |
+    /Data/ /del/ /presente/ /documento/ |
+    /Il/ /presente/ /documento/ /è/ /datato/ |
+    /Data/ /di/ /redazione/ /del/ /documento/ |
+    /Data/ /di/ /Realizzazione/ |
+    /Questo/ /documento/ /è/ /aggiornato|datato/ /al/? |
+    /Questo/ /documento/ /è/ /stato/ /@nl/? /aggiornato/ /l'ultima/ /volta/ /il/ |
+    /Questo/ /Documento/ /è/ /stato/ /prodotto/ /in/ /data/ /:/? |
+    /[Qq]uesto/ /[Dd]ocumento/ /[Cc]ontenente/ /[Ii]nformazioni/ /[Cc]hiave/ /è/ /stato/ /@nl/? /pubblicato/ /il/ /:/? |
+    /[Qq]uesto/ /[Dd]ocumento/ /[Cc]ontenente/ /le/? /[Ii]nformazioni/ /[Cc]hiave/ /e/ /'/ /stato/ /prodotto/ |
+    /Il/ /presente/ /documento/ /contenente/ /le/ /informazioni/ /chiave/ /è/ /stato/ /predisposto/ /in/ /data/ |
+    /Le/ /informazioni/ /chiave/ /per/ /gli/ /investitori/ /qui/ /riportate/ /sono/ /valide/ /al/ |
+    /Questo/ /KID/ /è/ /stato/ /pubblicato/ /il/ |
+    /Data/ /del/ /documento/ /contenente/ /le/ /@nl/? /informazioni/ /chiave/ /:/ /@nl/? |
+    /Data/ /del/? /documento/ /:/? |
+    /Data/ /di/ /revisione/ /:/? |
+    /Versione/ /n\./ /[1-9][0-9]?/ /del/  |
+    /Data/ /di/ /validità/ /del/ /documento/ /contenente/ /le/ /informazioni/ /chiave/ /:/? |
+    /Data/ /generazione/ /KID/ /:/? |
+    /Data/ /:/? |
+    /Revisione/ /del/ /documento/ /@nl/? /contenente/ /le/ /informazioni/ /@nl/? /chiave/ /:/? /@nl/? |
+    /data/ /di/ /realizzazione/ /del/ /presente/ /documento/ /:/ |
+    /Questo/ /documento/ /è/ /stato/ /redatto/ /il/ |
+    /Data/ /di/ /@nl/ /pubblicazione/ /:/ /@nl/ |
+    /Questo/ /[Dd]ocumento/ /contenente/ /informazioni/ /chiave/ /-LRB-/ /"|``/ /KID/ /"|''/ /-RRB-/ /è/ /stato/ /pubblicato/ /il/
+)
+
+$FineDataProduzione = (
+    /@nl/
+)
+
+#Aggiungere Tabella in check annotation
+{
+    ruleType: "tokens",
+    pattern: (
+        ($InizioDataProduzione)  (?$PrimaDataProduzione [{section:"SEZIONE_PRODOTTO"}]+?) ($FineDataProduzione)
+        ),
+    action: ( Annotate($PrimaDataProduzione, dataProduzione, "PRIMA_DATA_PRODUZIONE")),
+    result: "PRIMA_DATA_PRODUZIONE"
+}
+
+
+ENV.defaults["stage"] = 8
+
+$DeleteInData = (
+    /del/ /documento/ /contenente/ /le/ /informazioni/ /chiave/ /-LRB-/ /KID/ /-RRB-/ /:/ |
+    /:/ |
+    /di/ /questo/ /documento/ /contenente/ /le/ /informazioni/ /chiave/ |
+    /del/ /documento/ |
+    /del/ |
+    /CONSOB/
+)
+
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$Cancella ($DeleteInData| ([{word:/@nl/} & {section:"SEZIONE_PRODOTTO"}])))
+        ),
+    action: ( Annotate($Cancella, dataProduzione, "0"))
+}
+
+$date_1 = "/(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})/"
+
+$giorno = "/\d+/"
+$mese = "/[Gg]ennaio|[Ff]ebbraio|[Mm]arzo|[Aa]prile|[Mm]aggio|[Gg]iugno|[Ll]uglio|[Aa]gosto|[Ss]ettembre|[Oo]ttobre|[Nn]ovembre|[Dd]icembre|/"
+$anno = "/\d+/"
+
+{
+    ruleType: "tokens",
+    pattern: (
+            (?$DataProduzione
+                #[{dataProduzione:"PRIMA_DATA_PRODUZIONE"}]
+                [{word:$date_1} & {dataProduzione:"PRIMA_DATA_PRODUZIONE"}] |
+                [{word:$giorno} & {dataProduzione:"PRIMA_DATA_PRODUZIONE"}] [{dataProduzione:"PRIMA_DATA_PRODUZIONE"}]? [{word:$mese} & {dataProduzione:"PRIMA_DATA_PRODUZIONE"}] [{word:$anno} & {dataProduzione:"PRIMA_DATA_PRODUZIONE"}] |
+                #COMMENTA PER ELIMINARE DATE CHE NON RISPETTANO IMPOSTAZIONE EUROPEA E SONO DEL TIPO AAAA-MM-GG etc
+                [{word:/\d+(\/|-|\.)\d+(\/|-|\.)\d+/} & {dataProduzione:"PRIMA_DATA_PRODUZIONE"}]
+            )
+        ),
+    action: ( Annotate($DataProduzione, dataProduzione, "DATA_PRODUZIONE")),
+    result: "DATA_PRODUZIONE"
+}

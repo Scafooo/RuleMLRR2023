@@ -1,0 +1,184 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 0
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+ideatore = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$Author"}
+
+
+$InizioIdeatore = (
+    #roberto
+    [!{word:"è"}] [!{word:"il"}] /Produttore/  [!{word:"di"}]|
+    /Ideatore|ideatore/ /del/ /prodotto|Prodotto/ /:/* |
+    /@nl/ /Ideatore/ /del/ /Prodotto/ /:/ /@nl/ /nome/ /:/ |
+    /Ideatore/ /di/ /PRIIP/ |
+    /EMITTENTE\/IDEATORE/ |
+    /Ideatore|IDEATORE/ /:/* |
+    #roberto inizio
+        /Emittente/ /e/ /Ideatore/ |
+        /Nome/ /dell/ /ideatore/ /del/ /@nl/? /Priip/ /@nl/? |
+    #roberto fine
+    /Emittente/ /:/* |
+    /Issuer/ /Name/ |
+    /CONTROPARTE1/ /@nl/ |
+    /emesso/ /da/  |
+    /@nl/ /Produttore/ /@nl/ |
+    /@nl/ /Ideatori/ /di/ /PRIIP/ /:/ |
+    /sono/ /offerte|offerti/ /da/ |
+    [{word:"-"} & {section:"SEZIONE_PRODOTTO"}] |
+    [{word:"Ed"} & {section:"SEZIONE_PRODOTTO"}] [{word:"."} & {section:"SEZIONE_PRODOTTO"}] [] |
+    [{word:"è"} & {section:"SEZIONE_PRODOTTO"}] [{word:"un"} & {section:"SEZIONE_PRODOTTO"}] [{word:"fondo"} & {section:"SEZIONE_PRODOTTO"}] [{word:"ideato"} & {section:"SEZIONE_PRODOTTO"}] [{word:"da"} & {section:"SEZIONE_PRODOTTO"}] |
+    [{word:"@nl"} & {section:"SEZIONE_PRODOTTO"}] [{word:"ideato"} & {section:"SEZIONE_PRODOTTO"}] [{word:"e"} & {section:"SEZIONE_PRODOTTO"}] [{word:"gestito"} & {section:"SEZIONE_PRODOTTO"}] [{word:"da"} & {section:"SEZIONE_PRODOTTO"}] |
+    /@nl/ /Nome/ /dell/ /'/ /ideatore/ /del/ /Priip/ |
+    /un/ /marchio/ /della/ /società/ |
+    /@nl/ /Nome/ /ideatore/ /di/ /PRIIP/ /:/ |
+    /@nl/ /ideatrice/ /del/ /prodotto/ /:/ /@nl/ |
+    /@nl/ /Nome/ /dell/ /'/ /ideatore/ /del/ /PRIIP/ /:/ |
+    /@nl/ /Societa/ /'/ /:/ |
+    /al/ /n./ []*? /./ |
+    /,/ /gestito/ /da/ |
+    /@nl/ /Nome/ /ideatore/ /del/ /PRIIP/ /:/ |
+    /@nl/ /Prodotto/ /ideato/ /da/ |
+    /Impresa/ /di/ /Assicurazione:/ |
+    /Impresa/ /di/ /Assicurazione/ /:/ |
+    #roberto inizio
+        /Emittente/ /:/ |
+        /Emittente\/Ideatore:?/ /:/ |
+        /EMITTENTE\/IDEATORE:?/ /:/ |
+        /ideatrice/ /del/ /prodotto/ /:/ |
+        /alla/ /vigilanza/ /di/ /@nl/? |
+        /Nome/ /dell/ /'/ /ideatore/ /:/ |
+        /Ideatore/ /del/ /prodot/ /to/ /:/ |
+        /L'ideatore/ /del/ /prodotto/ /è/?|
+        /Compagnia/ /di/ /assicurazione/ /:/ |
+        /Società/ /di/ /Gestione/ /:/ |
+        /Nome/ /del/ /produttore/ /del/? /PRIIP/ /:/? |
+        /Fornitore/ /del/ /Prodotto/ /:/ |
+        # (da limare ancora) sporca ancora l'ideatore (vedi _933106 Banca Aletti). Forse risolto con word "Codice"
+        [{word:"-"} & {section:"SEZIONE_PRODOTTO"}]  [!{word: "[0-3][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9][0-9]"}] [{word: "Codice"}]
+    #roberto fine
+)
+
+$FineIdeatore = (
+    /@nl/ /Contattate/ /il/ /numero/ |
+    /CONTATTI|Contatti/ |
+    /Codice/ /del/ /prodotto/ |
+    /Autorità|AUTORITÀ/ /competente|COMPETENTE/ |
+    /|/ |
+    /\//|
+    /Per/ /ulteriori/ /informazioni|informazioni\:/ /\:/* |
+    /Garante/ |
+    /-LRB-/ /La/ /Compagnia/ /-RRB-/ |
+    /con/ /numero/ [] /./ /@nl/ |
+    /sito/ /web/ /:/* |
+    /-LRB-/ /la/ /``/ /Società/ /''/ /-RRB-/ |
+    [{word:"-LRB-"} & {section:"SEZIONE_PRODOTTO"}] [{word:"la"} & {section:"SEZIONE_PRODOTTO"}] [{word:"Compagnia"} & {section:"SEZIONE_PRODOTTO"}] [{word:"-RRB-"} & {section:"SEZIONE_PRODOTTO"}] |
+    [{word:"-LRB-"} & {section:"SEZIONE_PRODOTTO"}] [{word:"la"} & {section:"SEZIONE_PRODOTTO"}] [{word:"``"} & {section:"SEZIONE_PRODOTTO"}] [{word:"Compagnia"} & {section:"SEZIONE_PRODOTTO"}] [{word:"''"} & {section:"SEZIONE_PRODOTTO"}] [{word:"-RRB-"} & {section:"SEZIONE_PRODOTTO"}] |
+    /@nl/ /Data/ /di/ /realizzazione/ |
+    /./ /@nl/ /Per/ /maggiori/ /informazioni/ |
+    #roberto
+    /@nl/? /Sito/ /[Ww]eb|internet/ /:/? |
+    /è/ /@nl/ /sottoposta/ /a/ /vigilanza/ /da/ /parte/ |
+    /@nl/ /State/ /per/ /acquistare/ /un/ /`/ |
+    #roberto inizio
+        /Sito/ /web/ /dell/ /`|'/ /ideatore/ /di|del/ /prodotto|PRIIP/ /:/ |
+        /@nl/ /Informazioni/ /su/ /come/ /mettersi/ |
+        /è/ /regolata/ /dalla/ |
+        /CONSOB/ /-/? |
+        /Autorizzazione/ /:/ |
+        /Codice/ /prodotto/ /:/? |
+        /Sito/ /web/ |
+        /-LRB-/ /Codice/ /ISIN/ |
+        /Codice/ /Fiscale/ /:/ |
+        /ISIN/ |
+        /indirizzo/ /web/ |
+        /Data/ /di/ /@nl/? /pubblicazione/ |
+        /@nl/ /Autorità/ /di/ /vigilanza/
+    #roberto fine
+)
+
+ENV.defaults["stage"] = 6
+{
+    ruleType: "tokens",
+    pattern: (
+        ($InizioIdeatore)  (?$Ideatore [{section:"SEZIONE_PRODOTTO"}]+?) ($FineIdeatore)
+        ),
+    action: ( Annotate($Ideatore, ideatore, "IDEATORE")),
+    result: "IDEATORE"
+}
+
+# Special Extraction Rules
+{
+    ruleType: "tokens",
+    pattern: (
+        /Prodotto/ /:/ /@nl/ /@nl/ (?$Ideatore [{section:"SEZIONE_PRODOTTO"}]+?) /,/ /è/ /il/ /Produttore/ /di/
+        ),
+    action: ( Annotate($Ideatore, ideatore, "IDEATORE")),
+    result: "IDEATORE"
+}
+
+
+ENV.defaults["stage"] = 7
+
+$DeleteInIdeatoreDelProdotto = (
+    /Ideatore|ideatore/ /del/ /prodotto|Prodotto/ /:/* |
+    /Ideatore/ /di/ /PRIIP/ |
+    /EMITTENTE\/IDEATORE/ |
+    /Ideatore|IDEATORE/ /:/* |
+    /Emittente/ /:/* |
+    /Issuer/ /Name/ |
+    /CONTROPARTE1/ /@nl/ |
+    /emesso/ /da/ |
+    /del/ /presente/ /Prodotto/ /:/ |
+    /\|/ |
+    /del/ /prodotto/ |
+    /dell/ /'/ /ideatore/ /del/ /prodotto/ |
+    #roberto inizio
+        /Emittente/ /:/|
+        /Nome/ /dell/? /'|`/?  /ideatore/ /del|di/ /PRIIP/ /:/ |
+        /IVASS/ /-/ /Istituto/ /per/ /la/ /Vigilanza/ /sulle/ /Assicurazioni/ /;/? |
+        /,/ /l'investitore/ /può/ /consultare|consultate/ /il/ |
+        /Ø/ |
+        /Codice/ |
+        /•/ |
+        /\// /emittente/  |
+        /nome/ |
+        /:/ |
+        /;/ |
+        /State/ /per/ /acquistare/ /un/
+    #roberto fine
+)
+
+ #Clean Annotations
+ {
+     ruleType: "tokens",
+     pattern: (
+         (?$Cancella ($DeleteInIdeatoreDelProdotto| ([{word:/@nl/} & {section:"SEZIONE_PRODOTTO"}])))
+         ),
+     action: ( Annotate($Cancella, ideatore, "0"))
+ }
+
+ $CaseConsob = (
+    [{word:"CONSOB"} & {ideatore:"IDEATORE"}] [{word:"-LRB-"} & {ideatore:"IDEATORE"}] [{word:"commissione"} & {ideatore:"IDEATORE"}] [{word:"nazionale"} & {ideatore:"IDEATORE"}] [{word:"per"} & {ideatore:"IDEATORE"}] [{word:"le"} & {ideatore:"IDEATORE"}] [{word:"società"} & {ideatore:"IDEATORE"}] [{word:"e"} & {ideatore:"IDEATORE"}] [{word:"la"} & {ideatore:"IDEATORE"}] [{word:"borsa"} & {ideatore:"IDEATORE"}] [{word:"-RRB-"} & {ideatore:"IDEATORE"}]
+ )
+
+ # Special Extraction Rules
+ {
+     ruleType: "tokens",
+     pattern: (
+         /Prodotto/ /@nl/ (?$Ideatore []*?) $CaseConsob
+         ),
+     action: ( Annotate($Ideatore, ideatore, "IDEATORE")),
+     result: "IDEATORE"
+ }
+
+ #Clean CONSOB
+ {
+     ruleType: "tokens",
+     pattern: (
+         (?$Cancella $CaseConsob)
+         ),
+     action: ( Annotate($Cancella, ideatore, "0"))
+ }

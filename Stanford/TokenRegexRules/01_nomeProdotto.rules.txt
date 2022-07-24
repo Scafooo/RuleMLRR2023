@@ -1,0 +1,221 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 0
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+nomeProdotto = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$ProductName"}
+
+
+$InizioNomeProdotto = (
+    #roberto inizio
+        /NOME/ / /?  |
+        /NOME|Nome/ /@nl/* [!{word: /dell/}] [!{word: /'|`/}] [!{word: /ideatore/}] |
+        /Nome/ /del/ /Prodotto/ |
+    #roberto fine
+    /Nome/ /del/ /prodotto/ |
+    #roberto inizio
+        /è/ /il/ /Produttore/ /di/ |
+        /PRODOTTO/ /@nl/*? [!{word: /CHE/}] |
+    #roberto fine
+    /Prodotto|PRODOTTO/ /@nl/*? |
+    /@nl/ /PRODOTTO/ /@nl/ |
+    /Prodotto/ /:/ |
+    /@nl/ /Prodotto/ /:/ /@nl/ |
+    /Prodotto/ /@nl/ |
+    [{word:"prodotti"} & {section:"SEZIONE_SCOPO"}] [{word:"."} & {section:"SEZIONE_SCOPO"}] /@nl/ |
+    [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:"."} & {section:"SEZIONE_SCOPO"}] /@nl/ |
+    [{word:/d’investimento/} & {section:"SEZIONE_SCOPO"}] [{word:"."} & {section:"SEZIONE_SCOPO"}] /@nl/ |
+    [{word:/prodotti|d'investimento|d’investimento|investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/d’investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/d’investimento./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/di/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* [{word:/investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}]* [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/di/} & {section:"SEZIONE_SCOPO"}] [{word:/copertura/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/d'investimento/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/compararli/} & {section:"SEZIONE_SCOPO"}] [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/di/} & {section:"SEZIONE_SCOPO"}] [{word:/tasso/} & {section:"SEZIONE_SCOPO"}] [{word:/d'interesse/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/e/} & {section:"SEZIONE_SCOPO"}] [{word:/aiutarvi/} & {section:"SEZIONE_SCOPO"}] [{word:/a/} & {section:"SEZIONE_SCOPO"}] [{word:/confrontarlo/} & {section:"SEZIONE_SCOPO"}] [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/altri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodotti/} & {section:"SEZIONE_SCOPO"}] [{word:/./} & {section:"SEZIONE_SCOPO"}] |
+    [{word:/con/} & {section:"SEZIONE_SCOPO"}] [{word:/alt/} & {section:"SEZIONE_SCOPO"}] [{word:/ri/} & {section:"SEZIONE_SCOPO"}] [{word:/prodot/} & {section:"SEZIONE_SCOPO"}] [{word:/t/} & {section:"SEZIONE_SCOPO"}] [{word:/i./} & {section:"SEZIONE_SCOPO"}] [{word:/@nl/} & {section:"SEZIONE_SCOPO"}] |
+    /e/ /può/ /essere/ /di/ /difficile/ /comprensione/ /./ |
+    /Produttore/ /di/ |
+    #roberto inizio (serve per kid rif. _892857 Western Union International Bank)
+        [!{word: /Ideatore/}]? [!{word: /del/}]? /Prodotto/ |
+        [{word:/Informazioni/}] [{word:/generali/}] [{word:/@nl/}] |
+        /è/ /il/ /produttore/ /e/ /fornitore/ /di/
+    #roberto fine
+)
+
+$FineNomeProdotto = (
+#roberto inizio
+    /Produttore/ [!{word: /di/}] |
+    /Autorità/ |
+    /@nl/? /.?Nome/ /dell/ / /? /'|`/ / /? /ideatore/ |
+    /Societa/ /'/ /:/ |
+    /-LRB-/ /di/ /seguito/ /anche/ /il/ /Prodotto/ /@nl/ /Sito/ /web/ /dell/ /ideatore/ /del/ /@nl/ /Priip/ |
+    /Numero/ /di/ /ident|identificazione/ |
+    /-/? /Codice|CODICE/ /Identificativo|IDENTIFICATIVO|ISIN/ |
+#roberto fine
+    /ISIN|WKN/ |
+    /Identificatori|Identificatore/ /del/ /prodotto/ |
+    /Issuer/ /Name/ |
+    /CONTROPARTE1/ |
+    /emesso/ /da/ |
+    /@nl/ /Nome/ /ideatore/ /di/ /PRIIP/ /:/ |
+    /./ /Questo/ /Prodotto/ /è/ /negoziato/ |
+    /.|@nl/ /Per/ /ulteriori/ /informazioni/ |
+    /./ /@nl/ |
+    /,/ /una/ /società/ /di/ /investimento/ |
+    /@nl/ [{word:"/(https?:\/\/)?(www\.)?[-a-zA-Z0-9:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9:%_\+.~#?&//=]*)/"}] |
+    /./ /Per/ /ulteriori/ /informazioni/ |
+#roberto inizio
+        /Denominazione/ /dell/ /'/ /Impresa/ /assicurativa/ |
+        /cumento/ |
+        /,/? /gestito/ /da/ |
+        /Ideatori/ /di/ /PRIIP/ |
+        /-LRB-/ /Codice/ /ISIN/ |
+        /che/ /sono/ /stati/ /ammessi/ /al/ /listino/ /@nl/? /dalla/ |
+        /Impresa/ /di/ /Assicurazione/ /:/ |
+        /Codice/ /t|[Tt]itolo/ /itolo/? |
+        /Ideatore|L'ideatore/ /del/ /prodotto/ |
+        /Nome/ /ideatore/ |
+        /Prodotto/ /ideato/ /da/ |
+        /Per/ /ulteriori/ /informazioni/ |
+        #AGGIUNTO il 20/05/2019 per prendere almeno il titolo rif. KID 3 blocco 130827_2 pdf n. 1076113 (Mediolanum pdf)
+        /Mediolanum/ /International/ /Life/ |
+        /[Dd]enominazione/ /giuridica/ /dell|dell'/ |
+        /Fornitore/ /del/ /Prodotto/ /:/
+#roberto fine
+)
+
+ENV.defaults["stage"] = 4
+
+{
+    ruleType: "tokens",
+    pattern: (
+        ($InizioNomeProdotto)  (?$NomeProdotto [{section:"SEZIONE_PRODOTTO"}]+?) ($FineNomeProdotto)
+        ),
+    action: ( Annotate($NomeProdotto, nomeProdotto, "NOME_PRODOTTO")),
+    result: "NOME_PRODOTTO"
+}
+
+ENV.defaults["stage"] = 5
+
+$DeleteInNomeDelProdotto = (
+        #roberto inizio
+        / /? /:/ / /? |
+        /Ø/ |
+        /▪/ |
+        /Le/ /caratteristiche/ /del/ /prodotto/ /indicate/ /in/ /questo/ /documento/ /sono/ /indicative/ /di/ /questo/ /tipo/ /di/ /prodotto/ /ma/ /potrebbero/ /non/ /rispecchiare/ /i/ /@nl/? /termini/ /specifici/ /concordati/ /con/ /noi/ /./? |
+        #roberto fine
+        /Prodotto/ /esaminato/ /in/ /questo/ /documento/ /contenente/ /le/ /informazioni/ /chiave/ /:/ |
+        /Prodotto/ /-/ |
+        /prodotto/ |
+        /NOME|Nome/ /@nl/* |
+        /Nome/ /del/ /prodotto/ |
+        /Prodotto|PRODOTTO/ /@nl/ |
+        /Prodotto/ /:/ |
+        /prodotto/ /:/ |
+        /Nome/ |
+        /del/ /prodotto/ |
+        Scopo |
+        /State/ /per/ /acquistare/ /un/ /prodotto/ /che/ /non/ /è/ /semplice/ /e/ /può/ /essere/ /di/ /difficile/ /comprensione/ /./
+        /codice/ |
+        /Ed/ /./ []*? /Compagnia/ /''/ /-RRB-/ |
+        /Scadenza/ [] |
+        /con/* /scadenza/ [] |
+        /due/ /to/* [] |
+        /nome/ /:/ []*? /in/ /data/ /:/ [] [] [] |
+        /è/ /regolata/ [] [] [] [] [] |
+        /codice/ |
+        /-LRB-/ /il/ /``/ /Prodotto/ /''/ /-RRB-/ |
+        /Sito/ /web/ /dell/ /'/ /ideatore/ /del/ /Priip/ |
+        /Denominazione/ /dell/ /'/ /Impresa/ /assicurativa/ /ideatrice/ |
+        /_______________________________________________________________________________________________________________________/ |
+        /:/ |
+        /``/ |
+        /"/ |
+        #roberto inizio
+        /@nl/? /SEGNALAZIONE/ /:/ /Questo/ /è/ /un/ /prodotto/ /derivato/ /che/ /è/ /considerato/ /complesso/ /e/ /potenzialmente/ /difficile/ /da/ /capire/ /./ /Siete/ /pregati/ /di/ /accertarvi/ /di/ /aver/ /fatto/ /tutto/ /il/ /necessario/ /per/ /@nl/? /comprendere/ /i/ /rischi/ /e/ /gli/ /obblighi/ /che/ /l'adesione/ /a/ /questa/ /struttura/ /comporta/ /per/ /voi/ /e/ /per/ /la/ /vostra/ /azienda/ |
+        /Informazioni/ /generali/ |
+        /Sito/ /web/ /dell/ /'/ /ideatore/ /del/ |
+        /Priip/ |
+        /•/  |
+        /nome/ |
+        /C/ /os/ /'/ /è/ /questo/ |
+        /Le/ /informazioni/ /contenute/ /in/ /questo/ /documento/ /sono/ /di/ /carattere/ /preliminario/ /e/ /possono/ /essere/ /finalizzate/ /o/ /modificate/ |
+        /del/ /Prodotto/ |
+        /IQOPTION/ /EUROPE/ /LTD/ /-LRB-/ /la/ /``/ /Società/ /''/ /-RRB-/ |
+        /State/ /per/ /acquistare/ /un/ /prodotto/ /che/ /non/ /è/ /semplice/ /e/ /può/ /essere/ /di/ /difficile/ /comprensione/
+        #roberto fine
+)
+
+#Clean Annotations 1
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$Cancella ($DeleteInNomeDelProdotto| ([{word:/@nl/} & {section:"SEZIONE_PRODOTTO"}])))
+        ),
+    action: ( Annotate($Cancella, nomeProdotto, "0"))
+}
+
+$InizioDeleteProdotto = (
+    [{word:/sono/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/offerte|offerti/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/da/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    [{word:/Email/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/:/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    [{word:/Ideatori|ideatori/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/di/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/PRIIP/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/:/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    [{word:/Ideatore|ideatore/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    [{word:/è/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/offerto/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/da/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    [{word:/--/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/Durata/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    [{word:/Sito/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/:/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    [{word:/Un/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/elenco/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/completo/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/dei/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/numeri/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    [{word:/dell/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/`/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/ideatore/} & {nomeProdotto:"NOME_PRODOTTO"}] [{word:/:/} & {nomeProdotto:"NOME_PRODOTTO"}] |
+    #roberto inizio
+        /Margherita/ /6/ |
+        /&/ /Guareschi/ |
+        /Si/ /segnala/ /che/ |
+        /IQOPTION/ /EUROPE/ /LTD/ /-LRB-/ /la/ /``/ /Società/ /''/ /-RRB-/
+    #roberto fine
+
+)
+
+$FineDeleteProdotto = (
+    /con/ /numero/ [] |
+    /-/ /email/ [] |
+    /per/ /ulteriori/ /informazioni/ |
+    /la/ /Compagnia/ [] /:/ |
+    /per|Per/ /maggiori/ /informazioni/ []|
+    /con/ /numero/ /di/ /licenza/ [] |
+    /la/ /Compagnia/ [] /:/ |
+    /in/ /relazione/ /al/ /presente/ /documento/ |
+    /all/ /'/ /indirizzo/ |
+    /redazione/ /del/ /Documento/ /:/ [] |
+    #roberto inizio
+        /la/ /"/ /Società/ /"/ /-RRB-/ |
+        /Sito/ /Web/ |
+        /conseguentemente/ /il/ /presente/ /Documento/ /\./ |
+        /è/ /Produttore/ /di/
+    #roberto fine
+)
+
+#Clean Annotations 1
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$Cancella $InizioDeleteProdotto []*? $FineDeleteProdotto)
+        ),
+    action: ( Annotate($Cancella, nomeProdotto, "0"))
+}
+
+#Clean Annotations 1
+{
+    ruleType: "tokens",
+    pattern: (
+        (?$Cancella /Ideatore/ /del/ /Prodotto/ []{11,14})
+        ),
+    action: ( Annotate($Cancella, nomeProdotto, "0"))
+}

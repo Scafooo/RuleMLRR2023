@@ -1,0 +1,40 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ENV.defaultStringPatternFlags = 0
+
+# Map variable names to annotation keys
+section = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$SectionAnnotation" }
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+indiceSintenticoDiRischio = {type:"CLASS", value : "it.uniroma1.diag.extractor.stanford.annotation.CustomAnnotation$RiskIndex"}
+
+
+$InizioIndiceSintenticoDiRischio = (
+    /Abbiamo/ /classificato/ /questo/ /@nl/ /prodotto/ /al/ /livello/ |
+    /Abbiamo/ /classificato/ /questo/ /prodotto/ /al/ /livello/ |
+    /Abbiamo/ /classificato/ /questo/ /prodot/ /to/ /al/ /livello/ |
+    /Abbiamo/ /classificato/ /questo/ /prodotto/ /in/ /una/ /varietà/ /di/ /classi/ /di/ /rischio/ /compresa/ /fra/ /1/ /e/ /7/ /su/ |
+    /Abbiamo/ /classificato/ /@nl/ /questo/ /prodotto/ /al/ /livello/ |
+    /L'Emittente/ /ha/ /@nl/ /classificato/ /questo/ /prodotto/ /al/ /livello/ |
+    /Abbiamo/ /attribuito/ /a/ /questo/ /prodotto/ /un/ /livello/ /di/ /rischio/ /pari/ /a/ |
+    /Il/ /Certificato/ /è/ /stato/ /classificato/ /,/ /in/ /@nl/ /termini/ /di/ /rischio/ /,/ |
+    /Abbiamo/ /classificato/ /le/ /categorie/ /di/ /rischio/ /delle/ /strategie/ /di/ /@nl/ /investimento/ /sottostanti/ /come/ |
+    /L'Emittente/ /ha/ /attribuito/ /a/ /questo/ /prodotto/ /un/ /livello/ /di/ /rischio/ /pari/ /a/ |
+    /Abbiamo/ /classificato/ /questa/ /opzione/ /di/ /investimento/ /al/ /livello/ |
+    /Abbiamo/ /classificato/ /questo/ /prodotto/ /nel/ /livello/ |
+    /L/ /'Em/ /it/ /te/ /nt/ /e/ /ha/ /@nl/ /classificato/ /questo/ /prodotto/ /al/ /livello/ |
+    /Abbiamo/ /classificato/ /questo/ /prodotto/ /come/ |
+    /Abbiamo/ /classificato/ /questo/ /prodotto/ /al/ /livello/ /@nl/ |
+    /La/ /compagnia/ /ha/ /classificato/ /questo/ /prodotto/ /come/ |
+    /Abbiamo/ /classificato/ /questo/ /prodotto/ /,/ /per/ /la/ /parte/ /di/ /premio/ /investita/ /in/ /Gestione/ /Separata/ /,/ /al/ /livello/
+)
+
+ENV.defaults["stage"] = 4
+
+{
+    ruleType: "tokens",
+    pattern: (
+        ($InizioIndiceSintenticoDiRischio)  (?$IndiceSintenticoDiRischio [{word::IS_NUM}])
+        ),
+    action: ( Annotate($IndiceSintenticoDiRischio, indiceSintenticoDiRischio, "INDICE_SINTENTICO_DI_RISCHIO")),
+    result: "INDICE_SINTENTICO_DI_RISCHIO"
+}

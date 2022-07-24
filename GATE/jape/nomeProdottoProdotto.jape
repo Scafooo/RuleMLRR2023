@@ -1,0 +1,11 @@
+Phase: nomeProdottoProdotto
+Input: Prodotto nomeProdotto
+Options: control = first
+ 
+Rule: nomeProdottoProdotto 
+(
+	{nomeProdotto within Prodotto}
+):data
+
+-->
+:data.nomeProdottoProdotto = { rule = "nomeProdottoProdotto" }
