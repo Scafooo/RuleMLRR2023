@@ -20,3 +20,10 @@ Regarding table extraction, refer to the code within the Table-Extraction table,
 
 the dataset for fine-tuning is contained in the dataset-annotated-tables folder.
 
+## LINK Virtual Machine
+
+We also setuped a virtual machine to test the final implementation.
+
+Can be downloaded here:
+
+https://drive.google.com/drive/folders/1zMTAOLD86Rcb-pl20V-_eLSrRakj9KAZ?usp=sharing
