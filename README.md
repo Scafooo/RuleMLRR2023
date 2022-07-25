@@ -14,5 +14,9 @@ The folders are:
 * SystemT
 * Apache UIMA 
 
-## KID-IE
+## TABLE-Extraction
+
+Regarding table extraction, refer to the code within the Table-Extraction table, use the documents in the corpus folder belonging to DATASET-Q_O and DATASET-P_O containing the original pdfs for testing.
+
+the dataset for fine-tuning is contained in the dataset-annotated-tables folder.
 
