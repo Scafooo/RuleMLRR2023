@@ -1,6 +1,6 @@
 # SystemT
 
-SystemT è un software commerciale e quindi non possiamo fornire direttamente il codice per riprodurre gli esperimenti. Per questa motivazione rimandiamo il lettore alla guida per il suo utilizzo tramite interfaccia cloud:
+SystemT is commercial software and therefore we cannot directly provide the code to reproduce the experiments. For this reason we refer the reader to the guide for its use via cloud interface:
 
 [Tutorial SystemT](https://github.com/System-T/Tutorial-KDD-2019) see Lab1
 
