@@ -1,4 +1,4 @@
-# EMNLP 2022
+# EACL 2023
 
 This guide is intended to guide the reader for reproducing the experiments and testing the solution.
 
@@ -13,11 +13,3 @@ The folders are:
 * CoreNLP
 * SystemT
 * Apache UIMA 
-
-## TABLE-Extraction
-
-Regarding table extraction, refer to the code within the Table-Extraction table, use the documents in the corpus folder belonging to DATASET-Q_O and DATASET-P_O containing the original pdfs for testing.
-
-the dataset for fine-tuning is contained in the dataset-annotated-tables folder.
-
-NOTE: We will totally provide the code of the implemented solution following the publication of the work
