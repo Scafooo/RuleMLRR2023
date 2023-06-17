@@ -40,3 +40,5 @@ Also, you need to import the configuration and checkpoint file of the pretrained
 - Set ```mode='append'``` tp store the extractions in the csv.
 2. Run ```data_extraction.py```
 3. Run ```data_cleaning.py```
+
+
