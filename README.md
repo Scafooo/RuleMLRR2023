@@ -1,4 +1,4 @@
-# EACL 2023
+# RuleMLRR 2023
 
 This guide is intended to guide the reader for reproducing the experiments and testing the solution.
 
