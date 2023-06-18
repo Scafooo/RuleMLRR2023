@@ -8,14 +8,10 @@ To use the system, it will be enough to upload the rules and corpus to the cloud
 
 SystemT has been tested in embedded form starting with native Java code. For ease we report the performance related to CPU and RAM through the following plots.
 
-##RAM
-
-If the image is not displayed correctly, cause anonymization, see the RAM.png file in this folder.
+## RAM
 
 ![](https://github.com/Scafooo/EMNLP2022/blob/main/System-T/RAM.png)
 
-##CPU
-
-If the image is not displayed correctly, cause anonymization, see the CPU.png file in this folder.
+## CPU
 
 ![](https://github.com/Scafooo/EMNLP2022/blob/main/System-T/CPU.png)
