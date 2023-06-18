@@ -12,10 +12,10 @@ Automatically time and memory occupancy information will be printed to the termi
 
 For ease we report the performance related to CPU and RAM through the following plots.
 
-##RAM
+## RAM
 
 ![](https://github.com/Scafooo/EMNLP2022/blob/main/CoreNLP/RAM.png)
 
-##CPU
+## CPU
 
 ![](https://github.com/Scafooo/EMNLP2022/blob/main/CoreNLP/CPU.png)
