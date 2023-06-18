@@ -14,12 +14,8 @@ For ease we report the performance related to CPU and RAM through the following 
 
 ##RAM
 
-If the image is not displayed correctly, cause anonymization, see the RAM.png file in this folder.
-
 ![](https://github.com/Scafooo/EMNLP2022/blob/main/CoreNLP/RAM.png)
 
 ##CPU
-
-If the image is not displayed correctly, cause anonymization, see the CPU.png file in this folder.
 
 ![](https://github.com/Scafooo/EMNLP2022/blob/main/CoreNLP/CPU.png)
